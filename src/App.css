@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poiret One", cursive;
+}
+
+/* nav start */
+.nav {
+  background-color: beige;
+  height: 60px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.openCloseIcon {
+  cursor: pointer;
+  z-index: 1;
+}
+.burger-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  margin-left: 10px;
+}
+.navlinks-mobile {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: red;
+  width: 100%;
+  text-align: center;
+}
+.navlinks-bigScreen {
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.navlinks-wrapper {
+  display: flex;
+  width: 100%;
+}
+li {
+  list-style: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.nav-title {
+  margin-left: 15px;
+  display: flex;
+  width: 33%;
+  align-items: center;
+}
+.nav-icon-wrapper {
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+  flex: end;
+}
+
+.nav-icon {
+  margin: 3px;
+}
+form {
+  height: 40px;
+  display: flex;
+  margin: 8px;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+.searchField {
+  border: none;
+  width: 100%;
+  margin-left: 5px;
+  outline: none;
+}
+.search-icon-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  .navlinks-mobile {
+    display: none;
+  }
+
+  .navlinks-bigScreen {
+    display: flex;
+  }
+  li {
+    margin: 0px 10px;
+  }
+  .burger-wrapper {
+    display: none;
+  }
+  .navlinks-list {
+    display: flex;
+  }
+}
+
+/* nav ends */
+
+/* hero start */
+.hero {
+  width: 100%;
+  height: 80vh;
+  background-color: red;
+  display: flex;
+  align-items: end;
+}
+.hero h2,
+.hero p,
+button {
+  margin: 15px;
+}
+.hero p {
+  max-width: 200px;
+}
