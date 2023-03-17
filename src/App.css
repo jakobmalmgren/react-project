@@ -44,6 +44,9 @@
 }
 li {
   list-style: none;
+}
+.navlinks-mobile li {
+  list-style: none;
   padding: 15px;
   cursor: pointer;
 }
@@ -91,9 +94,7 @@ form {
   .navlinks-bigScreen {
     display: flex;
   }
-  li {
-    margin: 0px 10px;
-  }
+
   .burger-wrapper {
     display: none;
   }
@@ -120,3 +121,102 @@ button {
 .hero p {
   max-width: 200px;
 }
+/* hero ends */
+
+/* slider starts */
+.slider-card {
+  height: 290px;
+  border: 1px solid black;
+  position: relative;
+  margin: 5px;
+}
+.slider-image {
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
+}
+.slider-item {
+  font-weight: bold;
+  font-size: 15px;
+}
+.carousel-wrapper {
+  display: flex;
+
+  justify-content: center;
+  width: 100%;
+}
+.carousel {
+  width: 80%;
+}
+
+.slider-description,
+.slider-price {
+  margin-top: 13px;
+  font-size: 13px;
+}
+.slider-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+/* slider ends */
+
+/* ManWomanSections starts */
+.menWomen-wrapper {
+  width: 100%;
+}
+.men-section {
+  height: 400px;
+  background-color: green;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.women-section {
+  background-color: blue;
+  height: 400px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 600px) {
+  .menWomen-wrapper {
+    display: flex;
+    padding: 0px 8px;
+  }
+  .women-section {
+    width: 50%;
+    height: 400px;
+  }
+  .men-section {
+    width: 50%;
+    height: 400px;
+    margin-right: 10px;
+  }
+}
+/* ManWomanSections ends */
+
+/* slider again starts */
+/* slider again ends */
+
+/* ManWomanSections again start but its kids /girls , boys */
+/* ManWomanSections again ends */
+
+/* slider again starts */
+/* slider again ends */
+
+/* outlet starts */
+.outlet-wrapper {
+  background-color: red;
+  height: 300px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 8px;
+}
+
+/* outlet end */
