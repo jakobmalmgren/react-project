@@ -4,6 +4,8 @@ import Hero from "./components/Hero";
 import Slider from "./components/Slider";
 import MenWomenSection from "./components/MenWomenSection";
 import Outlet from "./components/Outlet";
+import RatingSlider from "./components/RatingSlider";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,8 +16,9 @@ function App() {
       <MenWomenSection></MenWomenSection>
       <Slider></Slider>
       <MenWomenSection></MenWomenSection>
-      <Slider></Slider>
       <Outlet></Outlet>
+      <RatingSlider></RatingSlider>
+      <Footer></Footer>
     </div>
   );
 }

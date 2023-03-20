@@ -4,14 +4,14 @@ function MenWomenSection() {
       <div className="men-section">
         <div>
           <h2>MEN</h2>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>The spring collection has arrived</p>
           <h2>SHOP NOW!</h2>
         </div>
       </div>
       <div className="women-section">
         <div>
           <h2>WOMEN</h2>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>The spring collection has arrived</p>
           <h2>SHOP NOW!</h2>
         </div>
       </div>

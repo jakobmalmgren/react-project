@@ -1,4 +1,4 @@
-import { GoSearch } from "react-icons/go";
+import { IoIosSearch } from "react-icons/io";
 function NavbarSearch() {
   return (
     <form>
@@ -11,7 +11,7 @@ function NavbarSearch() {
       />
 
       <div className="search-icon-wrapper">
-        <GoSearch className="seach-icon"></GoSearch>
+        <IoIosSearch className="seach-icon"></IoIosSearch>
       </div>
     </form>
   );

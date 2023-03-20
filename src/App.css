@@ -28,13 +28,11 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color: red;
+  background-color: beige;
   width: 100%;
   text-align: center;
 }
 .navlinks-bigScreen {
-  display: flex;
-  align-items: center;
   display: none;
 }
 
@@ -42,13 +40,14 @@
   display: flex;
   width: 100%;
 }
-li {
+.navlinks-list li {
   list-style: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
 }
 .navlinks-mobile li {
-  list-style: none;
   padding: 15px;
-  cursor: pointer;
 }
 
 .nav-title {
@@ -67,6 +66,17 @@ li {
 .nav-icon {
   margin: 3px;
 }
+.icon-check {
+  margin-right: 5px;
+}
+.nav-info .nav-info-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  margin: 5px 15px;
+}
+
 form {
   height: 40px;
   display: flex;
@@ -87,12 +97,21 @@ form {
 }
 
 @media only screen and (min-width: 600px) {
+  .nav-info {
+    height: 20px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .navlinks-mobile {
     display: none;
   }
 
   .navlinks-bigScreen {
     display: flex;
+    align-items: center;
+    width: 100%;
   }
 
   .burger-wrapper {
@@ -100,6 +119,10 @@ form {
   }
   .navlinks-list {
     display: flex;
+    width: 100%;
+  }
+  .navlinks-list li {
+    margin: 0px 15px;
   }
 }
 
@@ -108,15 +131,20 @@ form {
 /* hero start */
 .hero {
   width: 100%;
-  height: 80vh;
-  background-color: red;
+  height: 90vh;
+  background-image: url(/public/img/heroImage.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  align-items: end;
+  align-items: center;
+  justify-content: center;
 }
-.hero h2,
+.hero h1,
 .hero p,
 button {
   margin: 15px;
+  font-weight: bold;
 }
 .hero p {
   max-width: 200px;
@@ -124,35 +152,39 @@ button {
 /* hero ends */
 
 /* slider starts */
+.slider-header {
+  text-align: center;
+}
+.slider-header {
+  margin: 20px 0px;
+}
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.carousel {
+  width: 100%;
+}
 .slider-card {
   height: 290px;
-  border: 1px solid black;
+
   position: relative;
   margin: 5px;
 }
 .slider-image {
   object-fit: cover;
   width: 100%;
-  height: 70%;
+  height: 90%;
 }
 .slider-item {
   font-weight: bold;
-  font-size: 15px;
-}
-.carousel-wrapper {
-  display: flex;
-
-  justify-content: center;
-  width: 100%;
-}
-.carousel {
-  width: 80%;
+  font-size: 10px;
 }
 
 .slider-description,
 .slider-price {
-  margin-top: 13px;
-  font-size: 13px;
+  font-size: 9px;
 }
 .slider-icon {
   position: absolute;
@@ -164,20 +196,33 @@ button {
 /* ManWomanSections starts */
 .menWomen-wrapper {
   width: 100%;
+  margin-top: 50px;
 }
 .men-section {
   height: 400px;
-  background-color: green;
+  background-image: url(/public/img/men3.avif);
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+}
+.men-section h2,
+.women-section h2 {
+  font-size: 40px;
+}
+.men-section p,
+.women-section p {
+  font-size: 20px;
 }
 
 .women-section {
-  background-color: blue;
+  color: white;
+  background-image: url(/public/img/woman2.avif);
   height: 400px;
   background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,7 +255,13 @@ button {
 
 /* outlet starts */
 .outlet-wrapper {
+  background-image: url(/public/img/outlet2.avif);
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: red;
+  background-position: center;
+  object-fit: cover;
   height: 300px;
   display: flex;
   text-align: center;
@@ -218,5 +269,50 @@ button {
   align-items: center;
   margin: 0px 8px;
 }
+.outlet-wrapper h1 {
+  font-size: 40px;
+}
+.outlet-wrapper p {
+  font-size: 20px;
+}
 
 /* outlet end */
+
+/* rating carousel start */
+
+.rating-card {
+  background-color: blue;
+  margin: 5px;
+  height: 200px;
+}
+/* rating carousel end */
+
+/* footer starts */
+.footer {
+  height: 190px;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-payment-icons {
+  text-align: center;
+  font-size: 30px;
+}
+.footer p {
+  text-align: center;
+  margin: 15px 0px;
+}
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+}
+.footer-social-icons :nth-child(2) {
+  margin-left: 15px;
+  margin-right: 7.5px;
+}
+.footer-social-icons :nth-child(3) {
+  margin-left: 7.5px;
+  margin-right: 15px;
+}
+/* footer end */

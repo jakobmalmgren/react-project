@@ -23,72 +23,75 @@ function Slider() {
   };
 
   return (
-    <div className="carousel-wrapper">
-      <Carousel className="carousel" responsive={responsive}>
-        <div className="slider-card">
-          <img src="img/shoes.avif" alt="" className="slider-image" />
-          <h3 className="slider-item">SHOES</h3>
-          <p className="slider-description">Sneaker, Air Jordan</p>
-          <p className="slider-price">$80.99</p>
-          <div className="slider-icon">
-            <VscHeart></VscHeart>
+    <div>
+      <h1 className="slider-header">NEEWS</h1>
+      <div className="carousel-wrapper">
+        <Carousel className="carousel" responsive={responsive}>
+          <div className="slider-card">
+            <img src="img/shoes.avif" alt="" className="slider-image" />
+            <h3 className="slider-item">SHOES</h3>
+            <p className="slider-description">Sneaker, Air Jordan</p>
+            <p className="slider-price">$80.99</p>
+            <div className="slider-icon">
+              <VscHeart></VscHeart>
+            </div>
           </div>
-        </div>
-        <div className="slider-card">
-          <img src="img/shoes.avif" alt="" className="slider-image" />
-          <h3 className="slider-item">SHOES</h3>
-          <p className="slider-description">Sneaker, Air Jordan</p>
-          <p className="slider-price">$80.99</p>
-          <div className="slider-icon">
-            <VscHeart></VscHeart>
+          <div className="slider-card">
+            <img src="img/shoes.avif" alt="" className="slider-image" />
+            <h3 className="slider-item">SHOES</h3>
+            <p className="slider-description">Sneaker, Air Jordan</p>
+            <p className="slider-price">$80.99</p>
+            <div className="slider-icon">
+              <VscHeart></VscHeart>
+            </div>
           </div>
-        </div>
-        <div className="slider-card">
-          <img src="img/shoes.avif" alt="" className="slider-image" />
-          <h3 className="slider-item">SHOES</h3>
-          <p className="slider-description">Sneaker, Air Jordan</p>
-          <p className="slider-price">$80.99</p>
-          <div className="slider-icon">
-            <VscHeart></VscHeart>
+          <div className="slider-card">
+            <img src="img/shoes.avif" alt="" className="slider-image" />
+            <h3 className="slider-item">SHOES</h3>
+            <p className="slider-description">Sneaker, Air Jordan</p>
+            <p className="slider-price">$80.99</p>
+            <div className="slider-icon">
+              <VscHeart></VscHeart>
+            </div>
           </div>
-        </div>
-        <div className="slider-card">
-          <img src="img/shoes.avif" alt="" className="slider-image" />
-          <h3 className="slider-item">SHOES</h3>
-          <p className="slider-description">Sneaker, Air Jordan</p>
-          <p className="slider-price">$80.99</p>
-          <div className="slider-icon">
-            <VscHeart></VscHeart>
+          <div className="slider-card">
+            <img src="img/shoes.avif" alt="" className="slider-image" />
+            <h3 className="slider-item">SHOES</h3>
+            <p className="slider-description">Sneaker, Air Jordan</p>
+            <p className="slider-price">$80.99</p>
+            <div className="slider-icon">
+              <VscHeart></VscHeart>
+            </div>
           </div>
-        </div>
-        <div className="slider-card">
-          <img src="img/shoes.avif" alt="" className="slider-image" />
-          <h3 className="slider-item">SHOES</h3>
-          <p className="slider-description">Sneaker, Air Jordan</p>
-          <p className="slider-price">$80.99</p>
-          <div className="slider-icon">
-            <VscHeart></VscHeart>
+          <div className="slider-card">
+            <img src="img/shoes.avif" alt="" className="slider-image" />
+            <h3 className="slider-item">SHOES</h3>
+            <p className="slider-description">Sneaker, Air Jordan</p>
+            <p className="slider-price">$80.99</p>
+            <div className="slider-icon">
+              <VscHeart></VscHeart>
+            </div>
           </div>
-        </div>
-        <div className="slider-card">
-          <img src="img/shoes.avif" alt="" className="slider-image" />
-          <h3 className="slider-item">SHOES</h3>
-          <p className="slider-description">Sneaker, Air Jordan</p>
-          <p className="slider-price">$80.99</p>
-          <div className="slider-icon">
-            <VscHeart></VscHeart>
+          <div className="slider-card">
+            <img src="img/shoes.avif" alt="" className="slider-image" />
+            <h3 className="slider-item">SHOES</h3>
+            <p className="slider-description">Sneaker, Air Jordan</p>
+            <p className="slider-price">$80.99</p>
+            <div className="slider-icon">
+              <VscHeart></VscHeart>
+            </div>
           </div>
-        </div>
-        <div className="slider-card">
-          <img src="img/shoes.avif" alt="" className="slider-image" />
-          <h3 className="slider-item">SHOES</h3>
-          <p className="slider-description">Sneaker, Air Jordan</p>
-          <p className="slider-price">$80.99</p>
-          <div className="slider-icon">
-            <VscHeart></VscHeart>
+          <div className="slider-card">
+            <img src="img/shoes.avif" alt="" className="slider-image" />
+            <h3 className="slider-item">SHOES</h3>
+            <p className="slider-description">Sneaker, Air Jordan</p>
+            <p className="slider-price">$80.99</p>
+            <div className="slider-icon">
+              <VscHeart></VscHeart>
+            </div>
           </div>
-        </div>
-      </Carousel>
+        </Carousel>
+      </div>
     </div>
   );
 }

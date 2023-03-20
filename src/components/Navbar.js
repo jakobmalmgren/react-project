@@ -2,9 +2,10 @@ import { BsCart3 } from "react-icons/bs";
 import { VscHeart } from "react-icons/vsc";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
-import { GoSearch } from "react-icons/go";
+import { IoIosSearch } from "react-icons/io";
 import Navlinks from "./Navlinks";
 import NavbarSearch from "./NavbarSearch";
+import { BsCheck2 } from "react-icons/bs";
 
 import MobileNavigation from "./MobileNavigation";
 import { useState } from "react";
@@ -34,10 +35,21 @@ function Navbar() {
           </div>
         </div>
         <div className="nav-icon-wrapper">
-          <GoSearch className="nav-icon"></GoSearch>
+          <IoIosSearch className="nav-icon"></IoIosSearch>
           <BsCart3 className="nav-icon"></BsCart3>
           <VscHeart className="nav-icon"></VscHeart>
         </div>
+      </div>
+      <div className="nav-info">
+        <p className="nav-info-text">
+          <BsCheck2 className="icon-check"></BsCheck2> Free shipments over $100
+        </p>
+        <p className="nav-info-text">
+          <BsCheck2 className="icon-check"></BsCheck2>Fast shipments
+        </p>
+        <p className="nav-info-text">
+          <BsCheck2 className="icon-check"></BsCheck2>Handpicked assortment
+        </p>
       </div>
       <NavbarSearch></NavbarSearch>
     </div>
