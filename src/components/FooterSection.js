@@ -7,13 +7,14 @@ import { SiFacebook } from "react-icons/si";
 import { CgInstagram } from "react-icons/cg";
 import { SiTiktok } from "react-icons/si";
 import { CiYoutube } from "react-icons/ci";
+import css from "./FooterSection.module.css";
 
-function Footer() {
+function FooterSection() {
   return (
     <div>
-      <div className="footer">
+      <div className={css.footer}>
         <div>
-          <div className="footer-payment-icons">
+          <div className={css.footerPaymentIcons}>
             <SiKlarna></SiKlarna>
             <GrAmex></GrAmex>
             <FaCcMastercard></FaCcMastercard>
@@ -23,7 +24,7 @@ function Footer() {
 
           <p>Swaggish AB Copyright © 2023 | Karlavägen 12, 109 42 Stockholm</p>
         </div>
-        <div className="footer-social-icons">
+        <div className={css.footerSocialIcons}>
           <SiFacebook></SiFacebook>
           <CgInstagram></CgInstagram>
           <SiTiktok></SiTiktok>
@@ -34,4 +35,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterSection;

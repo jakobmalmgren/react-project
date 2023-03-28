@@ -1,0 +1,21 @@
+.ratingCard {
+  /* background-color: rgba(157, 187, 157, 0.285); */
+  margin: 5px;
+  background-color: rgba(128, 128, 128, 0.137);
+  height: 200px;
+  padding: 10px;
+}
+
+.ratingTitle {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 4px 0px;
+}
+.ratingDescription,
+.ratingCustomer,
+.ratingTime {
+  font-size: 12px;
+}
+.ratingCustomer {
+  margin: 4px 0px;
+}

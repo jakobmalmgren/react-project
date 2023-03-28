@@ -1,0 +1,66 @@
+.myShoppingCartCard {
+  height: 190px;
+  width: 100%;
+  display: flex;
+  background-color: #646464;
+  margin-top: 10px;
+}
+
+.myShoppingCartCardImg {
+  height: 100%;
+  object-fit: cover;
+}
+.myShoppingCartCardInfo {
+  width: 100%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.myShoppingCartCardInfo p {
+  font-size: 15px;
+  position: relative;
+  display: flex;
+}
+.myShoppingCartCardInfo h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.plusMinusWrapperMyShoppingCart {
+  display: flex;
+}
+.plusMinusWrapperMyShoppingCart :nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plusMinusBtn {
+  width: 28px;
+  margin: 0px;
+  height: 28px;
+  cursor: pointer;
+}
+.icon {
+  cursor: pointer;
+}
+.plusMinusWrapperMyShoppingCart h2 {
+  font-size: 16px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plusMinusWrapperMyShoppingCart p {
+  margin: 0px 5px;
+}
+.myShoppingCartCardDeleteIcon {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}

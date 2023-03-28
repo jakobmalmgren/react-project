@@ -1,14 +1,15 @@
-function MenWomenSection() {
+import css from "./CategoryAdultsSection.module.css";
+function CategoryAdultsSection() {
   return (
-    <div className="menWomen-wrapper">
-      <div className="men-section">
+    <div className={css.categoryWrapper}>
+      <div className={css.categorySectionOne}>
         <div>
           <h2>MEN</h2>
           <p>The spring collection has arrived</p>
           <h2>SHOP NOW!</h2>
         </div>
       </div>
-      <div className="women-section">
+      <div className={css.categorySectionTwo}>
         <div>
           <h2>WOMEN</h2>
           <p>The spring collection has arrived</p>
@@ -19,4 +20,4 @@ function MenWomenSection() {
   );
 }
 
-export default MenWomenSection;
+export default CategoryAdultsSection;

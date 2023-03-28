@@ -1,0 +1,25 @@
+.outletWrapper {
+  background-image: url(/public/img/outlet2.avif);
+  color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  height: 50vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 8px;
+}
+.outletWrapper h1 {
+  font-size: 70px;
+}
+.outletWrapper p {
+  font-size: 40px;
+}
+@media only screen and (min-width: 600px) {
+  .outletWrapper {
+    margin-top: 40px;
+  }
+}

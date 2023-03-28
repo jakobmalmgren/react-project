@@ -1,0 +1,37 @@
+.footer {
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footerPaymentIcons {
+  text-align: center;
+  font-size: 25px;
+}
+.footer p {
+  text-align: center;
+  margin: 15px 0px;
+  font-size: 10px;
+}
+.footerSocialIcons {
+  display: flex;
+  justify-content: center;
+}
+.footerPaymentIcons :nth-child(2) {
+  margin-left: 12px;
+  margin-right: 6px;
+}
+.footerPaymentIcons :nth-child(3) {
+  margin-left: 6px;
+  margin-right: 12px;
+}
+.footerPaymentIcons :nth-child(4) {
+  margin-right: 12px;
+}
+.footerSocialIcons :nth-child(2) {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.footerSocialIcons :nth-child(3) {
+  margin-right: 15px;
+}

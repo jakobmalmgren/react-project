@@ -1,0 +1,24 @@
+.outletRedColor {
+  color: red;
+}
+a {
+  color: black;
+}
+
+.navlinksList li {
+  list-style: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .navlinksList {
+    display: flex;
+    width: 100%;
+  }
+  .navlinksList li {
+    margin: 0px 15px;
+  }
+}
