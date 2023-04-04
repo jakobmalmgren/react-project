@@ -2,8 +2,9 @@
   height: 190px;
   width: 100%;
   display: flex;
-  background-color: #646464;
+  background-color: #f2f3f3;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .myShoppingCartCardImg {
@@ -15,7 +16,7 @@
   padding-left: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
 }
 
@@ -26,7 +27,6 @@
 }
 .myShoppingCartCardInfo h3 {
   font-size: 15px;
-  margin-bottom: 10px;
 }
 
 .plusMinusWrapperMyShoppingCart {
@@ -40,9 +40,11 @@
 
 .plusMinusBtn {
   width: 28px;
-  margin: 0px;
   height: 28px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .icon {
   cursor: pointer;
@@ -59,8 +61,8 @@
 }
 .myShoppingCartCardDeleteIcon {
   position: absolute;
-  right: 5px;
+  right: 15px;
   top: 15px;
-  font-size: 22px;
+  font-size: 15px;
   cursor: pointer;
 }

@@ -1,9 +1,10 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import SliderCard from "./SliderCard";
+import Card from "./Card";
 import css from "./SliderSection..module.css";
+import products from "../data/products";
 
-function SliderSection() {
+function SliderSection(props) {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1000 },
@@ -23,19 +24,17 @@ function SliderSection() {
     },
   };
 
+  const cardElements = products.map((item) => {
+    return (
+      <Card key={item.id} {...item} addToFavorite={props.addToFavorite}></Card>
+    );
+  });
   return (
     <div>
-      <h1 className={css.sliderHeader}>NEEWS</h1>
+      <h1>{props.header}</h1>
       <div className={css.carouselWrapper}>
         <Carousel className={css.carousel} responsive={responsive}>
-          <SliderCard></SliderCard>
-          <SliderCard></SliderCard>
-          <SliderCard></SliderCard>
-          <SliderCard></SliderCard>
-          <SliderCard></SliderCard>
-          <SliderCard></SliderCard>
-          <SliderCard></SliderCard>
-          <SliderCard></SliderCard>
+          {cardElements}
         </Carousel>
       </div>
     </div>

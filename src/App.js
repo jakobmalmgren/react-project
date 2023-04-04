@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./components/NavbarSection";
+import NavbarSection from "./components/NavbarSection";
 import RatingSlider from "./components/RatingSliderSection";
 import IndexPage from "./pages/IndexPage";
 import { Switch, Route } from "react-router-dom";
@@ -9,19 +9,33 @@ import MenPage from "./pages/MenPage";
 import KidsPage from "./pages/KidsPage";
 import OutletPage from "./pages/OutletPage";
 import MyFavoritePage from "./pages/MyFavoritePage";
+import { useState } from "react";
 import AddToCartPage from "./pages/AddToCartPage";
-import MyShoppingCartCard from "./components/MyShoppingCartCard";
-import MyShoppingCartPage from "./pages/MyShoppingCartPage";
-import SignInPage from "./pages/SignInPage";
-import DiscountModalSection from "./components/DiscountModalSection";
 
 function App() {
+  const [likedItems, setLikedItems] = useState([]);
+  const [product, setProduct] = useState([]);
+
+  function addToFavorite(products) {
+    //matcha id måste de för finns de redan ska de ej pushas upp
+    setLikedItems([...likedItems, products]);
+    console.log(likedItems);
+  }
+  // function deleteFavorite(products) {
+  //   setLikedItems(
+  //     likedItems.filter((item) => {
+  //       item.id ! == products.id;
+  //     })
+  //   );
+  // }
+
   return (
     <div>
-      <Navbar></Navbar>
+      <NavbarSection likedItems={likedItems}></NavbarSection>
+
       <Switch>
         <Route exact path="/">
-          <IndexPage></IndexPage>
+          <IndexPage addToFavorite={addToFavorite}></IndexPage>
         </Route>
         <Route path="/womenPage">
           <WomenPage></WomenPage>
@@ -36,7 +50,10 @@ function App() {
           <OutletPage></OutletPage>
         </Route>
         <Route path="/MyFavoritesPage">
-          <MyFavoritePage></MyFavoritePage>
+          <MyFavoritePage likedItems={likedItems}></MyFavoritePage>
+        </Route>
+        <Route path="/MyAddToCartPage">
+          <AddToCartPage></AddToCartPage>
         </Route>
       </Switch>
 

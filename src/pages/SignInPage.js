@@ -1,31 +1,33 @@
-import { CgClose } from "react-icons/cg";
+import { CgCloseO } from "react-icons/cg";
 import css from "./SignInPage.module.css";
+import Button from "../components/Button";
 
 function SignInPage({ setOpenModal }) {
   return (
     <form action="" className={css.formLogin}>
       <div className={css.formHeader}>
         <h2>LOG IN</h2>
-        <CgClose
+        <CgCloseO
           onClick={() => {
             setOpenModal(false);
           }}
           className={css.formClosingIcon}
-        ></CgClose>
+        ></CgCloseO>
       </div>
       <div className={css.formLoginWrapper}>
-        <input type="text" placeholder="email" />
-        <input type="text" placeholder="password" />
+        <input type="text" placeholder="Email" />
+        <input type="text" placeholder="Password" />
 
         <div className={css.rememberDataWrapper}>
-          <div>
+          <div className={css.rememberMeWrapper}>
             <input type="checkbox" className={css.formInputCheckbox}></input>
             <p>Remember me</p>
           </div>
+
           <p>Forgot the password?</p>
         </div>
-        <button className={css.formBtn}>LOG IN</button>
-        <button className={css.formBtn}>CREATE ACCOUNT</button>
+        <Button content="SIGN IN"></Button>
+        <Button content="CREATE ACCOUNT"></Button>
       </div>
     </form>
   );

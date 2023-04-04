@@ -5,18 +5,19 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
 import Navlinks from "./NavlinksSection";
 import NavbarSearchSection from "./NavbarSearchSection";
-import { BsCheck2 } from "react-icons/bs";
+import { GoCheck } from "react-icons/go";
 import SignInPage from "../pages/SignInPage";
 import MobileNavigation from "./MobileNavigationSection";
 import MyShoppingCartPage from "../pages/MyShoppingCartPage";
 import { useState } from "react";
 import css from "./NavbarSection.module.css";
 
-function NavbarSection() {
+function NavbarSection(props) {
   // fixa till en useState
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [openMyCart, setOpenMyCart] = useState(false);
+
   const burger = (
     <RxHamburgerMenu
       onClick={() => setOpen(!open)}
@@ -58,12 +59,16 @@ function NavbarSection() {
           ></BsCart3>
 
           <Link to="/MyFavoritesPage" className={css.heartWrapper}>
-            <VscHeart className={css.navIcon}></VscHeart>
+            <VscHeart className={css.navIcon}> </VscHeart>
+            <div className={css.cartCounter}>1</div>
+            <div className={css.favoriteCounter}>{props.likedItems.length}</div>
           </Link>
         </div>
       </div>
       <div className={css.signInWrapper}>
-        <div onClick={() => setOpenModal(true)}>SIGN IN</div>
+        <button onClick={() => setOpenModal(true)} className={css.signInBnt}>
+          Sign in
+        </button>
 
         {openModal && <SignInPage setOpenModal={setOpenModal}></SignInPage>}
         <NavbarSearchSection></NavbarSearchSection>
@@ -71,13 +76,13 @@ function NavbarSection() {
 
       <div className={css.navInfo}>
         <p className={css.navInfoText}>
-          <BsCheck2 className={css.navIcon}></BsCheck2> Free shipments over $100
+          <GoCheck className={css.navIcon}></GoCheck> Free shipments over $100
         </p>
         <p className={css.navInfoText}>
-          <BsCheck2 className={css.navIcon}></BsCheck2>Fast shipments
+          <GoCheck className={css.navIcon}></GoCheck>Fast shipments
         </p>
         <p className={css.navInfoText}>
-          <BsCheck2 className={css.navIcon}></BsCheck2>Handpicked assortment
+          <GoCheck className={css.navIcon}></GoCheck>Handpicked assortment
         </p>
       </div>
     </div>

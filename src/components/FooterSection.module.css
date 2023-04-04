@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: rgb(0 24 0 / 78%);
 }
 .footerPaymentIcons {
   text-align: center;

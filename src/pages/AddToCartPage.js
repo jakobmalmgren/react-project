@@ -9,11 +9,7 @@ function AddToCartPage() {
     <div className={css.addToCartPage}>
       <div className={css.imageContainer}>
         <div className={css.smallImageWrapper}>
-          <img
-            src="/img/conm7650c_copticalwhite_v102.jpg"
-            alt=""
-            className={css.smallImage}
-          />
+          <img src="/img/converesebig.jpeg" alt="" className={css.smallImage} />
           <img src="/img/converesebig.jpeg" alt="" className={css.smallImage} />
         </div>
 

@@ -1,33 +1,36 @@
 .myShoppingCart {
   width: 400px;
-  height: 100vh;
+  height: auto;
   position: absolute;
   top: 0;
   z-index: 1;
-  background-color: rgb(82 132 97);
   right: 0;
-  border: 1px solid black;
+  background-color: #485248;
+  border-left: 1px solid black;
+  border-top-left-radius: 35px;
 }
+/* båda border rad? */
 .myShoppingCartHeader {
-  background-color: #646464;
-  height: 50px;
+  border-top-left-radius: 35px;
+  background-color: #f2f3f3;
+  height: 60px;
   display: flex;
   align-items: center;
   padding: 10px;
   position: relative;
-}
-.myShoppingCartHeader .closingIcon {
-  position: absolute;
-  font-size: 25px;
-  top: 3px;
-  right: 3px;
-  cursor: pointer;
+  justify-content: space-between;
 }
 .myShoppingCartHeader h2 {
+  font-size: 12px;
   font-weight: lighter;
-  font-size: 18px;
 }
-
+.closingIcon {
+  cursor: pointer;
+  font-size: 19px;
+}
+.myShoppingCartInfo {
+  padding: 10px;
+}
 .totalCountWrapper {
   margin-top: 10px;
   width: 100%;
@@ -35,13 +38,6 @@
   justify-content: space-between;
 }
 .totalCountWrapper h2 {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: lighter;
-}
-
-.myShoppingCartBtn {
-  background-color: #646464;
-  height: 50px;
-  width: 100%;
-  margin-top: 50px;
 }

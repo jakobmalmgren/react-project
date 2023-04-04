@@ -1,9 +1,13 @@
 .ratingCard {
-  /* background-color: rgba(157, 187, 157, 0.285); */
   margin: 5px;
   background-color: rgba(128, 128, 128, 0.137);
   height: 200px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0 24 0 / 78%);
 }
 
 .ratingTitle {
@@ -15,6 +19,7 @@
 .ratingCustomer,
 .ratingTime {
   font-size: 12px;
+  text-align: center;
 }
 .ratingCustomer {
   margin: 4px 0px;

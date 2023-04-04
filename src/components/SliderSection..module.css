@@ -9,7 +9,6 @@
 .carouselWrapper {
   display: flex;
   justify-content: center;
-  margin: 0px 2px;
 }
 .carousel {
   width: 100%;

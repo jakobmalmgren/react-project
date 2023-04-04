@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+}

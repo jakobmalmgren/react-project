@@ -5,15 +5,19 @@
 .navbarForm {
   height: 60px;
   display: flex;
+  border-radius: 55px;
 }
 
 .searchField {
   width: 100%;
   outline: none;
   padding: 10px;
+  background-color: #f2f3f3;
+  border: 1px solid black;
+  border-radius: 55px;
 }
 .searchIcon {
   position: absolute;
-  right: 15px;
-  top: 90px;
+  right: 20px;
+  top: 82px;
 }

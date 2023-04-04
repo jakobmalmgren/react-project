@@ -1,0 +1,5 @@
+.myFavoriteContainer {
+  flex-wrap: wrap;
+  display: flex;
+  text-align: center;
+}

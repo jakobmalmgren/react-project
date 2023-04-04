@@ -1,17 +1,26 @@
 import HeroSection from "../components/HeroSection";
 import SliderSection from "../components/SliderSection";
-import CategoryAdultsSection from "../components/CategoryAdultsSection";
-import CategoryKidsSection from "../components/CategoryKidsSection";
+import CategorySection from "../components/CategorySection";
 import OutletSection from "../components/OutletSection";
 
-function IndexPage() {
+function IndexPage(props) {
   return (
     <div>
+      {/* KÖRA FILTER FÖR SHOES O T SHIRT ME */}
       <HeroSection></HeroSection>
-      <SliderSection></SliderSection>
-      <CategoryAdultsSection></CategoryAdultsSection>
-      <SliderSection></SliderSection>
-      <CategoryKidsSection></CategoryKidsSection>
+      <SliderSection
+        header="NEWS"
+        addToFavorite={props.addToFavorite}
+      ></SliderSection>
+      <CategorySection
+        categoryMale="MEN"
+        categoryFemale="T-SHIRTS"
+      ></CategorySection>
+      <SliderSection header="SHOES"></SliderSection>
+      <CategorySection
+        categoryMale="BOYS"
+        categoryFemale="GIRLS"
+      ></CategorySection>
       <OutletSection></OutletSection>
     </div>
   );

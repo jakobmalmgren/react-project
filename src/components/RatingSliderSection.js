@@ -1,11 +1,13 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import SliderCardRatings from "./SliderCardRatings";
+import ratings from "../data/ratings";
 
 // den här behövs Inte..e bara för visa me RatingSlidernnn...
 // den här ska väck sen ska ratingcarden in o vanlia card in i SliderSection..
+// GÖRA EN SLIDER..SEN FÖRA IN VIA PROPS RATINGCARD OCH SEN PRODUCTCARD..
 
-function RatingSliderSection() {
+function RatingSliderSection(props) {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1000 },
@@ -24,16 +26,13 @@ function RatingSliderSection() {
       items: 1,
     },
   };
+  const ratingData = ratings.map((item) => {
+    return <SliderCardRatings key={props.id} {...item}></SliderCardRatings>;
+  });
   return (
     <div className="carousel-wrapper">
       <Carousel className="carousel" responsive={responsive}>
-        <SliderCardRatings></SliderCardRatings>
-        <SliderCardRatings></SliderCardRatings>
-        <SliderCardRatings></SliderCardRatings>
-        <SliderCardRatings></SliderCardRatings>
-        <SliderCardRatings></SliderCardRatings>
-        <SliderCardRatings></SliderCardRatings>
-        <SliderCardRatings></SliderCardRatings>
+        {ratingData}
       </Carousel>
     </div>
   );
