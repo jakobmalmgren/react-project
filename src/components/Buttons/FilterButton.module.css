@@ -1,0 +1,39 @@
+.contentWrapper {
+  justify-content: center;
+  margin-top: 10px;
+}
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.filterBtn {
+  width: 90px;
+  height: 33px;
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.inputWrapper {
+  justify-content: center;
+  display: flex;
+}
+.filterInput {
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  background-color: rgb(0 24 0 / 78%);
+  height: 40px;
+  border-radius: 20px;
+  color: white;
+  align-items: center;
+}
+.filterInput input {
+  accent-color: white;
+  cursor: pointer;
+}

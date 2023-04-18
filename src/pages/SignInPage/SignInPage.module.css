@@ -1,0 +1,68 @@
+.formLogin {
+  width: 400px;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #485248;
+  border-left: 1px solid black;
+  border-top-left-radius: 35px;
+}
+.formHeader {
+  border-top-left-radius: 35px;
+  background-color: #f2f3f3;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+}
+.formClosingIcon {
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.formLoginWrapper {
+  padding: 10px;
+}
+
+.formHeader h2 {
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+.formLoginInput {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px;
+}
+.rememberDataWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rememberMeWrapper {
+  display: flex;
+  align-items: center;
+}
+.rememberMeWrapper input {
+  accent-color: black;
+}
+.rememberMeWrapper p {
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.formInputCheckbox {
+  width: 10%;
+  width: 15px;
+}
+
+.rememberDataWrapper :nth-child(1) {
+  display: flex;
+}

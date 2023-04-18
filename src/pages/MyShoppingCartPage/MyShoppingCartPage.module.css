@@ -1,0 +1,53 @@
+.myShoppingCart {
+  width: 400px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  right: 0;
+  background-color: #485248;
+  border-left: 1px solid black;
+  border-top-left-radius: 35px;
+  overflow-y: scroll;
+}
+/* båda border rad? */
+.myShoppingCartHeader {
+  border-top-left-radius: 35px;
+  background-color: #f2f3f3;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  justify-content: space-between;
+}
+.myShoppingCartHeader h2 {
+  font-size: 12px;
+  font-weight: lighter;
+}
+.closingIcon {
+  cursor: pointer;
+  font-size: 19px;
+}
+.myShoppingCartInfo {
+  padding: 10px;
+}
+.noItemsDiv {
+  margin: 100px 0px;
+}
+.noItemsDiv h4 {
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.totalCountWrapper {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.totalCountWrapper h2 {
+  font-size: 19px;
+  font-weight: lighter;
+}

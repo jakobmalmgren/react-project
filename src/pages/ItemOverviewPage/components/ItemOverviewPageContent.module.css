@@ -1,0 +1,126 @@
+.header {
+  text-align: center;
+  margin: 25px 0px;
+  font-size: 25px;
+  color: rgb(0 24 0 / 78%);
+}
+.addToCartPage {
+  color: rgb(0 24 0 / 78%);
+  display: flex;
+  justify-content: center;
+}
+
+.smallImage {
+  width: 50%;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.bigImage {
+  height: 500px;
+  width: 500px;
+  object-fit: cover;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.sectionInfo {
+  width: 100%;
+}
+
+.addToCartBtnWrapper {
+  display: flex;
+  justify-content: center;
+}
+.addToCartBtn {
+  width: 60%;
+  height: 40px;
+  background-color: rgb(8 57 3 / 30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.addToCartBtn :nth-child(1) {
+  margin-right: 5px;
+}
+.addToFav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0 24 0 / 78%);
+}
+.discountIcon {
+  width: 60px;
+  height: 60px;
+  color: red;
+}
+.heartIcon {
+  display: flex;
+}
+.addToFav :nth-child(1) {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.addToFav p {
+  font-size: 13px;
+}
+.addToCartInfo {
+  margin-top: 40px;
+  margin-left: 60px;
+}
+.addToCartInfo h4 {
+  font-size: 20px;
+}
+
+.sectionInfo h4 {
+  margin: 15px 0px;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 800px) {
+  .imageContainer {
+    display: flex;
+  }
+  .smallImageWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .smallImage {
+    height: 300px;
+    width: 300px;
+  }
+  .bigImage {
+    height: 500px;
+    width: 500px;
+  }
+
+  .addToCartBtn {
+    margin: 15px 0px;
+  }
+
+  .addToCartPage h3 {
+    margin: 10px 0px;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .smallImage {
+    height: 300px;
+    width: 300px;
+  }
+  .bigImage {
+    height: 500px;
+    width: 500px;
+  }
+  .addToCartPage {
+    display: flex;
+  }
+  .sectionInfo {
+    width: 30%;
+  }
+}

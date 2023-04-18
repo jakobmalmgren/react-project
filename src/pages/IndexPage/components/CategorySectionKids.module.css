@@ -1,0 +1,17 @@
+.categorySectionKids {
+  background-image: url(/public/img/kidsBackground.avif);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.categorySectionKids h2 {
+  font-size: 40px;
+}
+.categorySectionKids p {
+  font-size: 20px;
+}
