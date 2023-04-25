@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
 .checkoutPageImgWrapper {
   height: 100px;
   width: 100px;
@@ -8,7 +9,7 @@
   object-fit: cover;
 }
 .checkoutPageWrapper {
-  width: 90%;
+  width: 70%;
 
   padding: 10px;
   background-color: #f2f3f3;
@@ -25,10 +26,13 @@
 .totalSection {
   display: flex;
   margin-top: 10px;
-  align-items: center;
 }
 .totalSection p {
   margin: 0px 5px;
+  display: flex;
+  height: 20px;
+
+  align-items: center;
 }
 
 .totalSection h2 {
@@ -36,17 +40,31 @@
   align-items: center;
   margin-left: 10px;
 }
-.totalSection button {
-  width: 28px;
-  height: 28px;
+.totalSection .itemBtn {
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  width: 50px;
+  height: 30px;
+}
+.discountIcon {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(0 24 0 / 78%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  align-items: center;
+  font-size: 8px;
+  font-family: "Dancing Script", cursive;
 }
 
-.deleteIcon {
+.checkoutPageItems .deleteIcon {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -60,13 +78,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  justify-content: center;
 }
-.checkOutPageContainer h1,
-h3 {
-  text-align: center;
-}
-.checkOutPageContainer button {
-  width: 90px;
-  margin-top: 10px;
+
+.purchaseBtn {
   cursor: pointer;
+  width: 90px;
+  height: 30px;
+}
+.purchasedText {
+  font-family: "Zeyada", cursive;
+  text-align: center;
+  border-radius: 15px;
+}
+.shippingWrapper {
+  display: flex;
+  align-items: center;
 }

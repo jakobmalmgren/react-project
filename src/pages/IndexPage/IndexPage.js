@@ -13,9 +13,9 @@ function IndexPage(props) {
     .map((tshirt) => {
       return (
         <Card
+          renderLikedItems={props.renderLikedItems}
           key={tshirt.id}
           {...tshirt}
-          renderItems={props.renderItems}
           addItemToCart={props.addItemToCart}
         ></Card>
       );
@@ -28,8 +28,8 @@ function IndexPage(props) {
       return (
         <Card
           key={shoes.id}
+          renderLikedItems={props.renderLikedItems}
           {...shoes}
-          renderItems={props.renderItems}
           addItemToCart={props.addItemToCart}
         ></Card>
       );

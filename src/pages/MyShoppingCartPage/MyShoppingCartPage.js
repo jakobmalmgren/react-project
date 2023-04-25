@@ -5,15 +5,16 @@ import Button from "../../components/Buttons/Button";
 import { Link } from "react-router-dom";
 
 function MyShoppingCartPage(props) {
-  console.log(props); // kan inte ta de av här
   let myShoppingCartPageCard;
   if (props.boughtItems) {
     myShoppingCartPageCard = props.boughtItems.map((item) => {
       return (
         <MyShoppingCartPageCard
           {...item}
-          onRemove={props.onRemove}
-          onAdd={props.onAdd}
+          deleteItems={props.deleteItems}
+          handleDecrement={props.handleDecrement}
+          handleIncrement={props.handleIncrement}
+          // onAdd={props.onAdd}
         ></MyShoppingCartPageCard>
       );
     });
@@ -48,9 +49,22 @@ function MyShoppingCartPage(props) {
           ) : (
             <div>
               <div className={css.totalCountWrapper}>
-                <h2>Total: ?????? </h2>
-                <h2>$ ????????</h2>
+                <h2>Products: $ {props.sum.toFixed(2)} </h2>
+                <h2>Tax: $ {props.taxPrice.toFixed(2)} </h2>
+                <div className={css.shippingWrapper}>
+                  <h2>Shipping fee: $ {props.shippingPrice.toFixed(2)} </h2>
+                  {props.sum < 100 ? (
+                    <h3>
+                      ($ {props.amountToFreeShippingPrice} to free shippingfee)
+                    </h3>
+                  ) : (
+                    ""
+                  )}
+                </div>
+
+                <h2>Total: $ {props.totalPrice.toFixed(2)}</h2>
               </div>
+
               <Button content="GO TO CHECKOUT"></Button>
             </div>
           )}

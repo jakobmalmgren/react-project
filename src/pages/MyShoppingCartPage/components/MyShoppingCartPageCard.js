@@ -4,15 +4,19 @@ import { BsFillTrashFill } from "react-icons/bs";
 import css from "./MyShoppingCartPageCard.module.css";
 
 function MyShoppingCartPageCard(props) {
-  // console.log(props.qty); // kan ta del hr av qty
+  let discountIcon;
+  if (props.discount === true) {
+    discountIcon = "30%";
+  }
   return (
     <div className={css.myShoppingCartCard}>
       <div className={css.imgWrapper}>
         <img
-          src={`img/${props.image.img1}`}
+          src={`img/${props.image[0]}`}
           alt=""
           className={css.myShoppingCartCardImg}
         />
+        {discountIcon && <div className={css.discountIcon}>{discountIcon}</div>}
       </div>
 
       <div className={css.myShoppingCartCardInfo}>
@@ -27,7 +31,7 @@ function MyShoppingCartPageCard(props) {
           <button
             className={css.plusMinusBtn}
             onClick={() => {
-              props.onRemove(props);
+              props.handleDecrement(props);
             }}
           >
             <BiMinus className={css.icon}></BiMinus>
@@ -36,7 +40,7 @@ function MyShoppingCartPageCard(props) {
           <button
             className={css.plusMinusBtn}
             onClick={() => {
-              props.onAdd(props);
+              props.handleIncrement(props);
             }}
           >
             <BiPlus className={css.icon}></BiPlus>
@@ -46,7 +50,7 @@ function MyShoppingCartPageCard(props) {
         </div>
         <BsFillTrashFill
           onClick={() => {
-            props.onRemove(props);
+            props.deleteItems(props);
           }}
           className={css.myShoppingCartCardDeleteIcon}
         ></BsFillTrashFill>

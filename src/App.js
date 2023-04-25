@@ -26,11 +26,18 @@ function App() {
   //----------------------------------------------
 
   //--------------------------lägger till MyfavoritePage
-  function renderItems(products) {
-    setLikedItems([...likedItems, products]); //..lägger de i favo containern
+  function renderLikedItems(item) {
+    const exist = likedItems.find((x) => {
+      return item.id === x.id;
+    });
+    if (exist) {
+      setLikedItems([...item]);
+    } else {
+      setLikedItems([...likedItems, item]);
+    } //kolla bought items kanske kan göra samma
   }
   const [likedItems, setLikedItems] = useState([]);
-  const [liked, setLiked] = useState(false);
+  const [heart, setHeart] = useState(false);
 
   //----------------------------------------------------
 
@@ -44,37 +51,83 @@ function App() {
     if (exist) {
       setBoughtItems(
         boughtItems.map((x) => {
-          return x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x;
+          return [...x];
         })
       );
     } else {
       setBoughtItems([...boughtItems, { ...item, qty: 1 }]);
     }
   }
-  function onRemove(item) {
-    const exist = boughtItems.find((x) => {
-      return x.id === item.id;
-    });
-    if (exist.qty === 1) {
-      setBoughtItems(
-        boughtItems.filter((x) => {
-          return x.id !== item.id;
-        })
-      );
-    } else {
-      setBoughtItems(
-        boughtItems.map((x) => {
-          return x.id === item.id ? { ...exist, qty: exist.qty - 1 } : x;
-        })
-      );
-    }
+
+  //lägger till o tar bor antalet items----------------------------
+  function handleDecrement(product) {
+    setBoughtItems(
+      boughtItems.map((item) => {
+        if (item.qty < 2) {
+          return { ...item, qty: 1 };
+        } else {
+          return product.id === item.id ? { ...item, qty: item.qty - 1 } : item;
+        }
+      })
+    );
   }
+  function handleIncrement(product) {
+    setBoughtItems(
+      boughtItems.map((item) => {
+        return product.id === item.id ? { ...item, qty: item.qty + 1 } : item;
+      })
+    );
+  }
+  //--deletar item--------------------------------------------------------------
+
+  function deleteItems(product) {
+    setBoughtItems(
+      boughtItems.filter((item) => {
+        return item.id !== product.id;
+      })
+    );
+  }
+
   /////----------------- plugga denna..viktigt! varför [] i else o {} i första..
+  // addar sumering cash av allt_------------------
+
+  const sum = boughtItems.reduce((acc, cu) => {
+    return acc + cu.price * cu.qty;
+  }, 0);
+  const taxPrice = sum * 0.15;
+  // let shippingPrice;
+  // if (sum < 100) {
+  //   shippingPrice = 100 - sum;
+  //   // console.log((shippingPrice = 100 - sum));
+  // } else if (sum > 100) {
+  //   shippingPrice = 0;
+  // borde kunna göra en funcion me allt detta i ett ju?????????????????
+  // }
+  const shippingPrice = sum >= 100 ? 0 : 15.9;
+  const amountToFreeShippingPrice = 100 - sum;
+  const totalPrice = sum + taxPrice + shippingPrice;
+
+  //------------------------------------------------------------
+
+  let [filterTextValue, setFilterTextValue] = useState("All");
+
+  function onFilterValueSelected(filterValue) {
+    setFilterTextValue(filterValue);
+  }
 
   return (
     <div>
       <NavbarSection
-        onRemove={onRemove}
+        //-------------------------------
+        sum={sum}
+        taxPrice={taxPrice}
+        shippingPrice={shippingPrice}
+        totalPrice={totalPrice}
+        amountToFreeShippingPrice={amountToFreeShippingPrice}
+        //---------------------------
+        handleIncrement={handleIncrement}
+        handleDecrement={handleDecrement}
+        deleteItems={deleteItems}
         likedItems={likedItems}
         boughtItems={boughtItems}
         toggleBurger={toggleBurger}
@@ -87,35 +140,44 @@ function App() {
       <Switch>
         <Route exact path="/">
           <IndexPage
-            renderItems={renderItems}
+            renderLikedItems={renderLikedItems}
             addItemToCart={addItemToCart}
             products={products}
           ></IndexPage>
         </Route>
         <Route path="/womenPage">
           <WomenPage
-            renderItems={renderItems}
+            onFilterValueSelected={onFilterValueSelected}
+            setFilterTextValue={setFilterTextValue}
+            filterTextValue={filterTextValue}
             addItemToCart={addItemToCart}
+            products={products}
           ></WomenPage>
         </Route>
         <Route path="/menPage">
           <MenPage
             products={products}
-            renderItems={renderItems}
             addItemToCart={addItemToCart}
+            onFilterValueSelected={onFilterValueSelected}
+            setFilterTextValue={setFilterTextValue}
+            filterTextValue={filterTextValue}
           ></MenPage>
         </Route>
         <Route path="/kidsPage">
           <KidsPage
+            onFilterValueSelected={onFilterValueSelected}
+            setFilterTextValue={setFilterTextValue}
+            filterTextValue={filterTextValue}
             products={products}
-            renderItems={renderItems}
             addItemToCart={addItemToCart}
           ></KidsPage>
         </Route>
         <Route path="/outletPage">
           <OutletPage
+            onFilterValueSelected={onFilterValueSelected}
+            setFilterTextValue={setFilterTextValue}
+            filterTextValue={filterTextValue}
             products={products}
-            renderItems={renderItems}
             addItemToCart={addItemToCart}
           ></OutletPage>
         </Route>
@@ -126,13 +188,24 @@ function App() {
           <ItemOverviewPage
             onAdd={onAdd}
             addToCart={addToCart}
-            renderItems={renderItems}
+            setAddToCart={setAddToCart}
           ></ItemOverviewPage>
         </Route>
         <Route path="/checkoutPage">
           <CheckOutPage
+            //---------------------
+            sum={sum}
+            taxPrice={taxPrice}
+            shippingPrice={shippingPrice}
+            totalPrice={totalPrice}
+            amountToFreeShippingPrice={amountToFreeShippingPrice}
+            //-------------------
+            setBoughtItems={setBoughtItems}
+            products={products}
             boughtItems={boughtItems}
-            onRemove={onRemove}
+            deleteItems={deleteItems}
+            handleIncrement={handleIncrement}
+            handleDecrement={handleDecrement}
           ></CheckOutPage>
         </Route>
       </Switch>

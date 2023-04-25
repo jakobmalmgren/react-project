@@ -9,7 +9,8 @@ function ItemOverviewPage(props) {
         <ItemOverviewPageContent
           {...item}
           onAdd={props.onAdd}
-          renderItems={props.renderItems}
+          addToCart={props.addToCart}
+          setAddToCart={props.setAddToCart}
         ></ItemOverviewPageContent>
       );
     });

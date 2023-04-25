@@ -1,10 +1,7 @@
 const products = [
   {
     id: 1,
-    image: {
-      img1: "/newBalance1.avif",
-      img2: "/newBalanceBrand.avif",
-    },
+    image: ["/newBalance1.avif", "/newBalanceBrand.avif"],
     item: "SHOES",
     description: "New Balance Hero",
     price: 90,
@@ -15,10 +12,7 @@ const products = [
   },
   {
     id: 2,
-    image: {
-      img1: "/nike.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/nike.avif", "/nikeBrand.avif"],
     item: "SHOES",
     description: "Nike 102 Max",
     price: 80,
@@ -29,10 +23,7 @@ const products = [
   },
   {
     id: 3,
-    image: {
-      img1: "/converse2.jpeg",
-      img2: "/converseBrand.avif",
-    },
+    image: ["/converse2.jpeg", "/converse2.jpeg"],
     item: "SHOES",
     description: "Converse Original",
     price: 65,
@@ -43,10 +34,7 @@ const products = [
   },
   {
     id: 4,
-    image: {
-      img1: "/louisVuitton.avif",
-      img2: "/LVBrand.avif",
-    },
+    image: ["/louisVuitton.avif", "/LVBrand.avif"],
     item: "SHOES",
     description: "louisVuitton Supra",
     price: 165,
@@ -57,10 +45,7 @@ const products = [
   },
   {
     id: 5,
-    image: {
-      img1: "/nikeShoes3.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/nikeShoes3.avif", "/nikeBrand.avif"],
     item: "SHOES",
     description: "Nike air max",
     price: 135,
@@ -71,10 +56,7 @@ const products = [
   },
   {
     id: 6,
-    image: {
-      img1: "/nikeShoes4.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/nikeShoes4.avif", "/nikeBrand.avif"],
     item: "SHOES",
     description: "Nike Pro Solid",
     price: 115,
@@ -85,10 +67,7 @@ const products = [
   },
   {
     id: 7,
-    image: {
-      img1: "/fila.avif",
-      img2: "/filaBrand.avif",
-    },
+    image: ["/fila.avif", "/filaBrand.avif"],
     item: "SHOES",
     description: "Fila Retro",
     price: 75,
@@ -99,10 +78,8 @@ const products = [
   },
   {
     id: 8,
-    image: {
-      img1: "//nikeShoes5.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/nikeShoes5.avif", "/nikeBrand.avif"],
+
     item: "SHOES",
     description: "Nike Air Max 905",
     price: 125,
@@ -113,10 +90,8 @@ const products = [
   },
   {
     id: 9,
-    image: {
-      img1: "/converse3.jpeg",
-      img2: "/converseBrand.avif",
-    },
+    image: ["/converse3.jpeg", "/converseBrand.avif"],
+
     item: "SHOES",
     description: "Converse Razz",
     price: 65,
@@ -127,10 +102,8 @@ const products = [
   },
   {
     id: 10,
-    image: {
-      img1: "/converse4.jpeg",
-      img2: "/converseBrand.avif",
-    },
+    image: ["/converse4.jpeg", "/converseBrand.avif"],
+
     item: "SHOES",
     description: "Converse Superheroes",
     price: 95,
@@ -141,10 +114,8 @@ const products = [
   },
   {
     id: 11,
-    image: {
-      img1: "/drMartens.jpg",
-      img2: "/drMartensBrand.avif",
-    },
+    image: ["/drMartens.jpg", "/drMartensBrand.avif"],
+
     item: "SHOES",
     description: "Dr Martens Original",
     price: 55,
@@ -155,10 +126,8 @@ const products = [
   },
   {
     id: 12,
-    image: {
-      img1: "/adidasShoes.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/adidasShoes.avif", "/adidasBrand.avif"],
+
     item: "SHOES",
     description: "Adidas Concrete 105",
     price: 95,
@@ -169,10 +138,8 @@ const products = [
   },
   {
     id: 13,
-    image: {
-      img1: "/nikeShoes6.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/nikeShoes6.avif", "/nikeBrand.avif"],
+
     item: "SHOES",
     description: "Nike Sprinter 203",
     price: 105,
@@ -183,10 +150,8 @@ const products = [
   },
   {
     id: 14,
-    image: {
-      img1: "/vans.avif",
-      img2: "/vansBrand.avif",
-    },
+    image: ["/vans.avif", "/vansBrand.avif"],
+
     item: "SHOES",
     description: "Vans Classic",
     price: 75,
@@ -197,10 +162,8 @@ const products = [
   },
   {
     id: 15,
-    image: {
-      img1: "nikeShoes7.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["nikeShoes7.avif", "/nikeBrand.avif"],
+
     item: "SHOES",
     description: "Nike Solo",
     price: 105,
@@ -211,10 +174,8 @@ const products = [
   },
   {
     id: 16,
-    image: {
-      img1: "/nikeAirJordan.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/nikeAirJordan.avif", "/nikeBrand.avif"],
+
     item: "SHOES",
     description: "Nike Air Jordan 666",
     price: 85,
@@ -225,10 +186,8 @@ const products = [
   },
   {
     id: 17,
-    image: {
-      img1: "/pumashoes.avif",
-      img2: "/pumaBrand.avif",
-    },
+    image: ["/pumashoes.avif", "/pumaBrand.avif"],
+
     item: "SHOES",
     description: "Puma Clean Edition",
     price: 145,
@@ -239,10 +198,8 @@ const products = [
   },
   {
     id: 18,
-    image: {
-      img1: "/nikeShoes8.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/nikeShoes8.avif", "/nikeBrand.avif"],
+
     item: "SHOES",
     description: "Nike Air Supreme",
     price: 105,
@@ -253,10 +210,8 @@ const products = [
   },
   {
     id: 19,
-    image: {
-      img1: "/adidas2.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/adidas2.avif", "/adidasBrand.avif"],
+
     item: "SHOES",
     description: "Adidas Conquer",
     price: 75,
@@ -267,10 +222,8 @@ const products = [
   },
   {
     id: 20,
-    image: {
-      img1: "/adidas3.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/adidas3.avif", "/adidasBrand.avif"],
+
     item: "SHOES",
     description: "Adidas Boost",
     price: 135,
@@ -284,10 +237,8 @@ const products = [
 
   {
     id: 21,
-    image: {
-      img1: "/t-shirt1.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/t-shirt1.avif", "/gantBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Gant",
     price: 60,
@@ -298,10 +249,8 @@ const products = [
   },
   {
     id: 22,
-    image: {
-      img1: "/t-shirt2.avif",
-      img2: "/tigerBrand.png",
-    },
+    image: ["/t-shirt2.avif", "/tigerBrand.png"],
+
     item: "T-SHIRT",
     description: "Tiger of sweden",
     price: 80,
@@ -312,10 +261,8 @@ const products = [
   },
   {
     id: 23,
-    image: {
-      img1: "/t-shirt3.avif",
-      img2: "/reebokBrand.jpg",
-    },
+    image: ["/t-shirt3.avif", "/reebokBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Rebook",
     price: 65,
@@ -326,10 +273,8 @@ const products = [
   },
   {
     id: 24,
-    image: {
-      img1: "/t-shirt4.avif",
-      img2: "/LVBrand.avif",
-    },
+    image: ["/t-shirt4.avif", "/LVBrand.avif"],
+
     item: "T-SHIRT",
     description: "louisVuitton",
     price: 85,
@@ -340,10 +285,8 @@ const products = [
   },
   {
     id: 25,
-    image: {
-      img1: "/t-shirt5.avif",
-      img2: "/dolceBrand.jpg",
-    },
+    image: ["/t-shirt5.avif", "/dolceBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Dolce & Gabbana",
     price: 135,
@@ -354,10 +297,8 @@ const products = [
   },
   {
     id: 26,
-    image: {
-      img1: "/t-shirt6.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/t-shirt6.avif", "/gantBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Gant",
     price: 115,
@@ -368,10 +309,8 @@ const products = [
   },
   {
     id: 27,
-    image: {
-      img1: "/t-shirt7.avif",
-      img2: "/filaBrand.avif",
-    },
+    image: ["/t-shirt7.avif", "/filaBrand.avif"],
+
     item: "T-SHIRT",
     description: "Fila",
     price: 75,
@@ -382,10 +321,8 @@ const products = [
   },
   {
     id: 28,
-    image: {
-      img1: "/t-shirt8.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/t-shirt8.avif", "/nikeBrand.avif"],
+
     item: "T-SHIRT",
     description: "Nike ",
     price: 55,
@@ -396,10 +333,8 @@ const products = [
   },
   {
     id: 29,
-    image: {
-      img1: "/t-shirt9.avif",
-      img2: "/converseBrand.avif",
-    },
+    image: ["/t-shirt9.avif", "/converseBrand.avif"],
+
     item: "T-SHIRT",
     description: "Converse",
     price: 35,
@@ -410,10 +345,8 @@ const products = [
   },
   {
     id: 30,
-    image: {
-      img1: "/t-shirt10.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/t-shirt10.avif", "/gantBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Gant",
     price: 95,
@@ -424,10 +357,8 @@ const products = [
   },
   {
     id: 31,
-    image: {
-      img1: "/t-shirt11.avif",
-      img2: "/dolceBrand.jpg",
-    },
+    image: ["/t-shirt11.avif", "/dolceBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Dolce & Gabbana",
     price: 55,
@@ -438,10 +369,8 @@ const products = [
   },
   {
     id: 32,
-    image: {
-      img1: "/t-shirt12.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/t-shirt12.avif", "/adidasBrand.avif"],
+
     item: "T-SHIRT",
     description: "Adidas",
     price: 45,
@@ -452,10 +381,8 @@ const products = [
   },
   {
     id: 33,
-    image: {
-      img1: "/t-shirt13.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/t-shirt13.avif", "/gantBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Gant",
     price: 45,
@@ -466,10 +393,8 @@ const products = [
   },
   {
     id: 34,
-    image: {
-      img1: "/t-shirt14.avif",
-      img2: "/vansBrand.avif",
-    },
+    image: ["/t-shirt14.avif", "/vansBrand.avif"],
+
     item: "T-SHIRT",
     description: "Vans",
     price: 55,
@@ -480,10 +405,8 @@ const products = [
   },
   {
     id: 35,
-    image: {
-      img1: "/t-shirt15.avif",
-      img2: "/ralphBrand.jpg",
-    },
+    image: ["/t-shirt15.avif", "/ralphBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Ralph Lauren",
     price: 105,
@@ -494,10 +417,8 @@ const products = [
   },
   {
     id: 36,
-    image: {
-      img1: "/t-shirt16.avif",
-      img2: "gantBrand.jpg",
-    },
+    image: ["/t-shirt16.avif", "gantBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Gant",
     price: 85,
@@ -508,10 +429,8 @@ const products = [
   },
   {
     id: 37,
-    image: {
-      img1: "/t-shirt17.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/t-shirt17.avif", "/nikeBrand.avif"],
+
     item: "T-SHIRT",
     description: "Nike",
     price: 45,
@@ -522,10 +441,8 @@ const products = [
   },
   {
     id: 38,
-    image: {
-      img1: "/t-shirt18.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/t-shirt18.avif", "/adidasBrand.avif"],
+
     item: "T-SHIRT",
     description: "Adidas",
     price: 35,
@@ -536,10 +453,8 @@ const products = [
   },
   {
     id: 39,
-    image: {
-      img1: "/t-shirt19.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/t-shirt19.avif", "/adidasBrand.avif"],
+
     item: "T-SHIRT",
     description: "Adidas",
     price: 35,
@@ -550,10 +465,8 @@ const products = [
   },
   {
     id: 40,
-    image: {
-      img1: "/t-shirt20.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/t-shirt20.avif", "/gantBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Gant",
     price: 85,
@@ -565,10 +478,8 @@ const products = [
   //   -----
   {
     id: 41,
-    image: {
-      img1: "/pants1.avif",
-      img2: "s/dolceBrand.jpg",
-    },
+    image: ["/pants1.avif", "s/dolceBrand.jpg"],
+
     item: "PANTS",
     description: "Dolce & Gabbana",
     price: 115,
@@ -579,10 +490,8 @@ const products = [
   },
   {
     id: 42,
-    image: {
-      img1: "/pants2.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/pants2.avif", "/gantBrand.jpg"],
+
     item: "PANTS",
     description: "Gant",
     price: 95,
@@ -592,11 +501,9 @@ const products = [
       "These jeans are faded and lightly distressed at the pockets to look like an authentic '90s pair. Made from organic cotton-denim washed in a classic hue the label calls 'Black Tea', they sit high on the waist and have a straight fit through the legs. Wear yours with everything from cropped cardigans to bodysuits.",
   },
   {
-    id: 42,
-    image: {
-      img1: "/pants3.avif",
-      img2: "/filaBrand.avif",
-    },
+    id: 43,
+    image: ["/pants3.avif", "/filaBrand.avif"],
+
     item: "PANTS",
     description: "Fila",
     price: 85,
@@ -607,10 +514,8 @@ const products = [
   },
   {
     id: 44,
-    image: {
-      img1: "/pants4.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/pants4.avif", "/nikeBrand.avif"],
+
     item: "PANTS",
     description: "Nike ",
     price: 75,
@@ -621,10 +526,8 @@ const products = [
   },
   {
     id: 45,
-    image: {
-      img1: "/pants5.avif",
-      img2: "/converseBrand.avif",
-    },
+    image: ["/pants5.avif", "/converseBrand.avif"],
+
     item: "PANTS",
     description: "Converse",
     price: 65,
@@ -635,10 +538,8 @@ const products = [
   },
   {
     id: 46,
-    image: {
-      img1: "/pants6.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/pants6.avif", "/gantBrand.jpg"],
+
     item: "PANTS",
     description: "Gant",
     price: 95,
@@ -649,10 +550,8 @@ const products = [
   },
   {
     id: 47,
-    image: {
-      img1: "/pants7.avif",
-      img2: "/dolceBrand.jpg",
-    },
+    image: ["/pants7.avif", "/dolceBrand.jpg"],
+
     item: "PANTS",
     description: "Dolce & Gabbana",
     price: 155,
@@ -663,10 +562,8 @@ const products = [
   },
   {
     id: 48,
-    image: {
-      img1: "/pants8.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/pants8.avif", "/adidasBrand.avif"],
+
     item: "PANTS",
     description: "Adidas",
     price: 75,
@@ -677,10 +574,8 @@ const products = [
   },
   {
     id: 49,
-    image: {
-      img1: "/pants9.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/pants9.avif", "/gantBrand.jpg"],
+
     item: "PANTS",
     description: "Gant",
     price: 115,
@@ -691,10 +586,8 @@ const products = [
   },
   {
     id: 50,
-    image: {
-      img1: "/pants10.avif",
-      img2: "/vansBrand.avif",
-    },
+    image: ["/pants10.avif", "/vansBrand.avif"],
+
     item: "PANTS",
     description: "Vans",
     price: 95,
@@ -705,10 +598,8 @@ const products = [
   },
   {
     id: 51,
-    image: {
-      img1: "/pants11.avif",
-      img2: "/ralphBrand.jpg",
-    },
+    image: ["/pants11.avif", "/ralphBrand.jpg"],
+
     item: "PANTS",
     description: "Ralph Lauren",
     price: 225,
@@ -719,10 +610,8 @@ const products = [
   },
   {
     id: 52,
-    image: {
-      img1: "/pants12.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/pants12.avif", "/gantBrand.jpg"],
+
     item: "PANTS",
     description: "Gant",
     price: 135,
@@ -733,10 +622,8 @@ const products = [
   },
   {
     id: 53,
-    image: {
-      img1: "/pants13.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/pants13.avif", "/nikeBrand.avif"],
+
     item: "PANTS",
     description: "Nike",
     price: 85,
@@ -747,10 +634,8 @@ const products = [
   },
   {
     id: 54,
-    image: {
-      img1: "/pants14.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/pants14.avif", "/adidasBrand.avif"],
+
     item: "PANTS",
     description: "Adidas",
     price: 75,
@@ -761,10 +646,8 @@ const products = [
   },
   {
     id: 55,
-    image: {
-      img1: "/pants15.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/pants15.avif", "/adidasBrand.avif"],
+
     item: "PANTS",
     description: "Adidas",
     price: 135,
@@ -775,10 +658,8 @@ const products = [
   },
   {
     id: 56,
-    image: {
-      img1: "/pants16.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/pants16.avif", "/gantBrand.jpg"],
+
     item: "PANTS",
     description: "Gant",
     price: 125,
@@ -792,10 +673,8 @@ const products = [
 
   {
     id: 57,
-    image: {
-      img1: "/kids1.avif",
-      img2: "/bossBrand.webp",
-    },
+    image: ["/kids1.avif", "/bossBrand.webp"],
+
     item: "SHORTS",
     description: "Hugo Boss",
     price: 25,
@@ -806,10 +685,8 @@ const products = [
   },
   {
     id: 58,
-    image: {
-      img1: "/kidsDress.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/kidsDress.avif", "/gantBrand.jpg"],
+
     item: "SHIRT",
     description: "Gant",
     price: 45,
@@ -820,10 +697,8 @@ const products = [
   },
   {
     id: 59,
-    image: {
-      img1: "/kidsJacket.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/kidsJacket.avif", "/gantBrand.jpg"],
+
     item: "JACKET",
     description: "Gant",
     price: 65,
@@ -834,10 +709,8 @@ const products = [
   },
   {
     id: 60,
-    image: {
-      img1: "/kidsPants3.avif",
-      img2: "/ralphBrand.jpg",
-    },
+    image: ["/kidsPants3.avif", "/ralphBrand.jpg"],
+
     item: "PANTS",
     description: "Ralph Lauren",
     price: 85,
@@ -848,10 +721,8 @@ const products = [
   },
   {
     id: 61,
-    image: {
-      img1: "/kidsPants4.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/kidsPants4.avif", "/adidasBrand.avif"],
+
     item: "PANTS",
     description: "Adidas",
     price: 45,
@@ -862,10 +733,8 @@ const products = [
   },
   {
     id: 62,
-    image: {
-      img1: "/kidsPants5.avif",
-      img2: "/nikeBrand.avif",
-    },
+    image: ["/kidsPants5.avif", "/nikeBrand.avif"],
+
     item: "PANTS",
     description: "Nike",
     price: 35,
@@ -876,10 +745,8 @@ const products = [
   },
   {
     id: 63,
-    image: {
-      img1: "/kidsPants6.avif",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/kidsPants6.avif", "/adidasBrand.avif"],
+
     item: "PANTS",
     description: "Adidas",
     price: 25,
@@ -891,10 +758,8 @@ const products = [
 
   {
     id: 64,
-    image: {
-      img1: "/kidsShirt.avif",
-      img2: "/bossBrand.webp",
-    },
+    image: ["/kidsShirt.avif", "/bossBrand.webp"],
+
     item: "SHIRT",
     description: "Hugo Boss",
     price: 55,
@@ -905,10 +770,8 @@ const products = [
   },
   {
     id: 65,
-    image: {
-      img1: "/kidsSweater.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/kidsSweater.avif", "/gantBrand.jpg"],
+
     item: "SWEATSHIRT",
     description: "Gant",
     price: 75,
@@ -919,10 +782,8 @@ const products = [
   },
   {
     id: 66,
-    image: {
-      img1: "/kidsSweater2.avif",
-      img2: "/gantBrand.jpg",
-    },
+    image: ["/kidsSweater2.avif", "/gantBrand.jpg"],
+
     item: "SWEATSHIRT",
     description: "Gant",
     price: 85,
@@ -933,10 +794,8 @@ const products = [
   },
   {
     id: 67,
-    image: {
-      img1: "/kidsShoes.jpg",
-      img2: "/adidasBrand.avif",
-    },
+    image: ["/kidsShoes.jpg", "/adidasBrand.avif"],
+
     item: "SHOES",
     description: "Adidas",
     price: 45,
@@ -947,10 +806,8 @@ const products = [
   },
   {
     id: 68,
-    image: {
-      img1: "/kidsTshirt2.avif",
-      img2: "/reebokBrand.jpg",
-    },
+    image: ["/kidsTshirt2.avif", "/reebokBrand.jpg"],
+
     item: "T-SHIRT",
     description: "Rebook",
     price: 15,

@@ -8,20 +8,33 @@ function MenPage(props) {
     .filter((item) => {
       return item.category === "men";
     })
+    .filter((item) => {
+      if (props.filterTextValue === "Pants") {
+        return item.item === "PANTS";
+      } else if (props.filterTextValue === "T-shirts")
+        return item.item === "T-SHIRT";
+      else if (props.filterTextValue === "Jackets")
+        return item.item === "JACKET";
+      else if (props.filterTextValue === "Shorts")
+        return item.item === "SHORTS";
+      else if (props.filterTextValue === "Shoes") return item.item === "SHOES";
+      else if (props.filterTextValue === "Sweatshirts")
+        return item.item === "SWEATSHIRT";
+      else if (props.filterTextValue === "Discount")
+        return item.discount === true;
+      else return item;
+    })
     .map((men) => {
       return (
-        <Card
-          key={men.id}
-          {...men}
-          renderItems={props.renderItems}
-          addItemToCart={props.addItemToCart}
-        ></Card>
+        <Card key={men.id} {...men} addItemToCart={props.addItemToCart}></Card>
       );
     });
   return (
     <div>
       <h1>Men</h1>
-      <FilterButton></FilterButton>
+      <FilterButton
+        onFilterValueSelected={props.onFilterValueSelected}
+      ></FilterButton>
       <div className={css.cardWrapper}> {filteredMen}</div>
     </div>
   );

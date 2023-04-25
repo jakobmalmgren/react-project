@@ -44,10 +44,16 @@
 .totalCountWrapper {
   margin-top: 10px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
 .totalCountWrapper h2 {
   font-size: 19px;
   font-weight: lighter;
+}
+.totalCountWrapper h3 {
+  font-size: 13px;
+  font-weight: lighter;
+}
+.shippingWrapper {
+  display: flex;
+  align-items: center;
 }

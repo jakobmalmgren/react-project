@@ -1,3 +1,17 @@
+.discountIcon {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(0 24 0 / 78%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 20px;
+  font-family: "Dancing Script", cursive;
+}
+
 .header {
   text-align: center;
   margin: 25px 0px;
@@ -25,6 +39,7 @@
   object-fit: cover;
   padding: 8px;
   cursor: pointer;
+  position: relative;
 }
 
 .sectionInfo {
@@ -55,11 +70,7 @@
   align-items: center;
   color: rgb(0 24 0 / 78%);
 }
-.discountIcon {
-  width: 60px;
-  height: 60px;
-  color: red;
-}
+
 .heartIcon {
   display: flex;
 }

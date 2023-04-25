@@ -3,6 +3,9 @@ import css from "./FilterButton.module.css";
 import { useState } from "react";
 
 function FilterButton(props) {
+  function changeValue(e) {
+    props.onFilterValueSelected(e.target.value);
+  }
   const [toggleFilter, setToggleFilter] = useState(false);
   return (
     <div className={css.contentWrapper}>
@@ -19,18 +22,16 @@ function FilterButton(props) {
       {toggleFilter && (
         <div className={css.inputWrapper}>
           <div className={css.filterInput}>
-            <input type="checkbox" id="pants" />
-            <label for="pants">Pants</label>
-            <input type="checkbox" id="tshirt" />
-            <label for="tshirt">T-shirts</label>
-            <input type="checkbox" id="jacket" />
-            <label for="jacket">Jackets</label>
-            <input type="checkbox" id="shorts" />
-            <label for="shorts">Shorts</label>
-            <input type="checkbox" id="shirt" />
-            <label for="shirt">Shirts</label>
-            <input type="checkbox" id="sweathshirts" />
-            <label for="sweatshirts">Sweatshirts</label>
+            <select name="filter" onChange={changeValue}>
+              <option value="All">All</option>
+              <option value="Pants">Pants</option>
+              <option value="Shoes">Shoes</option>
+              <option value="T-shirts">T-shirts</option>
+              <option value="Jackets">Jackets</option>
+              <option value="Shorts">Shorts</option>
+              <option value="Sweatshirts">Sweatshirts</option>
+              <option value="Discount">Discount</option>
+            </select>
           </div>
         </div>
       )}

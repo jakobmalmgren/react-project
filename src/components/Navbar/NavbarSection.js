@@ -53,9 +53,19 @@ function NavbarSection(props) {
 
         {props.openMyShoppingCartPage && (
           <MyShoppingCartPage
+            //------------
+            sum={props.sum}
+            taxPrice={props.taxPrice}
+            shippingPrice={props.shippingPrice}
+            totalPrice={props.totalPrice}
+            amountToFreeShippingPrice={props.amountToFreeShippingPrice}
+            //-----------------
+            deleteItems={props.deleteItems}
+            handleDecrement={props.handleDecrement}
+            handleIncrement={props.handleIncrement}
             boughtItems={props.boughtItems}
-            onRemove={props.onRemove}
-            onAdd={props.onAdd}
+            // onAdd={props.onAdd}
+
             setOpenMyShoppingCartPage={props.setOpenMyShoppingCartPage}
           ></MyShoppingCartPage>
         )}
@@ -67,19 +77,19 @@ function NavbarSection(props) {
               props.setOpenMyShoppingCartPage(!props.openMyShoppingCartPage);
             }}
           ></BsCart3>
+          <div className={props.boughtItems.length > 0 ? css.cartCounter : ""}>
+            {props.boughtItems.length <= 0 ? "" : props.boughtItems.length}
+          </div>
 
           <Link to="/MyFavoritesPage" className={css.heartWrapper}>
             <VscHeart className={css.navIcon}> </VscHeart>
-            <div
-              className={props.boughtItems.length > 0 ? css.cartCounter : ""}
-            >
-              {props.boughtItems.length <= 0 ? "" : props.boughtItems.length}
-            </div>
+            {/* här  */}
             <div
               className={props.likedItems.length > 0 ? css.favoriteCounter : ""}
             >
               {props.likedItems.length <= 0 ? "" : props.likedItems.length}
             </div>
+            {/* här */}
           </Link>
         </div>
       </div>
