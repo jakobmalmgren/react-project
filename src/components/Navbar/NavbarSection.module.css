@@ -46,7 +46,6 @@
 .heartWrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 .heartWrapper :nth-child(1) {
   margin-right: 25px;
@@ -80,6 +79,7 @@
   align-items: center;
   font-size: 13px;
 }
+
 .signInWrapper {
   color: black;
   font-size: 15px;

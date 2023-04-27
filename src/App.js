@@ -13,19 +13,25 @@ import { useState } from "react";
 import ItemOverviewPage from "./pages/ItemOverviewPage/ItemOverviewPage";
 import CheckOutPage from "./pages/CheckOutPage/CheckOutPage";
 import products from "./data/products";
+import { useEffect } from "react";
 
 function App() {
   const [toggleBurger, setToggleBurger] = useState(false); // öppnar/stännger Burgermenu
   const [openMyShoppingCartPage, setOpenMyShoppingCartPage] = useState(false); // öppnar/stänger myshoppingcartpage
+  function handleMyShoppingCartPage() {
+    setOpenMyShoppingCartPage(!openMyShoppingCartPage); // öppnar/stänger myshoppingcartpage function
+  }
 
   // -----------------------läggeer till i itemoverviewpage!
   const [addToCart, setAddToCart] = useState([]);
   function addItemToCart(products) {
     setAddToCart([products]);
   }
+
   //----------------------------------------------
 
   //--------------------------lägger till MyfavoritePage
+  //lägga toll localstorage här me...som ja gjrde innan..
   function renderLikedItems(item) {
     const exist = likedItems.find((x) => {
       return item.id === x.id;
@@ -42,7 +48,10 @@ function App() {
   //----------------------------------------------------
 
   //------------------lägger till va man valt att köpa i myshoppingcartpage MED state!
-  const [boughtItems, setBoughtItems] = useState([]);
+  const getMyCartFromLocalStorage = JSON.parse(
+    localStorage.getItem("myShoppingCart")
+  );
+  const [boughtItems, setBoughtItems] = useState(getMyCartFromLocalStorage);
 
   function onAdd(item) {
     const exist = boughtItems.find((x) => {
@@ -58,6 +67,9 @@ function App() {
       setBoughtItems([...boughtItems, { ...item, qty: 1 }]);
     }
   }
+  useEffect(() => {
+    localStorage.setItem("myShoppingCart", JSON.stringify(boughtItems));
+  }, [boughtItems]);
 
   //lägger till o tar bor antalet items----------------------------
   function handleDecrement(product) {
@@ -115,9 +127,28 @@ function App() {
     setFilterTextValue(filterValue);
   }
 
+  //-------------------------------------
+  const [openSignIn, setOpenSignIn] = useState(false); // öppnar stänger signInpage o fixar så modal kmr o ingen scroll
+  //i bode signinpage OCH myshoppingcartpage...
+  //men vill fixa annnrolunda här under o nå body o ändra classname dynamisk
+
+  if (openSignIn || openMyShoppingCartPage) {
+    //prevent from scrolling
+    document.body.classList.add("active");
+  } else {
+    document.body.classList.remove("active");
+  }
+
+  function handleSignIn() {
+    setOpenSignIn(!openSignIn);
+  }
+  //--------------------------------------------------------------------
+
   return (
     <div>
       <NavbarSection
+        handleMyShoppingCartPage={handleMyShoppingCartPage}
+        openMyShoppingCartPage={openMyShoppingCartPage}
         //-------------------------------
         sum={sum}
         taxPrice={taxPrice}
@@ -125,6 +156,9 @@ function App() {
         totalPrice={totalPrice}
         amountToFreeShippingPrice={amountToFreeShippingPrice}
         //---------------------------
+        handleSignIn={handleSignIn}
+        openSignIn={openSignIn}
+        setOpenSignIn={setOpenSignIn}
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}
         deleteItems={deleteItems}
@@ -133,8 +167,6 @@ function App() {
         toggleBurger={toggleBurger}
         setToggleBurger={setToggleBurger}
         onAdd={onAdd}
-        openMyShoppingCartPage={openMyShoppingCartPage}
-        setOpenMyShoppingCartPage={setOpenMyShoppingCartPage}
       ></NavbarSection>
 
       <Switch>
@@ -188,7 +220,6 @@ function App() {
           <ItemOverviewPage
             onAdd={onAdd}
             addToCart={addToCart}
-            setAddToCart={setAddToCart}
           ></ItemOverviewPage>
         </Route>
         <Route path="/checkoutPage">

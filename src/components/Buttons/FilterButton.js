@@ -18,10 +18,8 @@ function FilterButton(props) {
         >
           FILTER <BiRightArrowCircle></BiRightArrowCircle>
         </button>
-      </div>
-      {toggleFilter && (
-        <div className={css.inputWrapper}>
-          <div className={css.filterInput}>
+        {toggleFilter && (
+          <div className={css.filterItems}>
             <select name="filter" onChange={changeValue}>
               <option value="All">All</option>
               <option value="Pants">Pants</option>
@@ -33,8 +31,8 @@ function FilterButton(props) {
               <option value="Discount">Discount</option>
             </select>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

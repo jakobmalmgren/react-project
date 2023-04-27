@@ -8,7 +8,6 @@ function Card(props) {
   if (props.discount === true) {
     discountIcon = "30%";
   }
-  // function handleDiscount() {}
 
   return (
     <div className={css.card}>

@@ -10,10 +10,8 @@ import SignInPage from "../../pages/SignInPage/SignInPage";
 import MobileNavigation from "./MobileNavigationSection";
 import MyShoppingCartPage from "../../pages/MyShoppingCartPage/MyShoppingCartPage";
 import css from "./NavbarSection.module.css";
-import { useState } from "react";
 
 function NavbarSection(props) {
-  const [openSignIn, setOpenSignIn] = useState(false); // öppnar stänger signInpage
   const burger = (
     <RxHamburgerMenu
       onClick={() => props.setToggleBurger(!props.toggleBurger)}
@@ -45,13 +43,18 @@ function NavbarSection(props) {
           </div>
         </div>
 
-        <button onClick={() => setOpenSignIn(true)} className={css.signInBtn}>
+        <button onClick={props.handleSignIn} className={css.signInBtn}>
           Sign in
         </button>
 
-        {openSignIn && <SignInPage setOpenSignIn={setOpenSignIn}></SignInPage>}
+        {/* {props.openSignIn && (
+          <SignInPage
+            handleSignIn={props.handleSignIn}
+            openSignIn={props.openSignIn}
+          ></SignInPage>
+        )} */}
 
-        {props.openMyShoppingCartPage && (
+        {/* {props.openMyShoppingCartPage && (
           <MyShoppingCartPage
             //------------
             sum={props.sum}
@@ -60,22 +63,39 @@ function NavbarSection(props) {
             totalPrice={props.totalPrice}
             amountToFreeShippingPrice={props.amountToFreeShippingPrice}
             //-----------------
+            openMyShoppingCartPage={props.openMyShoppingCartPage}
+            handleMyShoppingCartPage={props.handleMyShoppingCartPage}
             deleteItems={props.deleteItems}
             handleDecrement={props.handleDecrement}
             handleIncrement={props.handleIncrement}
             boughtItems={props.boughtItems}
-            // onAdd={props.onAdd}
-
-            setOpenMyShoppingCartPage={props.setOpenMyShoppingCartPage}
           ></MyShoppingCartPage>
-        )}
+        )} */}
+
+        <SignInPage
+          handleSignIn={props.handleSignIn}
+          openSignIn={props.openSignIn}
+        ></SignInPage>
+
+        <MyShoppingCartPage
+          sum={props.sum}
+          taxPrice={props.taxPrice}
+          shippingPrice={props.shippingPrice}
+          totalPrice={props.totalPrice}
+          amountToFreeShippingPrice={props.amountToFreeShippingPrice}
+          //-----------------
+          openMyShoppingCartPage={props.openMyShoppingCartPage}
+          handleMyShoppingCartPage={props.handleMyShoppingCartPage}
+          deleteItems={props.deleteItems}
+          handleDecrement={props.handleDecrement}
+          handleIncrement={props.handleIncrement}
+          boughtItems={props.boughtItems}
+        ></MyShoppingCartPage>
 
         <div className={css.navIconWrapper}>
           <BsCart3
             className={css.navIcon}
-            onClick={() => {
-              props.setOpenMyShoppingCartPage(!props.openMyShoppingCartPage);
-            }}
+            onClick={props.handleMyShoppingCartPage}
           ></BsCart3>
           <div className={props.boughtItems.length > 0 ? css.cartCounter : ""}>
             {props.boughtItems.length <= 0 ? "" : props.boughtItems.length}
@@ -83,13 +103,11 @@ function NavbarSection(props) {
 
           <Link to="/MyFavoritesPage" className={css.heartWrapper}>
             <VscHeart className={css.navIcon}> </VscHeart>
-            {/* här  */}
             <div
               className={props.likedItems.length > 0 ? css.favoriteCounter : ""}
             >
               {props.likedItems.length <= 0 ? "" : props.likedItems.length}
             </div>
-            {/* här */}
           </Link>
         </div>
       </div>

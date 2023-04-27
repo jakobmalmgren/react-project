@@ -8,10 +8,14 @@
   justify-content: center;
   align-items: center;
   position: absolute;
+  top: 15px;
+  right: 15px;
   font-size: 20px;
   font-family: "Dancing Script", cursive;
 }
-
+.bigImageWrapper {
+  position: relative;
+}
 .header {
   text-align: center;
   margin: 25px 0px;

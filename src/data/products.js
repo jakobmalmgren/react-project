@@ -778,7 +778,7 @@ const products = [
     category: "boys",
     discount: false,
     about:
-      " A timeless T-shirt for kids. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
+      " A timeless sweatshirt for kids. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
   },
   {
     id: 66,
@@ -815,6 +815,282 @@ const products = [
     discount: false,
     about:
       " A timeless T-shirt for kids. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
+  },
+  {
+    id: 69,
+    image: ["/adidasjacket2women.jpg", "/adidasBrand.avif"],
+
+    item: "JACKET",
+    description: "Adidas",
+    price: 95,
+    category: "women",
+    discount: false,
+    about:
+      " A modern jacket for women. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
+  },
+  {
+    id: 70,
+    image: ["/gantjacket2women.jpg", "/gantBrand.jpg"],
+
+    item: "JACKET",
+    description: "Gant",
+    price: 145,
+    category: "women",
+    discount: false,
+    about:
+      " A modern jacket for women. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
+  },
+  {
+    id: 71,
+    image: ["/gantjacketwomen.jpg", "/gantBrand.jpg"],
+
+    item: "JACKET",
+    description: "Gant",
+    price: 115,
+    category: "women",
+    discount: false,
+    about:
+      " A modern jacket for women. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
+  },
+  {
+    id: 72,
+    image: ["/hugobossjackettwomen.webp", "/bossBrand.webp"],
+
+    item: "JACKET",
+    description: "Hugo Boss",
+    price: 185,
+    category: "women",
+    discount: false,
+    about:
+      " A modern jacket for women. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
+  },
+  {
+    id: 73,
+    image: ["/shortswomengant.jpg", "/gantBrand.jpg"],
+
+    item: "SHORTS",
+    description: "Hugo Boss",
+    price: 75,
+    category: "women",
+    discount: false,
+    about:
+      " Slim-fit model for women, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
+  },
+  {
+    id: 74,
+    image: ["/shortswomenadidas.webp", "/adidasBrand.avif"],
+
+    item: "SHORTS",
+    description: "Adidas",
+    price: 45,
+    category: "women",
+    discount: false,
+    about:
+      " Slim-fit model for women, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
+  },
+  {
+    id: 75,
+    image: ["/shortswomenhugoboss.jpg", "/bossBrand.webp"],
+
+    item: "SHORTS",
+    description: "Hugo Boss",
+    price: 75,
+    category: "women",
+    discount: false,
+    about:
+      " Slim-fit model for women, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
+  },
+  {
+    id: 76,
+    image: ["/shortswomenrebook.jpg", "/reebokBrand.jpg"],
+
+    item: "SHORTS",
+    description: "Rebook",
+    price: 45,
+    category: "women",
+    discount: false,
+    about:
+      " Slim-fit model for women, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
+  },
+  {
+    id: 77,
+    image: ["/shortswomentigerofsweden.jpg", "/tigerBrand.png"],
+
+    item: "SHORTS",
+    description: "Tiger Of Sweden",
+    price: 65,
+    category: "women",
+    discount: false,
+    about:
+      " Slim-fit model for women, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
+  },
+  {
+    id: 78,
+    image: ["/sweatshirtwomenadidas.jpg", "/adidasBrand.avif"],
+
+    item: "SWEATSHIRT",
+    description: "Adidas",
+    price: 65,
+    category: "women",
+    discount: false,
+    about:
+      " A timeless sweatshirt for women. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
+  },
+  {
+    id: 79,
+    image: ["/sweatshirtwomengant.jpg", "/gantBrand.jpg"],
+
+    item: "SWEATSHIRT",
+    description: "Gant",
+    price: 95,
+    category: "women",
+    discount: false,
+    about:
+      " A timeless sweatshirt for women. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
+  },
+  {
+    id: 80,
+    image: ["/sweatshirtwomenreebok.jpg", "/reebokBrand.jpg"],
+
+    item: "SWEATSHIRT",
+    description: "Reebok",
+    price: 75,
+    category: "women",
+    discount: true,
+    about:
+      " A timeless sweatshirt for women. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
+  },
+  {
+    id: 81,
+    image: ["/sweatshirtwomentigerofsweden.jpg", "/tigerBrand.png"],
+
+    item: "SWEATSHIRT",
+    description: "Tiger Of Sweden",
+    price: 105,
+    category: "women",
+    discount: true,
+    about:
+      " A timeless sweatshirt for women. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
+  },
+  {
+    id: 82,
+    image: ["/jacketmenadidas.jpg", "/adidasBrand.avif"],
+
+    item: "JACKET",
+    description: "Adidas",
+    price: 134,
+    category: "men",
+    discount: true,
+    about:
+      " A modern jacket for men. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
+  },
+  {
+    id: 83,
+    image: ["/jacketmengant.jpg", "/gantBrand.jpg"],
+
+    item: "JACKET",
+    description: "Gant",
+    price: 185,
+    category: "men",
+    discount: true,
+    about:
+      " A modern jacket for men. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
+  },
+  {
+    id: 84,
+    image: ["/jacketmenhugoboss.webp", "/bossBrand.webp"],
+
+    item: "JACKET",
+    description: "Hugo Boss",
+    price: 215,
+    category: "men",
+    discount: false,
+    about:
+      " A modern jacket for men. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
+  },
+  {
+    id: 85,
+    image: ["/jacketmenreebok.jpg", "/reebokBrand.jpg"],
+
+    item: "JACKET",
+    description: "Reebok",
+    price: 115,
+    category: "men",
+    discount: false,
+    about:
+      " A modern jacket for men. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
+  },
+  {
+    id: 86,
+    image: ["/shortsmenadidas.webp", "/adidasBrand.avif"],
+
+    item: "SHORTS",
+    description: "Adidas",
+    price: 65,
+    category: "men",
+    discount: false,
+    about:
+      " Slim-fit model for men, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
+  },
+  {
+    id: 87,
+    image: ["/shortsmengant.jpg", "/gantBrand.jpg"],
+
+    item: "SHORTS",
+    description: "Gant",
+    price: 85,
+    category: "men",
+    discount: true,
+    about:
+      " Slim-fit model for men, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
+  },
+  {
+    id: 88,
+    image: ["/shortsmenhugoboss.webp", "/bossBrand.webp"],
+
+    item: "SHORTS",
+    description: "Hugo Boss",
+    price: 145,
+    category: "men",
+    discount: true,
+    about:
+      " Slim-fit model for men, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
+  },
+  {
+    id: 89,
+    image: ["/sweatshirtMenadidas.jpg", "/adidasBrand.avif"],
+
+    item: "SWEATSHIRT",
+    description: "Adidas",
+    price: 85,
+    category: "men",
+    discount: true,
+    about:
+      " A timeless sweatshirt for men. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
+  },
+  {
+    id: 90,
+    image: ["/sweatshirtMengant.jpg", "/gantBrand.jpg"],
+
+    item: "SWEATSHIRT",
+    description: "Gant",
+    price: 145,
+    category: "men",
+    discount: false,
+    about:
+      " A timeless sweatshirt for men. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
+  },
+  {
+    id: 91,
+    image: ["/sweatshirtMenreebok.jpg", "/reebokBrand.jpg"],
+
+    item: "SWEATSHIRT",
+    description: "Reebok",
+    price: 115,
+    category: "men",
+    discount: true,
+    about:
+      " A timeless sweatshirt for men. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
   },
 ];
 export default products;

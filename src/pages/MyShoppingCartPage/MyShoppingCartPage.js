@@ -14,36 +14,43 @@ function MyShoppingCartPage(props) {
           deleteItems={props.deleteItems}
           handleDecrement={props.handleDecrement}
           handleIncrement={props.handleIncrement}
-          // onAdd={props.onAdd}
         ></MyShoppingCartPageCard>
       );
     });
   }
-  return (
-    <div className={css.myShoppingCart}>
-      <div className={css.myShoppingCartHeader}>
-        <h2>
-          SHOPPING BAG(
-          {props.boughtItems.length <= 0 ? 0 : props.boughtItems.length})
-        </h2>
-        <CgCloseO
-          className={css.closingIcon}
-          onClick={() => {
-            props.setOpenMyShoppingCartPage(false);
-          }}
-        ></CgCloseO>
-      </div>
-      <div className={css.myShoppingCartInfo}>
-        {props.boughtItems.length <= 0 ? (
-          <div className={css.noItemsDiv}>
-            <h4>YOUR CART IS EMPTY</h4>
-          </div>
-        ) : (
-          ""
-        )}
-        {myShoppingCartPageCard}
 
-        <Link to="/checkoutPage">
+  return (
+    <div
+      className={
+        props.openMyShoppingCartPage ? css.active : css.containerWrapper
+      }
+    >
+      <div
+        className={css.overlay}
+        onClick={props.handleMyShoppingCartPage}
+      ></div>
+
+      <div className={css.myShoppingCart}>
+        <div className={css.myShoppingCartHeader}>
+          <h2>
+            SHOPPING BAG(
+            {props.boughtItems.length <= 0 ? 0 : props.boughtItems.length})
+          </h2>
+          <CgCloseO
+            className={css.closingIcon}
+            onClick={props.handleMyShoppingCartPage}
+          ></CgCloseO>
+        </div>
+        <div className={css.myShoppingCartInfo}>
+          {props.boughtItems.length <= 0 ? (
+            <div className={css.noItemsDiv}>
+              <h4>YOUR CART IS EMPTY</h4>
+            </div>
+          ) : (
+            ""
+          )}
+          {myShoppingCartPageCard}
+
           {props.boughtItems.length <= 0 ? (
             ""
           ) : (
@@ -64,11 +71,15 @@ function MyShoppingCartPage(props) {
 
                 <h2>Total: $ {props.totalPrice.toFixed(2)}</h2>
               </div>
-
-              <Button content="GO TO CHECKOUT"></Button>
+              <Link to="/checkoutPage">
+                <Button
+                  content="GO TO CHECKOUT"
+                  handleMyShoppingCartPage={props.handleMyShoppingCartPage}
+                ></Button>
+              </Link>
             </div>
           )}
-        </Link>
+        </div>
       </div>
     </div>
   );

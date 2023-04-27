@@ -1,22 +1,41 @@
-.formLogin {
-  width: 400px;
+.containerWrapper {
+  display: flex;
+  width: 100%;
   height: 100vh;
+  z-index: 1001;
+  position: fixed;
+  justify-content: end;
   position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
+  left: 1500px;
+  transition: 0.2s;
+}
+.active {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  z-index: 1001;
+  position: fixed;
+  justify-content: end;
+  position: absolute;
+  left: 0px;
+  transition: 0.2s;
+}
+
+.overlay {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.272);
+}
+.formLogin {
+  width: 550px;
+  height: 100vh;
   background-color: #485248;
-  border-left: 1px solid black;
-  border-top-left-radius: 35px;
 }
 .formHeader {
-  border-top-left-radius: 35px;
   background-color: #f2f3f3;
   height: 60px;
   display: flex;
   align-items: center;
   padding: 10px;
-  position: relative;
   width: 100%;
   justify-content: space-between;
 }

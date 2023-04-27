@@ -4,11 +4,13 @@
 }
 .btnWrapper {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 20px;
 }
 .filterBtn {
   width: 90px;
+  margin-right: 10px;
   height: 33px;
   font-size: 14px;
   background-color: white;
@@ -17,20 +19,4 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-}
-
-.inputWrapper {
-  justify-content: center;
-  display: flex;
-}
-.filterInput {
-  display: flex;
-
-  justify-content: space-evenly;
-  background-color: rgb(0 24 0 / 78%);
-  height: 40px;
-  width: 130px;
-  border-radius: 10px;
-  color: white;
-  align-items: center;
 }

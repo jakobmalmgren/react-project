@@ -13,12 +13,10 @@ function ItemOverviewPageContent(props) {
 
   const [bigImage, setBigImage] = useState(props.image[0]);
   function handleClick(index) {
-    console.log(index);
-
     setBigImage(props.image[index]);
   }
 
-  const images = props.image.map((item, index) => {
+  const smallImages = props.image.map((item, index) => {
     return (
       <div>
         <img
@@ -36,22 +34,13 @@ function ItemOverviewPageContent(props) {
   return (
     <div className={css.addToCartPage}>
       <div className={css.imageContainer}>
-        <div className={css.smallImageWrapper}>
-          {images}
-          {/* <img
-            src={`img/${props.image.img2}`}
-            alt=""
-            className={css.smallImage}
-          />
-          <img
-            src={`img/${props.image.img1}`}
-            alt=""
-            className={css.smallImage}
-          /> */}
+        <div className={css.smallImageWrapper}>{smallImages}</div>
+        <div className={css.bigImageWrapper}>
+          <img src={`img/${bigImage}`} alt="" className={css.bigImage} />
+          {discountIcon && (
+            <div className={css.discountIcon}>{discountIcon}</div>
+          )}
         </div>
-
-        {/* <img src={`img/${props.image.img1}`} alt="" className={css.bigImage} /> */}
-        <img src={`img/${bigImage}`} alt="" className={css.bigImage} />
       </div>
       <div className={css.sectionInfo}>
         <h4 className={css.header}>{props.description}</h4>
@@ -67,7 +56,6 @@ function ItemOverviewPageContent(props) {
             <BsCart3></BsCart3>ADD TO CART
           </button>
         </div>
-        {discountIcon && <div className={css.discountIcon}>{discountIcon}</div>}
 
         <div className={css.addToFav}>
           <div className={css.heartIcon}>

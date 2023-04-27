@@ -6,3 +6,6 @@
   text-decoration: none;
   font-family: "Alegreya SC", serif;
 }
+body.active {
+  overflow-y: hidden;
+}
