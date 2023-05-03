@@ -6,9 +6,9 @@ import { VscHeartFilled } from "react-icons/vsc";
 function Card(props) {
   let discountIcon;
   if (props.discount === true) {
-    discountIcon = "30%";
+    discountIcon = props.discountValue;
   }
-
+  const itemValue = (props.price / ((100 - props.discountValue) / 10)) * 10;
   return (
     <div className={css.card}>
       <Link to="/ItemOverviewPage">
@@ -21,10 +21,21 @@ function Card(props) {
           }}
         />
       </Link>
-      {discountIcon && <div className={css.discountIcon}>{discountIcon}</div>}
+      {discountIcon && <h2 className={css.discountIcon}>{discountIcon}%</h2>}
+      {discountIcon && (
+        <p className={css.itemValue}>
+          ${itemValue.toFixed(2)}
+          {/* ${(props.price / ((100 - props.discountValue) / 10)) * 10} */}
+        </p>
+      )}
       <h3 className={css.cardItem}>{props.item}</h3>
       <p className={css.cardDescription}>{props.description}</p>
-      <p className={css.cardPrice}>${props.price}</p>
+
+      {discountIcon ? (
+        <p className={css.cardPriceDiscount}>$ {props.price}</p>
+      ) : (
+        <p className={css.cardPrice}>$ {props.price}</p>
+      )}
 
       <div className={css.cardIcon}>
         <VscHeart

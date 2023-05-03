@@ -87,3 +87,9 @@
   font-size: 15px;
   cursor: pointer;
 }
+.myShoppingCartCardInfo .itemValue {
+  text-decoration: line-through;
+}
+.myShoppingCartCardInfo .cardPriceDiscount {
+  color: red;
+}

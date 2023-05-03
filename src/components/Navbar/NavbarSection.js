@@ -78,6 +78,15 @@ function NavbarSection(props) {
         ></SignInPage>
 
         <MyShoppingCartPage
+          //---
+          // discountPrice={props.discountPrice}
+          // taxPriceDiscount={props.taxPriceDiscount}
+          // shippingPriceDiscount={props.shippingPriceDiscount}
+          // amountToFreeShippingPriceDiscount={
+          //   props.amountToFreeShippingPriceDiscount
+          // }
+          // totalPriceDiscount={props.totalPriceDiscount}
+          //-
           sum={props.sum}
           taxPrice={props.taxPrice}
           shippingPrice={props.shippingPrice}

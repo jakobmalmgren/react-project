@@ -41,7 +41,14 @@
   font-size: 12px;
   font-family: "Dancing Script", cursive;
 }
+
 .card p,
 .card h3 {
   color: rgb(0 24 0 / 78%);
+}
+.card .itemValue {
+  text-decoration: line-through;
+}
+.card .cardPriceDiscount {
+  color: red;
 }

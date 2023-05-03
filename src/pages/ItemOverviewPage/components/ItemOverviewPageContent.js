@@ -5,11 +5,11 @@ import { useState } from "react";
 // import { VscHeartFilled } from "react-icons/vsc";
 
 function ItemOverviewPageContent(props) {
-  console.log(props);
   let discountIcon;
   if (props.discount === true) {
-    discountIcon = "30%";
+    discountIcon = props.discountValue;
   }
+  const itemValue = (props.price / ((100 - props.discountValue) / 10)) * 10;
 
   const [bigImage, setBigImage] = useState(props.image[0]);
   function handleClick(index) {
@@ -38,13 +38,24 @@ function ItemOverviewPageContent(props) {
         <div className={css.bigImageWrapper}>
           <img src={`img/${bigImage}`} alt="" className={css.bigImage} />
           {discountIcon && (
-            <div className={css.discountIcon}>{discountIcon}</div>
+            <h2 className={css.discountIcon}>{discountIcon}%</h2>
+          )}
+          {discountIcon && (
+            <p className={css.itemValue}>
+              {/* ${(props.price / ((100 - props.discountValue) / 10)) * 10} */}
+              ${itemValue.toFixed(2)}
+            </p>
           )}
         </div>
       </div>
       <div className={css.sectionInfo}>
         <h4 className={css.header}>{props.description}</h4>
-        <h4 className={css.header}>$ {props.price}</h4>
+
+        {discountIcon ? (
+          <p className={css.cardPriceDiscount}>$ {props.price}</p>
+        ) : (
+          <p className={css.cardPrice}>$ {props.price}</p>
+        )}
 
         <div className={css.addToCartBtnWrapper}>
           <button

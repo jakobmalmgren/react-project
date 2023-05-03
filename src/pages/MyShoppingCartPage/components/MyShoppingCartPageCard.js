@@ -6,8 +6,9 @@ import css from "./MyShoppingCartPageCard.module.css";
 function MyShoppingCartPageCard(props) {
   let discountIcon;
   if (props.discount === true) {
-    discountIcon = "30%";
+    discountIcon = props.discountValue;
   }
+  const itemValue = (props.price / ((100 - props.discountValue) / 10)) * 10;
   return (
     <div className={css.myShoppingCartCard}>
       <div className={css.imgWrapper}>
@@ -16,14 +17,25 @@ function MyShoppingCartPageCard(props) {
           alt=""
           className={css.myShoppingCartCardImg}
         />
-        {discountIcon && <div className={css.discountIcon}>{discountIcon}</div>}
+        {discountIcon && <h2 className={css.discountIcon}>{discountIcon}%</h2>}
       </div>
 
       <div className={css.myShoppingCartCardInfo}>
         <div>
           <h3>{props.description}</h3>
           <p>{props.item} </p>
-          <p>$ {props.price}</p>
+
+          {discountIcon && (
+            <p className={css.itemValue}>
+              {/* ${(props.price / ((100 - props.discountValue) / 10)) * 10} */}
+              ${itemValue.toFixed(2)}
+            </p>
+          )}
+          {discountIcon ? (
+            <p className={css.cardPriceDiscount}>$ {props.price}</p>
+          ) : (
+            <p className={css.cardPrice}>$ {props.price}</p>
+          )}
           <p>{props.category}</p>
         </div>
 

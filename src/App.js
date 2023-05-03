@@ -14,6 +14,7 @@ import ItemOverviewPage from "./pages/ItemOverviewPage/ItemOverviewPage";
 import CheckOutPage from "./pages/CheckOutPage/CheckOutPage";
 import products from "./data/products";
 import { useEffect } from "react";
+import CreateAccountPage from "./pages/CreateAccountPage/CreateAccountPage";
 
 function App() {
   const [toggleBurger, setToggleBurger] = useState(false); // öppnar/stännger Burgermenu
@@ -106,26 +107,13 @@ function App() {
   const sum = boughtItems.reduce((acc, cu) => {
     return acc + cu.price * cu.qty;
   }, 0);
+
   const taxPrice = sum * 0.15;
-  // let shippingPrice;
-  // if (sum < 100) {
-  //   shippingPrice = 100 - sum;
-  //   // console.log((shippingPrice = 100 - sum));
-  // } else if (sum > 100) {
-  //   shippingPrice = 0;
-  // borde kunna göra en funcion me allt detta i ett ju?????????????????
-  // }
   const shippingPrice = sum >= 100 ? 0 : 15.9;
   const amountToFreeShippingPrice = 100 - sum;
   const totalPrice = sum + taxPrice + shippingPrice;
 
   //------------------------------------------------------------
-
-  let [filterTextValue, setFilterTextValue] = useState("All");
-
-  function onFilterValueSelected(filterValue) {
-    setFilterTextValue(filterValue);
-  }
 
   //-------------------------------------
   const [openSignIn, setOpenSignIn] = useState(false); // öppnar stänger signInpage o fixar så modal kmr o ingen scroll
@@ -144,12 +132,13 @@ function App() {
   }
   //--------------------------------------------------------------------
 
+  //----------------------------
+
   return (
     <div>
       <NavbarSection
         handleMyShoppingCartPage={handleMyShoppingCartPage}
         openMyShoppingCartPage={openMyShoppingCartPage}
-        //-------------------------------
         sum={sum}
         taxPrice={taxPrice}
         shippingPrice={shippingPrice}
@@ -179,36 +168,21 @@ function App() {
         </Route>
         <Route path="/womenPage">
           <WomenPage
-            onFilterValueSelected={onFilterValueSelected}
-            setFilterTextValue={setFilterTextValue}
-            filterTextValue={filterTextValue}
             addItemToCart={addItemToCart}
             products={products}
           ></WomenPage>
         </Route>
         <Route path="/menPage">
-          <MenPage
-            products={products}
-            addItemToCart={addItemToCart}
-            onFilterValueSelected={onFilterValueSelected}
-            setFilterTextValue={setFilterTextValue}
-            filterTextValue={filterTextValue}
-          ></MenPage>
+          <MenPage products={products} addItemToCart={addItemToCart}></MenPage>
         </Route>
         <Route path="/kidsPage">
           <KidsPage
-            onFilterValueSelected={onFilterValueSelected}
-            setFilterTextValue={setFilterTextValue}
-            filterTextValue={filterTextValue}
             products={products}
             addItemToCart={addItemToCart}
           ></KidsPage>
         </Route>
         <Route path="/outletPage">
           <OutletPage
-            onFilterValueSelected={onFilterValueSelected}
-            setFilterTextValue={setFilterTextValue}
-            filterTextValue={filterTextValue}
             products={products}
             addItemToCart={addItemToCart}
           ></OutletPage>
@@ -238,6 +212,9 @@ function App() {
             handleIncrement={handleIncrement}
             handleDecrement={handleDecrement}
           ></CheckOutPage>
+        </Route>
+        <Route path="/CreateAccountPage">
+          <CreateAccountPage></CreateAccountPage>
         </Route>
       </Switch>
 

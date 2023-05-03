@@ -1,0 +1,20 @@
+.createAccountPage h1 {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+.createAccountPageFormWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.createAccountPageForm {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+.createAccountPageForm button {
+  width: 100%;
+  padding: 15px;
+}

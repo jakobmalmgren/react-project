@@ -1,26 +1,35 @@
 import FilterButton from "../../components/Buttons/FilterButton";
 import Card from "../../components/Cards/Card";
-
+import { useState } from "react";
 import css from "./OutletPage.module.css";
 
 function OutletPage(props) {
+  let [filterTextValueOutlet, setFilterTextValueOutlet] = useState("All");
+
+  function onFilterValueSelectedOutlet(filterValue) {
+    setFilterTextValueOutlet(filterValue);
+  }
+  function changeValueOutlet(e) {
+    onFilterValueSelectedOutlet(e.target.value);
+  }
+  const [toggleFilterItemsOutlet, setToggleFilterItemsOutlet] = useState(false);
   const filteredOutlet = props.products
     .filter((item) => {
       return item.discount === true;
     })
     .filter((item) => {
-      if (props.filterTextValue === "Pants") {
+      if (filterTextValueOutlet === "Pants") {
         return item.item === "PANTS";
-      } else if (props.filterTextValue === "T-shirts")
+      } else if (filterTextValueOutlet === "T-shirts")
         return item.item === "T-SHIRT";
-      else if (props.filterTextValue === "Jackets")
+      else if (filterTextValueOutlet === "Jackets")
         return item.item === "JACKET";
-      else if (props.filterTextValue === "Shorts")
+      else if (filterTextValueOutlet === "Shorts")
         return item.item === "SHORTS";
-      else if (props.filterTextValue === "Shoes") return item.item === "SHOES";
-      else if (props.filterTextValue === "Sweatshirts")
+      else if (filterTextValueOutlet === "Shoes") return item.item === "SHOES";
+      else if (filterTextValueOutlet === "Sweatshirts")
         return item.item === "SWEATSHIRT";
-      else if (props.filterTextValue === "Discount")
+      else if (filterTextValueOutlet === "Discount")
         return item.discount === true;
       else return item;
     })
@@ -36,9 +45,27 @@ function OutletPage(props) {
   return (
     <div>
       <h1>Outlet</h1>
-      <FilterButton
-        onFilterValueSelected={props.onFilterValueSelected}
-      ></FilterButton>
+      <div
+        onClick={() => {
+          setToggleFilterItemsOutlet(!toggleFilterItemsOutlet);
+        }}
+      >
+        <FilterButton></FilterButton>
+      </div>
+      {toggleFilterItemsOutlet && (
+        <div className={css.filterItems}>
+          <select name="filter" onChange={changeValueOutlet}>
+            <option value="All">All</option>
+            <option value="Pants">Pants</option>
+            <option value="Shoes">Shoes</option>
+            <option value="T-shirts">T-shirts</option>
+            <option value="Jackets">Jackets</option>
+            <option value="Shorts">Shorts</option>
+            <option value="Sweatshirts">Sweatshirts</option>
+            <option value="Discount">Discount</option>
+          </select>
+        </div>
+      )}
       <div className={css.cardWrapper}> {filteredOutlet}</div>
     </div>
   );

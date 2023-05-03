@@ -18,22 +18,34 @@ function CheckoutPage(props) {
   const checkout = props.boughtItems.map((item) => {
     let discountIcon;
     if (item.discount === true) {
-      discountIcon = "30%";
+      discountIcon = item.discountValue;
     }
+    const itemValue = (item.price / ((100 - item.discountValue) / 10)) * 10;
     return (
       <div className={css.checkoutPageWrapper}>
         <div className={css.checkoutPageItems}>
           <div className={css.checkoutPageImgWrapper}>
             <img src={`img/${item.image[0]}`} alt="" />
             {discountIcon && (
-              <div className={css.discountIcon}>{discountIcon}</div>
+              <h2 className={css.discountIcon}>{discountIcon}%</h2>
             )}
           </div>
 
           <div className={css.checkoutPageCategories}>
             <h3>{item.description}</h3>
             <p>{item.item}</p>
-            <p>$ {item.price}</p>
+
+            {discountIcon && (
+              <p className={css.itemValue}>
+                {/* ${(item.price / ((100 - item.discountValue) / 10)) * 10} */}
+                ${itemValue.toFixed(2)}
+              </p>
+            )}
+            {discountIcon ? (
+              <p className={css.cardPriceDiscount}>$ {item.price}</p>
+            ) : (
+              <p className={css.cardPrice}>$ {item.price}</p>
+            )}
             <p>{item.category}</p>
           </div>
 

@@ -9,7 +9,7 @@
   align-items: center;
   position: absolute;
   top: 15px;
-  right: 15px;
+  left: 15px;
   font-size: 20px;
   font-family: "Dancing Script", cursive;
 }
@@ -96,6 +96,12 @@
 .sectionInfo h4 {
   margin: 15px 0px;
   font-weight: bold;
+}
+.bigImageWrapper .itemValue {
+  text-decoration: line-through;
+}
+.cardPriceDiscount {
+  color: red;
 }
 
 @media only screen and (min-width: 800px) {

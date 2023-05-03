@@ -1,5 +1,6 @@
 import { CgCloseO } from "react-icons/cg";
 import css from "./SignInPage.module.css";
+import { Link } from "react-router-dom";
 import Button from "../../components/Buttons/Button";
 
 function SignInPage(props) {
@@ -35,7 +36,9 @@ function SignInPage(props) {
             <p>Forgot the password?</p>
           </div>
           <Button content="SIGN IN"></Button>
-          <Button content="CREATE ACCOUNT"></Button>
+          <Link to="/CreateAccountPage">
+            <Button content="CREATE ACCOUNT"></Button>
+          </Link>
         </div>
       </form>
     </div>

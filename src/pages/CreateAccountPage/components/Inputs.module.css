@@ -1,0 +1,17 @@
+.createAccountPageFormLabel {
+  padding: 15px;
+  margin: 10px 0px;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+span {
+  color: red;
+  font-size: 10px;
+  padding: 4px 0px;
+  display: none;
+}
+input:invalid[focused="true"] ~ span {
+  display: block;
+}

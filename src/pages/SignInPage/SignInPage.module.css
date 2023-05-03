@@ -6,8 +6,8 @@
   position: fixed;
   justify-content: end;
   position: absolute;
-  left: 1500px;
-  transition: 0.2s;
+  left: -1500px;
+  transition: 100ms;
 }
 .active {
   display: flex;
@@ -18,7 +18,7 @@
   justify-content: end;
   position: absolute;
   left: 0px;
-  transition: 0.2s;
+  transition: 100ms;
 }
 
 .overlay {

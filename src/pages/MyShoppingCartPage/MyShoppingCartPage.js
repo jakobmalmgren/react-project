@@ -56,20 +56,20 @@ function MyShoppingCartPage(props) {
           ) : (
             <div>
               <div className={css.totalCountWrapper}>
-                <h2>Products: $ {props.sum.toFixed(2)} </h2>
-                <h2>Tax: $ {props.taxPrice.toFixed(2)} </h2>
-                <div className={css.shippingWrapper}>
-                  <h2>Shipping fee: $ {props.shippingPrice.toFixed(2)} </h2>
+                <div>
+                  <h2>Products: ${props.sum.toFixed(2)}</h2>
+                  <h2>Tax: $ {props.taxPrice.toFixed(2)} </h2>
+                  <h2>Shipping fee: $ {props.shippingPrice.toFixed(2)}</h2>
                   {props.sum < 100 ? (
                     <h3>
-                      ($ {props.amountToFreeShippingPrice} to free shippingfee)
+                      ($ {props.amountToFreeShippingPrice.toFixed(2)} to free
+                      shippingfee)
                     </h3>
                   ) : (
                     ""
                   )}
+                  <h2>Total: $ {props.totalPrice.toFixed(2)}</h2>
                 </div>
-
-                <h2>Total: $ {props.totalPrice.toFixed(2)}</h2>
               </div>
               <Link to="/checkoutPage">
                 <Button

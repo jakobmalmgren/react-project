@@ -7,6 +7,7 @@ const products = [
     price: 90,
     category: "men",
     discount: true,
+    discountValue: 30,
     about:
       "The'SL61' shoe have been made from supple leather that's perforated at the sides and toe box to enhance breathability. They're paneled with nice colors for a striking contrast and stamped with the brand's moniker on the bottom of she shoe.",
   },
@@ -18,6 +19,7 @@ const products = [
     price: 80,
     category: "men",
     discount: true,
+    discountValue: 30,
     about:
       "The new is retro, meaning styles like these 'Medalist Low' sneakers will look even more the part once they've picked up some scuffs - don't be afraid to wear yours every day. Made from smooth leather and suede, the inners are fitted with soft cotton-terry.",
   },
@@ -29,6 +31,7 @@ const products = [
     price: 65,
     category: "women",
     discount: true,
+    discountValue: 20,
     about:
       "The'SL61' shoe have been made from supple leather that's perforated at the sides and toe box to enhance breathability. They're paneled with nice colors for a striking contrast and stamped with the brand's moniker on the bottom of she shoe.",
   },
@@ -109,6 +112,7 @@ const products = [
     price: 95,
     category: "men",
     discount: true,
+    discountValue: 20,
     about:
       "The new is retro, meaning styles like these 'Medalist Low' sneakers will look even more the part once they've picked up some scuffs - don't be afraid to wear yours every day. Made from smooth leather and suede, the inners are fitted with soft cotton-terry.",
   },
@@ -121,6 +125,7 @@ const products = [
     price: 55,
     category: "men",
     discount: true,
+    discountValue: 30,
     about:
       "The'SL61' shoe have been made from supple leather that's perforated at the sides and toe box to enhance breathability. They're paneled with nice colors for a striking contrast and stamped with the brand's moniker on the bottom of she shoe.",
   },
@@ -133,6 +138,7 @@ const products = [
     price: 95,
     category: "women",
     discount: true,
+    discountValue: 20,
     about:
       "The new is retro, meaning styles like these 'Medalist Low' sneakers will look even more the part once they've picked up some scuffs - don't be afraid to wear yours every day. Made from smooth leather and suede, the inners are fitted with soft cotton-terry.",
   },
@@ -157,6 +163,7 @@ const products = [
     price: 75,
     category: "women",
     discount: true,
+    discountValue: 30,
     about:
       "The new is retro, meaning styles like these 'Medalist Low' sneakers will look even more the part once they've picked up some scuffs - don't be afraid to wear yours every day. Made from smooth leather and suede, the inners are fitted with soft cotton-terry.",
   },
@@ -169,6 +176,7 @@ const products = [
     price: 105,
     category: "women",
     discount: true,
+    discountValue: 20,
     about:
       "The'SL61' shoe have been made from supple leather that's perforated at the sides and toe box to enhance breathability. They're paneled with nice colors for a striking contrast and stamped with the brand's moniker on the bottom of she shoe.",
   },
@@ -217,6 +225,7 @@ const products = [
     price: 75,
     category: "women",
     discount: true,
+    discountValue: 30,
     about:
       "The'SL61' shoe have been made from supple leather that's perforated at the sides and toe box to enhance breathability. They're paneled with nice colors for a striking contrast and stamped with the brand's moniker on the bottom of she shoe.",
   },
@@ -229,6 +238,7 @@ const products = [
     price: 135,
     category: "women",
     discount: true,
+    discountValue: 30,
     about:
       "The new is retro, meaning styles like these 'Medalist Low' sneakers will look even more the part once they've picked up some scuffs - don't be afraid to wear yours every day. Made from smooth leather and suede, the inners are fitted with soft cotton-terry.",
   },
@@ -256,6 +266,7 @@ const products = [
     price: 80,
     category: "men",
     discount: true,
+    discountValue: 20,
     about:
       "The elevated T-shirt has a firm place in The Row's lineup - it was one of the original seven pieces that founders Ashley and Mary-Kate Olsen designed for the label back in 2006. This 'Chiara' tee is made from especially soft, premium cotton-jersey and cut for a boxy fit. Wear yours with everything, from neutral tailoring to inky jeans.",
   },
@@ -328,6 +339,7 @@ const products = [
     price: 55,
     category: "men",
     discount: true,
+    discountValue: 30,
     about:
       "The elevated T-shirt has a firm place in The Row's lineup - it was one of the original seven pieces that founders Ashley and Mary-Kate Olsen designed for the label back in 2006. This 'Chiara' tee is made from especially soft, premium cotton-jersey and cut for a boxy fit. Wear yours with everything, from neutral tailoring to inky jeans.",
   },
@@ -340,6 +352,7 @@ const products = [
     price: 35,
     category: "women",
     discount: true,
+    discountValue: 30,
     about:
       "This amazing T-shirt is trimmed with delicate cotton between panels of airy cotton-voile that are pintucked and gathered for delicate texture. Ruffled along the high neckline and hem, it has a slim fitsize-shape. Wear yours with high-rise jeans or tailoring.",
   },
@@ -352,6 +365,7 @@ const products = [
     price: 95,
     category: "men",
     discount: true,
+    discountValue: 20,
     about:
       "The elevated T-shirt has a firm place in The Row's lineup - it was one of the original seven pieces that founders Ashley and Mary-Kate Olsen designed for the label back in 2006. This 'Chiara' tee is made from especially soft, premium cotton-jersey and cut for a boxy fit. Wear yours with everything, from neutral tailoring to inky jeans.",
   },
@@ -364,6 +378,7 @@ const products = [
     price: 55,
     category: "women",
     discount: true,
+    discountValue: 10,
     about:
       "This amazing T-shirt is trimmed with delicate cotton between panels of airy cotton-voile that are pintucked and gathered for delicate texture. Ruffled along the high neckline and hem, it has a slim fitsize-shape. Wear yours with high-rise jeans or tailoring.",
   },
@@ -388,6 +403,7 @@ const products = [
     price: 45,
     category: "men",
     discount: true,
+    discountValue: 10,
     about:
       "This amazing T-shirt is trimmed with delicate cotton between panels of airy cotton-voile that are pintucked and gathered for delicate texture. Ruffled along the high neckline and hem, it has a slim fitsize-shape. Wear yours with high-rise jeans or tailoring.",
   },
@@ -424,6 +440,7 @@ const products = [
     price: 85,
     category: "women",
     discount: true,
+    discountValue: 10,
     about:
       "The elevated T-shirt has a firm place in The Row's lineup - it was one of the original seven pieces that founders Ashley and Mary-Kate Olsen designed for the label back in 2006. This 'Chiara' tee is made from especially soft, premium cotton-jersey and cut for a boxy fit. Wear yours with everything, from neutral tailoring to inky jeans.",
   },
@@ -436,6 +453,7 @@ const products = [
     price: 45,
     category: "women",
     discount: true,
+    discountValue: 30,
     about:
       "This amazing T-shirt is trimmed with delicate cotton between panels of airy cotton-voile that are pintucked and gathered for delicate texture. Ruffled along the high neckline and hem, it has a slim fitsize-shape. Wear yours with high-rise jeans or tailoring.",
   },
@@ -448,6 +466,7 @@ const products = [
     price: 35,
     category: "women",
     discount: true,
+    discountValue: 20,
     about:
       "The elevated T-shirt has a firm place in The Row's lineup - it was one of the original seven pieces that founders Ashley and Mary-Kate Olsen designed for the label back in 2006. This 'Chiara' tee is made from especially soft, premium cotton-jersey and cut for a boxy fit. Wear yours with everything, from neutral tailoring to inky jeans.",
   },
@@ -521,6 +540,7 @@ const products = [
     price: 75,
     category: "men",
     discount: true,
+    discountValue: 30,
     about:
       "These jeans are faded and lightly distressed at the pockets to look like an authentic '90s pair. Made from organic cotton-denim washed in a classic hue the label calls 'Black Tea', they sit high on the waist and have a straight fit through the legs. Wear yours with everything from cropped cardigans to bodysuits.",
   },
@@ -533,6 +553,7 @@ const products = [
     price: 65,
     category: "women",
     discount: true,
+    discountValue: 30,
     about:
       "The beauty of this organic '90s Pinch Waist' jeans is that they look like a prized vintage pair but have been rigorously tested to ensure a great fit. They have a high-rise waist, straight legs and a retro buttoned fly. Wear them with nearly anything in your wardrobe, from simple tees to chunky sweaters.",
   },
@@ -545,6 +566,7 @@ const products = [
     price: 95,
     category: "men",
     discount: true,
+    discountValue: 20,
     about:
       "These jeans are faded and lightly distressed at the pockets to look like an authentic '90s pair. Made from organic cotton-denim washed in a classic hue the label calls 'Black Tea', they sit high on the waist and have a straight fit through the legs. Wear yours with everything from cropped cardigans to bodysuits.",
   },
@@ -629,6 +651,7 @@ const products = [
     price: 85,
     category: "women",
     discount: true,
+    discountValue: 20,
     about:
       "The beauty of this organic '90s Pinch Waist' jeans is that they look like a prized vintage pair but have been rigorously tested to ensure a great fit. They have a high-rise waist, straight legs and a retro buttoned fly. Wear them with nearly anything in your wardrobe, from simple tees to chunky sweaters.",
   },
@@ -641,6 +664,7 @@ const products = [
     price: 75,
     category: "men",
     discount: true,
+    discountValue: 10,
     about:
       "These jeans are faded and lightly distressed at the pockets to look like an authentic '90s pair. Made from organic cotton-denim washed in a classic hue the label calls 'Black Tea', they sit high on the waist and have a straight fit through the legs. Wear yours with everything from cropped cardigans to bodysuits.",
   },
@@ -653,6 +677,7 @@ const products = [
     price: 135,
     category: "men",
     discount: true,
+    discountValue: 30,
     about:
       "The beauty of this organic '90s Pinch Waist' jeans is that they look like a prized vintage pair but have been rigorously tested to ensure a great fit. They have a high-rise waist, straight legs and a retro buttoned fly. Wear them with nearly anything in your wardrobe, from simple tees to chunky sweaters.",
   },
@@ -716,6 +741,7 @@ const products = [
     price: 85,
     category: "boys",
     discount: true,
+    discountValue: 30,
     about:
       " Slim-fit model for boys, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
   },
@@ -728,6 +754,7 @@ const products = [
     price: 45,
     category: "boys",
     discount: true,
+    discountValue: 20,
     about:
       " Slim-fit model for boys, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
   },
@@ -740,6 +767,7 @@ const products = [
     price: 35,
     category: "boys",
     discount: true,
+    discountValue: 30,
     about:
       " Slim-fit model for boys, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
   },
@@ -752,6 +780,7 @@ const products = [
     price: 25,
     category: "girls",
     discount: true,
+    discountValue: 30,
     about:
       "Super-soft tracksuit bottoms for kids. Featuring an embroidered logo on the left leg and a branded woven flag on the side seam, these cuffed tracksuit bottoms are crafted in cotton-rich velvet. The elasticated waist is designed with an adjustable drawcord for total comfort.",
   },
@@ -765,6 +794,7 @@ const products = [
     price: 55,
     category: "boys",
     discount: true,
+    discountValue: 20,
     about:
       " A timeless T-shirt for kids. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
   },
@@ -957,6 +987,7 @@ const products = [
     price: 75,
     category: "women",
     discount: true,
+    discountValue: 20,
     about:
       " A timeless sweatshirt for women. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
   },
@@ -969,6 +1000,7 @@ const products = [
     price: 105,
     category: "women",
     discount: true,
+    discountValue: 30,
     about:
       " A timeless sweatshirt for women. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
   },
@@ -981,6 +1013,7 @@ const products = [
     price: 134,
     category: "men",
     discount: true,
+    discountValue: 30,
     about:
       " A modern jacket for men. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
   },
@@ -993,6 +1026,7 @@ const products = [
     price: 185,
     category: "men",
     discount: true,
+    discountValue: 20,
     about:
       " A modern jacket for men. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
   },
@@ -1041,6 +1075,7 @@ const products = [
     price: 85,
     category: "men",
     discount: true,
+    discountValue: 20,
     about:
       " Slim-fit model for men, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
   },
@@ -1053,6 +1088,7 @@ const products = [
     price: 145,
     category: "men",
     discount: true,
+    discountValue: 30,
     about:
       " Slim-fit model for men, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
   },
@@ -1065,6 +1101,7 @@ const products = [
     price: 85,
     category: "men",
     discount: true,
+    discountValue: 30,
     about:
       " A timeless sweatshirt for men. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
   },
@@ -1089,6 +1126,7 @@ const products = [
     price: 115,
     category: "men",
     discount: true,
+    discountValue: 30,
     about:
       " A timeless sweatshirt for men. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
   },
