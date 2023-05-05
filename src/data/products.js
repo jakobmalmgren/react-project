@@ -13,9 +13,9 @@ const products = [
   },
   {
     id: 2,
-    image: ["/nike.avif", "/nikeBrand.avif"],
+    image: ["/adidas1.jpg", "/adidas1pic2.jpg"],
     item: "SHOES",
-    description: "Nike 102 Max",
+    description: "Adidas 102L",
     price: 80,
     category: "men",
     discount: true,
@@ -25,9 +25,9 @@ const products = [
   },
   {
     id: 3,
-    image: ["/converse2.jpeg", "/converse2.jpeg"],
+    image: ["/reebok1.webp", "/reebok1pic2.webp"],
     item: "SHOES",
-    description: "Converse Original",
+    description: "Reebok Original",
     price: 65,
     category: "women",
     discount: true,
@@ -37,9 +37,9 @@ const products = [
   },
   {
     id: 4,
-    image: ["/louisVuitton.avif", "/LVBrand.avif"],
+    image: ["/adidas2.webp", "/adidas2pic2.webp"],
     item: "SHOES",
-    description: "louisVuitton Supra",
+    description: "Adidas Superstar",
     price: 165,
     category: "men",
     discount: false,
@@ -48,9 +48,9 @@ const products = [
   },
   {
     id: 5,
-    image: ["/nikeShoes3.avif", "/nikeBrand.avif"],
+    image: ["/RL1.jpg", "/RL1pic2.jpg"],
     item: "SHOES",
-    description: "Nike air max",
+    description: "Ralph Lauren Retro",
     price: 135,
     category: "women",
     discount: false,
@@ -59,9 +59,9 @@ const products = [
   },
   {
     id: 6,
-    image: ["/nikeShoes4.avif", "/nikeBrand.avif"],
+    image: ["/gant1.jpg", "/gant1pic2.jpg"],
     item: "SHOES",
-    description: "Nike Pro Solid",
+    description: "Gant Mojo",
     price: 115,
     category: "women",
     discount: false,
@@ -70,9 +70,9 @@ const products = [
   },
   {
     id: 7,
-    image: ["/fila.avif", "/filaBrand.avif"],
+    image: ["/gant2.jpg", "/gant2pic2.jpg"],
     item: "SHOES",
-    description: "Fila Retro",
+    description: "Gant Sweeper",
     price: 75,
     category: "women",
     discount: false,
@@ -81,10 +81,10 @@ const products = [
   },
   {
     id: 8,
-    image: ["/nikeShoes5.avif", "/nikeBrand.avif"],
+    image: ["/fila1.jpg", "/fila1pic2.jpg"],
 
     item: "SHOES",
-    description: "Nike Air Max 905",
+    description: "Fila Retro",
     price: 125,
     category: "women",
     discount: false,
@@ -93,10 +93,10 @@ const products = [
   },
   {
     id: 9,
-    image: ["/converse3.jpeg", "/converseBrand.avif"],
+    image: ["vagabond1.jpg", "/vagabond1pic2.jpg"],
 
     item: "SHOES",
-    description: "Converse Razz",
+    description: "Vagabond Trial",
     price: 65,
     category: "men",
     discount: false,
@@ -105,10 +105,10 @@ const products = [
   },
   {
     id: 10,
-    image: ["/converse4.jpeg", "/converseBrand.avif"],
+    image: ["/tommy1.jpg", "/tommy1pic2.jpg"],
 
     item: "SHOES",
-    description: "Converse Superheroes",
+    description: "Tommy Hilfiger H23",
     price: 95,
     category: "men",
     discount: true,
@@ -118,10 +118,10 @@ const products = [
   },
   {
     id: 11,
-    image: ["/drMartens.jpg", "/drMartensBrand.avif"],
+    image: ["/lacoste1.jpg", "/lacoste1pic2.jpg"],
 
     item: "SHOES",
-    description: "Dr Martens Original",
+    description: "Lacoste H76",
     price: 55,
     category: "men",
     discount: true,
@@ -131,10 +131,10 @@ const products = [
   },
   {
     id: 12,
-    image: ["/adidasShoes.avif", "/adidasBrand.avif"],
+    image: ["/vans1.jpg", "/vans1pic2.jpg"],
 
     item: "SHOES",
-    description: "Adidas Concrete 105",
+    description: "Vans Concrete 105",
     price: 95,
     category: "women",
     discount: true,
@@ -144,10 +144,10 @@ const products = [
   },
   {
     id: 13,
-    image: ["/nikeShoes6.avif", "/nikeBrand.avif"],
+    image: ["/converse1.jpg", "/converse1pic2.jpg"],
 
     item: "SHOES",
-    description: "Nike Sprinter 203",
+    description: "Converse 203",
     price: 105,
     category: "women",
     discount: false,
@@ -156,10 +156,10 @@ const products = [
   },
   {
     id: 14,
-    image: ["/vans.avif", "/vansBrand.avif"],
+    image: ["/RL2.jpg", "/RL2pic2.jpg"],
 
     item: "SHOES",
-    description: "Vans Classic",
+    description: "Ralph Lauren Classic",
     price: 75,
     category: "women",
     discount: true,
@@ -169,10 +169,10 @@ const products = [
   },
   {
     id: 15,
-    image: ["nikeShoes7.avif", "/nikeBrand.avif"],
+    image: ["/CK1.jpg", "/CK1pic2.jpg"],
 
     item: "SHOES",
-    description: "Nike Solo",
+    description: "Calvin Klein Solo",
     price: 105,
     category: "women",
     discount: true,
@@ -182,10 +182,10 @@ const products = [
   },
   {
     id: 16,
-    image: ["/nikeAirJordan.avif", "/nikeBrand.avif"],
+    image: ["/RL3.jpg", "/RL3pic2.jpg"],
 
     item: "SHOES",
-    description: "Nike Air Jordan 666",
+    description: "Ralph Lauren Vessle",
     price: 85,
     category: "men",
     discount: false,
@@ -194,10 +194,10 @@ const products = [
   },
   {
     id: 17,
-    image: ["/pumashoes.avif", "/pumaBrand.avif"],
+    image: ["/gant3.jpg", "/gant3pic2.jpg"],
 
     item: "SHOES",
-    description: "Puma Clean Edition",
+    description: "Gant Clean Edition",
     price: 145,
     category: "men",
     discount: false,
@@ -206,10 +206,10 @@ const products = [
   },
   {
     id: 18,
-    image: ["/nikeShoes8.avif", "/nikeBrand.avif"],
+    image: ["/hugo1.webp", "/hugo1pic2.webp"],
 
     item: "SHOES",
-    description: "Nike Air Supreme",
+    description: "Hugo Boss Flame",
     price: 105,
     category: "men",
     discount: false,
@@ -218,10 +218,10 @@ const products = [
   },
   {
     id: 19,
-    image: ["/adidas2.avif", "/adidasBrand.avif"],
+    image: ["/sneakySteve1.jpg", "/sneakySteve1pic2.jpg"],
 
     item: "SHOES",
-    description: "Adidas Conquer",
+    description: "Sneaky Steve Conquer",
     price: 75,
     category: "women",
     discount: true,
@@ -231,10 +231,10 @@ const products = [
   },
   {
     id: 20,
-    image: ["/adidas3.avif", "/adidasBrand.avif"],
+    image: ["/vans2.webp", "/vans2pic2.webp"],
 
     item: "SHOES",
-    description: "Adidas Boost",
+    description: "Vans Boost",
     price: 135,
     category: "women",
     discount: true,
@@ -243,14 +243,12 @@ const products = [
       "The new is retro, meaning styles like these 'Medalist Low' sneakers will look even more the part once they've picked up some scuffs - don't be afraid to wear yours every day. Made from smooth leather and suede, the inners are fitted with soft cotton-terry.",
   },
 
-  //   ---
-
   {
     id: 21,
-    image: ["/t-shirt1.avif", "/gantBrand.jpg"],
+    image: ["tshirtNB.webp", "tshirtNBpic2.webp"],
 
     item: "T-SHIRT",
-    description: "Gant",
+    description: "New Balance",
     price: 60,
     category: "women",
     discount: false,
@@ -259,7 +257,7 @@ const products = [
   },
   {
     id: 22,
-    image: ["/t-shirt2.avif", "/tigerBrand.png"],
+    image: ["/tiger1.webp", "/tiger1pic2.webp"],
 
     item: "T-SHIRT",
     description: "Tiger of sweden",
@@ -272,7 +270,7 @@ const products = [
   },
   {
     id: 23,
-    image: ["/t-shirt3.avif", "/reebokBrand.jpg"],
+    image: ["/reebok2.webp", "/reebok2pic2.webp"],
 
     item: "T-SHIRT",
     description: "Rebook",
@@ -284,7 +282,7 @@ const products = [
   },
   {
     id: 24,
-    image: ["/t-shirt4.avif", "/LVBrand.avif"],
+    image: ["/LV1.webp", "LV1pic2.webp"],
 
     item: "T-SHIRT",
     description: "louisVuitton",
@@ -296,10 +294,10 @@ const products = [
   },
   {
     id: 25,
-    image: ["/t-shirt5.avif", "/dolceBrand.jpg"],
+    image: ["/HB1.webp", "/HBpic2.webp"],
 
     item: "T-SHIRT",
-    description: "Dolce & Gabbana",
+    description: "Hugo Boss",
     price: 135,
     category: "men",
     discount: false,
@@ -308,7 +306,7 @@ const products = [
   },
   {
     id: 26,
-    image: ["/t-shirt6.avif", "/gantBrand.jpg"],
+    image: ["/gant4.webp", "/gant4pic2.webp"],
 
     item: "T-SHIRT",
     description: "Gant",
@@ -318,12 +316,13 @@ const products = [
     about:
       "The elevated T-shirt has a firm place in The Row's lineup - it was one of the original seven pieces that founders Ashley and Mary-Kate Olsen designed for the label back in 2006. This 'Chiara' tee is made from especially soft, premium cotton-jersey and cut for a boxy fit. Wear yours with everything, from neutral tailoring to inky jeans.",
   },
+
   {
     id: 27,
-    image: ["/t-shirt7.avif", "/filaBrand.avif"],
+    image: ["/gant5.webp", "/gant5pic2.webp"],
 
     item: "T-SHIRT",
-    description: "Fila",
+    description: "Gant",
     price: 75,
     category: "men",
     discount: false,
@@ -332,10 +331,10 @@ const products = [
   },
   {
     id: 28,
-    image: ["/t-shirt8.avif", "/nikeBrand.avif"],
+    image: ["/gant6.webp", "/gant6pic2.webp"],
 
     item: "T-SHIRT",
-    description: "Nike ",
+    description: "Gant",
     price: 55,
     category: "men",
     discount: true,
@@ -345,10 +344,10 @@ const products = [
   },
   {
     id: 29,
-    image: ["/t-shirt9.avif", "/converseBrand.avif"],
+    image: ["/gant7.jpg", "/gant7pic2.jpg"],
 
     item: "T-SHIRT",
-    description: "Converse",
+    description: "Gant",
     price: 35,
     category: "women",
     discount: true,
@@ -358,10 +357,10 @@ const products = [
   },
   {
     id: 30,
-    image: ["/t-shirt10.avif", "/gantBrand.jpg"],
+    image: ["/morris1.webp", "/morris1pic2.webp"],
 
     item: "T-SHIRT",
-    description: "Gant",
+    description: "Morris",
     price: 95,
     category: "men",
     discount: true,
@@ -371,10 +370,10 @@ const products = [
   },
   {
     id: 31,
-    image: ["/t-shirt11.avif", "/dolceBrand.jpg"],
+    image: ["/LesDeux1.webp", "/LesDeux1pic2.webp"],
 
     item: "T-SHIRT",
-    description: "Dolce & Gabbana",
+    description: "Les Deux",
     price: 55,
     category: "women",
     discount: true,
@@ -384,10 +383,10 @@ const products = [
   },
   {
     id: 32,
-    image: ["/t-shirt12.avif", "/adidasBrand.avif"],
+    image: ["/RL4.webp", "/RL4pic2.webp"],
 
     item: "T-SHIRT",
-    description: "Adidas",
+    description: "Ralph Lauren",
     price: 45,
     category: "women",
     discount: false,
@@ -396,10 +395,10 @@ const products = [
   },
   {
     id: 33,
-    image: ["/t-shirt13.avif", "/gantBrand.jpg"],
+    image: ["/RL5.webp", "/RL5pic2.webp"],
 
     item: "T-SHIRT",
-    description: "Gant",
+    description: "Ralph Lauren",
     price: 45,
     category: "men",
     discount: true,
@@ -409,10 +408,10 @@ const products = [
   },
   {
     id: 34,
-    image: ["/t-shirt14.avif", "/vansBrand.avif"],
+    image: ["/CK2.jpg", "/Ck2pic2.jpg"],
 
     item: "T-SHIRT",
-    description: "Vans",
+    description: "Calvin Klein",
     price: 55,
     category: "men",
     discount: false,
@@ -421,7 +420,7 @@ const products = [
   },
   {
     id: 35,
-    image: ["/t-shirt15.avif", "/ralphBrand.jpg"],
+    image: ["/RL6.webp", "/RL6pic2.webp"],
 
     item: "T-SHIRT",
     description: "Ralph Lauren",
@@ -433,7 +432,7 @@ const products = [
   },
   {
     id: 36,
-    image: ["/t-shirt16.avif", "gantBrand.jpg"],
+    image: ["/gant8.webp", "/gant8pic2.webp"],
 
     item: "T-SHIRT",
     description: "Gant",
@@ -446,7 +445,7 @@ const products = [
   },
   {
     id: 37,
-    image: ["/t-shirt17.avif", "/nikeBrand.avif"],
+    image: ["/nike1.webp", "/nike1pic2.webp"],
 
     item: "T-SHIRT",
     description: "Nike",
@@ -459,10 +458,10 @@ const products = [
   },
   {
     id: 38,
-    image: ["/t-shirt18.avif", "/adidasBrand.avif"],
+    image: ["/nike2.webp", "/nike2pic2.webp"],
 
     item: "T-SHIRT",
-    description: "Adidas",
+    description: "Nike",
     price: 35,
     category: "women",
     discount: true,
@@ -472,10 +471,10 @@ const products = [
   },
   {
     id: 39,
-    image: ["/t-shirt19.avif", "/adidasBrand.avif"],
+    image: ["/hugo2.webp", "/hugo2pic2.webp"],
 
     item: "T-SHIRT",
-    description: "Adidas",
+    description: "Hugo Boss",
     price: 35,
     category: "women",
     discount: false,
@@ -484,7 +483,7 @@ const products = [
   },
   {
     id: 40,
-    image: ["/t-shirt20.avif", "/gantBrand.jpg"],
+    image: ["/gant9.jpg", "/gant9pic2.jpg"],
 
     item: "T-SHIRT",
     description: "Gant",
@@ -494,13 +493,13 @@ const products = [
     about:
       "The elevated T-shirt has a firm place in The Row's lineup - it was one of the original seven pieces that founders Ashley and Mary-Kate Olsen designed for the label back in 2006. This 'Chiara' tee is made from especially soft, premium cotton-jersey and cut for a boxy fit. Wear yours with everything, from neutral tailoring to inky jeans.",
   },
-  //   -----
+
   {
     id: 41,
-    image: ["/pants1.avif", "s/dolceBrand.jpg"],
+    image: ["/pants1.webp", "/pants1pic2.webp"],
 
     item: "PANTS",
-    description: "Dolce & Gabbana",
+    description: "Resteröds",
     price: 115,
     category: "women",
     discount: false,
@@ -509,10 +508,10 @@ const products = [
   },
   {
     id: 42,
-    image: ["/pants2.avif", "/gantBrand.jpg"],
+    image: ["/pants2.webp", "/pants2pic2.webp"],
 
     item: "PANTS",
-    description: "Gant",
+    description: "Wrangler",
     price: 95,
     category: "women",
     discount: false,
@@ -521,7 +520,7 @@ const products = [
   },
   {
     id: 43,
-    image: ["/pants3.avif", "/filaBrand.avif"],
+    image: ["/pants3.jpg", "/pants3pic2.jpg"],
 
     item: "PANTS",
     description: "Fila",
@@ -533,10 +532,10 @@ const products = [
   },
   {
     id: 44,
-    image: ["/pants4.avif", "/nikeBrand.avif"],
+    image: ["/pants4.webp", "/pants4pic2.webp"],
 
     item: "PANTS",
-    description: "Nike ",
+    description: "Hugo Boss ",
     price: 75,
     category: "men",
     discount: true,
@@ -546,7 +545,7 @@ const products = [
   },
   {
     id: 45,
-    image: ["/pants5.avif", "/converseBrand.avif"],
+    image: ["/pants5.webp", "/pants5pic2.webp"],
 
     item: "PANTS",
     description: "Converse",
@@ -559,10 +558,10 @@ const products = [
   },
   {
     id: 46,
-    image: ["/pants6.avif", "/gantBrand.jpg"],
+    image: ["/pants16.jpg", "/pants16pic2.jpg"],
 
     item: "PANTS",
-    description: "Gant",
+    description: "Tommy Jeans",
     price: 95,
     category: "men",
     discount: true,
@@ -572,10 +571,10 @@ const products = [
   },
   {
     id: 47,
-    image: ["/pants7.avif", "/dolceBrand.jpg"],
+    image: ["/pants6.jpg", "/pants6pic2.jpg"],
 
     item: "PANTS",
-    description: "Dolce & Gabbana",
+    description: "Jack & Jones",
     price: 155,
     category: "women",
     discount: false,
@@ -584,7 +583,7 @@ const products = [
   },
   {
     id: 48,
-    image: ["/pants8.avif", "/adidasBrand.avif"],
+    image: ["pants7.webp", "/pants7pic2.webp"],
 
     item: "PANTS",
     description: "Adidas",
@@ -596,7 +595,7 @@ const products = [
   },
   {
     id: 49,
-    image: ["/pants9.avif", "/gantBrand.jpg"],
+    image: ["/pants8.webp", "//pants8pic2.webp"],
 
     item: "PANTS",
     description: "Gant",
@@ -608,7 +607,7 @@ const products = [
   },
   {
     id: 50,
-    image: ["/pants10.avif", "/vansBrand.avif"],
+    image: ["/pants9.webp", "/pants9pic2.webp"],
 
     item: "PANTS",
     description: "Vans",
@@ -620,10 +619,10 @@ const products = [
   },
   {
     id: 51,
-    image: ["/pants11.avif", "/ralphBrand.jpg"],
+    image: ["/pants10.webp", "/pants10pic2.webp"],
 
     item: "PANTS",
-    description: "Ralph Lauren",
+    description: "Hugo Boss",
     price: 225,
     category: "women",
     discount: false,
@@ -632,10 +631,10 @@ const products = [
   },
   {
     id: 52,
-    image: ["/pants12.avif", "/gantBrand.jpg"],
+    image: ["/pants11.webp", "/pants11pic2.webp"],
 
     item: "PANTS",
-    description: "Gant",
+    description: "Lee",
     price: 135,
     category: "women",
     discount: false,
@@ -644,10 +643,10 @@ const products = [
   },
   {
     id: 53,
-    image: ["/pants13.avif", "/nikeBrand.avif"],
+    image: ["/pants12.jpg", "/pants12pic2.jpg"],
 
     item: "PANTS",
-    description: "Nike",
+    description: "Jack & jones",
     price: 85,
     category: "women",
     discount: true,
@@ -657,10 +656,10 @@ const products = [
   },
   {
     id: 54,
-    image: ["/pants14.avif", "/adidasBrand.avif"],
+    image: ["/pants13.webp", "pants13pic2.webp"],
 
     item: "PANTS",
-    description: "Adidas",
+    description: "Lee",
     price: 75,
     category: "men",
     discount: true,
@@ -670,10 +669,10 @@ const products = [
   },
   {
     id: 55,
-    image: ["/pants15.avif", "/adidasBrand.avif"],
+    image: ["/pants14.webp", "/pants14pic2.webp"],
 
     item: "PANTS",
-    description: "Adidas",
+    description: "Jack & Jones",
     price: 135,
     category: "men",
     discount: true,
@@ -683,10 +682,10 @@ const products = [
   },
   {
     id: 56,
-    image: ["/pants16.avif", "/gantBrand.jpg"],
+    image: ["/pants15pic2.jpg", "/pants15pic2.jpg"],
 
     item: "PANTS",
-    description: "Gant",
+    description: "Jack & Jones",
     price: 125,
     category: "women",
     discount: false,
@@ -694,14 +693,12 @@ const products = [
       "These jeans are faded and lightly distressed at the pockets to look like an authentic '90s pair. Made from organic cotton-denim washed in a classic hue the label calls 'Black Tea', they sit high on the waist and have a straight fit through the legs. Wear yours with everything from cropped cardigans to bodysuits.",
   },
 
-  //   ----
-
   {
     id: 57,
-    image: ["/kids1.avif", "/bossBrand.webp"],
+    image: ["/shorts1.webp", "/shorts1pic2.webp"],
 
     item: "SHORTS",
-    description: "Hugo Boss",
+    description: "Name It",
     price: 25,
     category: "boys",
     discount: false,
@@ -710,10 +707,10 @@ const products = [
   },
   {
     id: 58,
-    image: ["/kidsDress.avif", "/gantBrand.jpg"],
+    image: ["/shirt1.jpg", "/shirt1pic2.jpg"],
 
-    item: "SHIRT",
-    description: "Gant",
+    item: "T-SHIRT",
+    description: "Only",
     price: 45,
     category: "boys",
     discount: false,
@@ -722,7 +719,7 @@ const products = [
   },
   {
     id: 59,
-    image: ["/kidsJacket.avif", "/gantBrand.jpg"],
+    image: ["/jacket1.webp", "/jacket1pic2.webp"],
 
     item: "JACKET",
     description: "Gant",
@@ -734,10 +731,10 @@ const products = [
   },
   {
     id: 60,
-    image: ["/kidsPants3.avif", "/ralphBrand.jpg"],
+    image: ["/pants17.webp", "/pants17pic2.webp"],
 
     item: "PANTS",
-    description: "Ralph Lauren",
+    description: "Name It",
     price: 85,
     category: "boys",
     discount: true,
@@ -747,10 +744,10 @@ const products = [
   },
   {
     id: 61,
-    image: ["/kidsPants4.avif", "/adidasBrand.avif"],
+    image: ["/pants18.webp", "/pants18pic2.webp"],
 
     item: "PANTS",
-    description: "Adidas",
+    description: "Gant",
     price: 45,
     category: "boys",
     discount: true,
@@ -760,7 +757,7 @@ const products = [
   },
   {
     id: 62,
-    image: ["/kidsPants5.avif", "/nikeBrand.avif"],
+    image: ["/pants19.webp", "/pants19pic2.webp"],
 
     item: "PANTS",
     description: "Nike",
@@ -773,7 +770,7 @@ const products = [
   },
   {
     id: 63,
-    image: ["/kidsPants6.avif", "/adidasBrand.avif"],
+    image: ["/pants20.webp", "/pants20pic2.webp"],
 
     item: "PANTS",
     description: "Adidas",
@@ -787,10 +784,10 @@ const products = [
 
   {
     id: 64,
-    image: ["/kidsShirt.avif", "/bossBrand.webp"],
+    image: ["/shirt2.webp", "/shirt2pic2.webp"],
 
-    item: "SHIRT",
-    description: "Hugo Boss",
+    item: "T-SHIRT",
+    description: "Vans",
     price: 55,
     category: "boys",
     discount: true,
@@ -800,7 +797,7 @@ const products = [
   },
   {
     id: 65,
-    image: ["/kidsSweater.avif", "/gantBrand.jpg"],
+    image: ["/sweater1.webp", "/sweater1pic2.jpg"],
 
     item: "SWEATSHIRT",
     description: "Gant",
@@ -812,7 +809,7 @@ const products = [
   },
   {
     id: 66,
-    image: ["/kidsSweater2.avif", "/gantBrand.jpg"],
+    image: ["/sweater2.webp", "/sweater2pic2.jpg"],
 
     item: "SWEATSHIRT",
     description: "Gant",
@@ -824,7 +821,7 @@ const products = [
   },
   {
     id: 67,
-    image: ["/kidsShoes.jpg", "/adidasBrand.avif"],
+    image: ["/shoes1.webp", "/shoes1pic2.webp"],
 
     item: "SHOES",
     description: "Adidas",
@@ -836,10 +833,10 @@ const products = [
   },
   {
     id: 68,
-    image: ["/kidsTshirt2.avif", "/reebokBrand.jpg"],
+    image: ["/shirt3.webp", "/shirt3pic2.webp"],
 
     item: "T-SHIRT",
-    description: "Rebook",
+    description: "Ralph Lauren",
     price: 15,
     category: "boys",
     discount: false,
@@ -848,10 +845,10 @@ const products = [
   },
   {
     id: 69,
-    image: ["/adidasjacket2women.jpg", "/adidasBrand.avif"],
+    image: ["/jacket2.jpg", "/jacket2pic2.jpg"],
 
     item: "JACKET",
-    description: "Adidas",
+    description: "Tommy Hilfiger",
     price: 95,
     category: "women",
     discount: false,
@@ -860,7 +857,7 @@ const products = [
   },
   {
     id: 70,
-    image: ["/gantjacket2women.jpg", "/gantBrand.jpg"],
+    image: ["/jacket3.webp", "/jacket3pic2.webp"],
 
     item: "JACKET",
     description: "Gant",
@@ -872,7 +869,7 @@ const products = [
   },
   {
     id: 71,
-    image: ["/gantjacketwomen.jpg", "/gantBrand.jpg"],
+    image: ["/jacket4.jpg", "/jacket4pic2.jpg"],
 
     item: "JACKET",
     description: "Gant",
@@ -884,7 +881,7 @@ const products = [
   },
   {
     id: 72,
-    image: ["/hugobossjackettwomen.webp", "/bossBrand.webp"],
+    image: ["/jacket5.webp", "/jacket5pic2.webp"],
 
     item: "JACKET",
     description: "Hugo Boss",
@@ -896,10 +893,10 @@ const products = [
   },
   {
     id: 73,
-    image: ["/shortswomengant.jpg", "/gantBrand.jpg"],
+    image: ["/shorts2.webp", "/shorts2pic2.webp"],
 
     item: "SHORTS",
-    description: "Hugo Boss",
+    description: "Odd Molly",
     price: 75,
     category: "women",
     discount: false,
@@ -908,7 +905,7 @@ const products = [
   },
   {
     id: 74,
-    image: ["/shortswomenadidas.webp", "/adidasBrand.avif"],
+    image: ["/shorts3.webp", "/shorts3pic2.webp"],
 
     item: "SHORTS",
     description: "Adidas",
@@ -920,7 +917,7 @@ const products = [
   },
   {
     id: 75,
-    image: ["/shortswomenhugoboss.jpg", "/bossBrand.webp"],
+    image: ["/shorts4.webp", "/shorts4pic2.webp"],
 
     item: "SHORTS",
     description: "Hugo Boss",
@@ -932,7 +929,7 @@ const products = [
   },
   {
     id: 76,
-    image: ["/shortswomenrebook.jpg", "/reebokBrand.jpg"],
+    image: ["/shorts5.webp", "/shorts5pic2.webp"],
 
     item: "SHORTS",
     description: "Rebook",
@@ -944,7 +941,7 @@ const products = [
   },
   {
     id: 77,
-    image: ["/shortswomentigerofsweden.jpg", "/tigerBrand.png"],
+    image: ["/shorts6.webp", "/shorts6pic2.webp"],
 
     item: "SHORTS",
     description: "Tiger Of Sweden",
@@ -956,10 +953,10 @@ const products = [
   },
   {
     id: 78,
-    image: ["/sweatshirtwomenadidas.jpg", "/adidasBrand.avif"],
+    image: ["/sweater3.webp", "/sweater3pic2.webp"],
 
     item: "SWEATSHIRT",
-    description: "Adidas",
+    description: "Ralph Lauren",
     price: 65,
     category: "women",
     discount: false,
@@ -968,7 +965,7 @@ const products = [
   },
   {
     id: 79,
-    image: ["/sweatshirtwomengant.jpg", "/gantBrand.jpg"],
+    image: ["/sweater4.webp", "/sweater4pic2.webp"],
 
     item: "SWEATSHIRT",
     description: "Gant",
@@ -980,10 +977,10 @@ const products = [
   },
   {
     id: 80,
-    image: ["/sweatshirtwomenreebok.jpg", "/reebokBrand.jpg"],
+    image: ["/sweater5.webp", "/sweater5pic2.webp"],
 
     item: "SWEATSHIRT",
-    description: "Reebok",
+    description: "Lexington",
     price: 75,
     category: "women",
     discount: true,
@@ -993,10 +990,10 @@ const products = [
   },
   {
     id: 81,
-    image: ["/sweatshirtwomentigerofsweden.jpg", "/tigerBrand.png"],
+    image: ["/sweater6.webp", "/sweater6pic2.webp"],
 
     item: "SWEATSHIRT",
-    description: "Tiger Of Sweden",
+    description: "Gant",
     price: 105,
     category: "women",
     discount: true,
@@ -1006,20 +1003,20 @@ const products = [
   },
   {
     id: 82,
-    image: ["/jacketmenadidas.jpg", "/adidasBrand.avif"],
+    image: ["/jacket6.webp", "/jacket6pic2.webp"],
 
     item: "JACKET",
-    description: "Adidas",
+    description: "Gant",
     price: 134,
     category: "men",
     discount: true,
-    discountValue: 30,
+    discountValue: 40,
     about:
       " A modern jacket for men. Featuring signature stripes on each sleeve, this zip-up layer is crafted in soft cotton blended with wool. A logo print at the chest, a branded badge and a woven label add the finishing touches.",
   },
   {
     id: 83,
-    image: ["/jacketmengant.jpg", "/gantBrand.jpg"],
+    image: ["/jacket7.jpg", "/jacket7pic2.jpg"],
 
     item: "JACKET",
     description: "Gant",
@@ -1032,10 +1029,10 @@ const products = [
   },
   {
     id: 84,
-    image: ["/jacketmenhugoboss.webp", "/bossBrand.webp"],
+    image: ["/jacket8.webp", "/jacket8pic2.webp"],
 
     item: "JACKET",
-    description: "Hugo Boss",
+    description: "Calvin Klein",
     price: 215,
     category: "men",
     discount: false,
@@ -1044,10 +1041,10 @@ const products = [
   },
   {
     id: 85,
-    image: ["/jacketmenreebok.jpg", "/reebokBrand.jpg"],
+    image: ["/jacket9.jpg", "/jacket9pic2.jpg"],
 
     item: "JACKET",
-    description: "Reebok",
+    description: "Ralph Lauren",
     price: 115,
     category: "men",
     discount: false,
@@ -1056,10 +1053,10 @@ const products = [
   },
   {
     id: 86,
-    image: ["/shortsmenadidas.webp", "/adidasBrand.avif"],
+    image: ["/shorts7.webp", "/shorts7pic2.webp"],
 
     item: "SHORTS",
-    description: "Adidas",
+    description: "Ralph Lauren",
     price: 65,
     category: "men",
     discount: false,
@@ -1068,10 +1065,10 @@ const products = [
   },
   {
     id: 87,
-    image: ["/shortsmengant.jpg", "/gantBrand.jpg"],
+    image: ["/shorts8.webp", "/shorts8pic2.webp"],
 
     item: "SHORTS",
-    description: "Gant",
+    description: "Les Deux",
     price: 85,
     category: "men",
     discount: true,
@@ -1081,33 +1078,33 @@ const products = [
   },
   {
     id: 88,
-    image: ["/shortsmenhugoboss.webp", "/bossBrand.webp"],
+    image: ["/shorts9.webp", "/shorts9pic2.webp"],
 
     item: "SHORTS",
     description: "Hugo Boss",
-    price: 145,
+    price: 45,
     category: "men",
     discount: true,
-    discountValue: 30,
+    discountValue: 70,
     about:
       " Slim-fit model for men, designed in stretch piqué fabric with multiple cargo pockets and signature detailing at the rear . Also with belt loops Crafted in stretch fabric for easy movement, these smart product feature elasticated hems for a casual touch. Sizes up to 10 years include an adjustable waist for lasting",
   },
   {
     id: 89,
-    image: ["/sweatshirtMenadidas.jpg", "/adidasBrand.avif"],
+    image: ["/sweater7.jpg", "/sweater7pic2.jpg"],
 
     item: "SWEATSHIRT",
-    description: "Adidas",
+    description: "Tommy Hilfiger",
     price: 85,
     category: "men",
     discount: true,
-    discountValue: 30,
+    discountValue: 60,
     about:
       " A timeless sweatshirt for men. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
   },
   {
     id: 90,
-    image: ["/sweatshirtMengant.jpg", "/gantBrand.jpg"],
+    image: ["/sweater8.webp", "/sweater8pic2.webp"],
 
     item: "SWEATSHIRT",
     description: "Gant",
@@ -1119,14 +1116,14 @@ const products = [
   },
   {
     id: 91,
-    image: ["/sweatshirtMenreebok.jpg", "/reebokBrand.jpg"],
+    image: ["/sweater9.jpg", "/sweater9pic2.jpg"],
 
     item: "SWEATSHIRT",
     description: "Reebok",
-    price: 115,
+    price: 45,
     category: "men",
     discount: true,
-    discountValue: 30,
+    discountValue: 70,
     about:
       " A timeless sweatshirt for men. Featuring a logo print and a branded flag on the side seam, this crew-neck T-shirt is crafted in pure-cotton jersey for natural comfort. Snap fasteners at the shoulder allow for easy changing.",
   },

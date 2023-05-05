@@ -36,9 +36,13 @@ function WomenPage(props) {
     .map((women) => {
       return (
         <Card
+          toggleHeart={props.toggleHeart}
           key={women.id}
+          heart={props.heart}
+          setHeart={props.setHeart}
           {...women}
           addItemToCart={props.addItemToCart}
+          renderLikedItems={props.renderLikedItems}
         ></Card>
       );
     });

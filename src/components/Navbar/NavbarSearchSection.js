@@ -1,10 +1,14 @@
 import { IoIosSearch } from "react-icons/io";
 import css from "./NavbarSearchSection.module.css";
-function NavbarSearchSection() {
+
+function NavbarSearchSection(props) {
   return (
     <div className={css.formWrapper}>
       <form className={css.navbarForm}>
         <input
+          onChange={(e) => {
+            props.setSearch(e.target.value);
+          }}
           type="text"
           id="search"
           name="search"

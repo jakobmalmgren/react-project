@@ -10,6 +10,7 @@ import SignInPage from "../../pages/SignInPage/SignInPage";
 import MobileNavigation from "./MobileNavigationSection";
 import MyShoppingCartPage from "../../pages/MyShoppingCartPage/MyShoppingCartPage";
 import css from "./NavbarSection.module.css";
+import { CiLogin } from "react-icons/ci";
 
 function NavbarSection(props) {
   const burger = (
@@ -35,17 +36,13 @@ function NavbarSection(props) {
         <div className={css.navlinksWrapper}>
           <div className={css.navTitle}>
             <Link to="/">
-              <h2>.ZWAGGI$H.</h2>
+              <h2>CLOTHES</h2>
             </Link>
           </div>
           <div className={css.navlinksBigScreen}>
             <Navlinks></Navlinks>
           </div>
         </div>
-
-        <button onClick={props.handleSignIn} className={css.signInBtn}>
-          Sign in
-        </button>
 
         {/* {props.openSignIn && (
           <SignInPage
@@ -78,15 +75,6 @@ function NavbarSection(props) {
         ></SignInPage>
 
         <MyShoppingCartPage
-          //---
-          // discountPrice={props.discountPrice}
-          // taxPriceDiscount={props.taxPriceDiscount}
-          // shippingPriceDiscount={props.shippingPriceDiscount}
-          // amountToFreeShippingPriceDiscount={
-          //   props.amountToFreeShippingPriceDiscount
-          // }
-          // totalPriceDiscount={props.totalPriceDiscount}
-          //-
           sum={props.sum}
           taxPrice={props.taxPrice}
           shippingPrice={props.shippingPrice}
@@ -102,8 +90,12 @@ function NavbarSection(props) {
         ></MyShoppingCartPage>
 
         <div className={css.navIconWrapper}>
+          <CiLogin
+            onClick={props.handleSignIn}
+            className={css.navIconLogin}
+          ></CiLogin>
           <BsCart3
-            className={css.navIcon}
+            className={css.navIconCart}
             onClick={props.handleMyShoppingCartPage}
           ></BsCart3>
           <div className={props.boughtItems.length > 0 ? css.cartCounter : ""}>
@@ -111,7 +103,7 @@ function NavbarSection(props) {
           </div>
 
           <Link to="/MyFavoritesPage" className={css.heartWrapper}>
-            <VscHeart className={css.navIcon}> </VscHeart>
+            <VscHeart className={css.navIconHeart}> </VscHeart>
             <div
               className={props.likedItems.length > 0 ? css.favoriteCounter : ""}
             >
@@ -121,7 +113,7 @@ function NavbarSection(props) {
         </div>
       </div>
       <div className={css.signInWrapper}>
-        <NavbarSearchSection></NavbarSearchSection>
+        <NavbarSearchSection setSearch={props.setSearch}></NavbarSearchSection>
         <div className={css.countryInfo}>
           <img src="/img/united-states.png" alt="" className={css.flag} />
           <small>USA</small>

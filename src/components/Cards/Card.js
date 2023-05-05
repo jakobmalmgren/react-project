@@ -22,12 +22,7 @@ function Card(props) {
         />
       </Link>
       {discountIcon && <h2 className={css.discountIcon}>{discountIcon}%</h2>}
-      {discountIcon && (
-        <p className={css.itemValue}>
-          ${itemValue.toFixed(2)}
-          {/* ${(props.price / ((100 - props.discountValue) / 10)) * 10} */}
-        </p>
-      )}
+      {discountIcon && <p className={css.itemValue}>${itemValue.toFixed(2)}</p>}
       <h3 className={css.cardItem}>{props.item}</h3>
       <p className={css.cardDescription}>{props.description}</p>
 
@@ -38,11 +33,27 @@ function Card(props) {
       )}
 
       <div className={css.cardIcon}>
-        <VscHeart
+        {props.heart ? (
+          <VscHeartFilled
+            onClick={() => {
+              props.toggleHeart();
+              props.renderLikedItems(props);
+            }}
+          ></VscHeartFilled>
+        ) : (
+          <VscHeart
+            onClick={() => {
+              props.toggleHeart();
+              props.renderLikedItems(props);
+            }}
+          ></VscHeart>
+        )}
+        {/* <VscHeart
           onClick={() => {
             props.renderLikedItems(props);
+          
           }}
-        ></VscHeart>
+        ></VscHeart> */}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@
 }
 .categorySectionOne {
   height: 400px;
-  background-image: url(/public/img/men3.avif);
+  background-image: url(/public/img/mensection.avif);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -24,7 +24,7 @@
 
 .categorySectionTwo {
   color: white;
-  background-image: url(/public/img/woman2.avif);
+  background-image: url(/public/img/womensecion.jpg);
   height: 400px;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,14 +1,15 @@
 .card {
-  height: 290px;
   position: relative;
   margin: 5px;
   width: 100%;
   max-width: 200px;
+
+  height: 320px;
 }
 .cardImage {
   object-fit: cover;
   width: 100%;
-  height: 80%;
+  height: 60%;
 }
 
 .cardItem {

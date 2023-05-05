@@ -6,14 +6,14 @@ function CategorySectionMenWomen(props) {
       <Link to="/MenPage" className={css.categorySectionOne}>
         <div>
           <h2>{props.categoryMale}</h2>
-          <p>The spring collection has arrived</p>
+          <p>The summer collection has arrived</p>
           <h2>SHOP NOW!</h2>
         </div>
       </Link>
       <Link to="/WomenPage" className={css.categorySectionTwo}>
         <div>
           <h2>{props.categoryFemale}</h2>
-          <p>The spring collection has arrived</p>
+          <p>The summer collection has arrived</p>
           <h2>SHOP NOW!</h2>
         </div>
       </Link>

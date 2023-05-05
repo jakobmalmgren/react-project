@@ -14,6 +14,8 @@ import ItemOverviewPage from "./pages/ItemOverviewPage/ItemOverviewPage";
 import CheckOutPage from "./pages/CheckOutPage/CheckOutPage";
 import products from "./data/products";
 import { useEffect } from "react";
+
+import SearchProductsPage from "./pages/SearchProductsPage/SearchProductsPage";
 import CreateAccountPage from "./pages/CreateAccountPage/CreateAccountPage";
 
 function App() {
@@ -45,6 +47,11 @@ function App() {
   }
   const [likedItems, setLikedItems] = useState([]);
   const [heart, setHeart] = useState(false);
+
+  function toggleHeart() {
+    setHeart(!heart);
+  }
+  console.log(heart);
 
   //----------------------------------------------------
 
@@ -131,9 +138,10 @@ function App() {
     setOpenSignIn(!openSignIn);
   }
   //--------------------------------------------------------------------
+  const [search, setSearch] = useState(""); // fixar sökaproductsida
 
   //----------------------------
-
+  console.log(search);
   return (
     <div>
       <NavbarSection
@@ -145,13 +153,16 @@ function App() {
         totalPrice={totalPrice}
         amountToFreeShippingPrice={amountToFreeShippingPrice}
         //---------------------------
+        setSearch={setSearch}
+        //-
+        likedItems={likedItems}
+        // products={products}
         handleSignIn={handleSignIn}
         openSignIn={openSignIn}
         setOpenSignIn={setOpenSignIn}
         handleIncrement={handleIncrement}
         handleDecrement={handleDecrement}
         deleteItems={deleteItems}
-        likedItems={likedItems}
         boughtItems={boughtItems}
         toggleBurger={toggleBurger}
         setToggleBurger={setToggleBurger}
@@ -159,34 +170,90 @@ function App() {
       ></NavbarSection>
 
       <Switch>
-        <Route exact path="/">
+        {search === "" ? (
+          <Route exact path="/">
+            <IndexPage
+              addItemToCart={addItemToCart}
+              products={products}
+            ></IndexPage>
+          </Route>
+        ) : (
+          <SearchProductsPage search={search}></SearchProductsPage>
+        )}
+        {/* <Route exact path="/">
           <IndexPage
             renderLikedItems={renderLikedItems}
             addItemToCart={addItemToCart}
             products={products}
           ></IndexPage>
-        </Route>
+        </Route> */}
+        {search === "" ? (
+          <Route path="/womenPage">
+            <WomenPage
+              toggleHeart={toggleHeart}
+              setHeart={setHeart}
+              heart={heart}
+              renderLikedItems={renderLikedItems}
+              addItemToCart={addItemToCart}
+              products={products}
+            ></WomenPage>
+          </Route>
+        ) : (
+          <SearchProductsPage search={search}></SearchProductsPage>
+        )}
+        {/* 
         <Route path="/womenPage">
           <WomenPage
+            search={search}
             addItemToCart={addItemToCart}
             products={products}
           ></WomenPage>
-        </Route>
-        <Route path="/menPage">
+        </Route> */}
+        {search === "" ? (
+          <Route path="/menPage">
+            <MenPage
+              addItemToCart={addItemToCart}
+              products={products}
+            ></MenPage>
+          </Route>
+        ) : (
+          <SearchProductsPage search={search}></SearchProductsPage>
+        )}
+        {/* <Route path="/menPage">
           <MenPage products={products} addItemToCart={addItemToCart}></MenPage>
-        </Route>
-        <Route path="/kidsPage">
+        </Route> */}
+        {search === "" ? (
+          <Route path="/kidsPage">
+            <KidsPage
+              addItemToCart={addItemToCart}
+              products={products}
+            ></KidsPage>
+          </Route>
+        ) : (
+          <SearchProductsPage search={search}></SearchProductsPage>
+        )}
+        {/* <Route path="/kidsPage">
           <KidsPage
             products={products}
             addItemToCart={addItemToCart}
           ></KidsPage>
-        </Route>
-        <Route path="/outletPage">
+        </Route> */}
+        {search === "" ? (
+          <Route path="/outletPage">
+            <OutletPage
+              addItemToCart={addItemToCart}
+              products={products}
+            ></OutletPage>
+          </Route>
+        ) : (
+          <SearchProductsPage search={search}></SearchProductsPage>
+        )}
+        {/* <Route path="/outletPage">
           <OutletPage
             products={products}
             addItemToCart={addItemToCart}
           ></OutletPage>
-        </Route>
+        </Route> */}
         <Route path="/MyFavoritesPage">
           <MyFavoritePage likedItems={likedItems}></MyFavoritePage>
         </Route>
@@ -217,7 +284,6 @@ function App() {
           <CreateAccountPage></CreateAccountPage>
         </Route>
       </Switch>
-
       <RatingSlider></RatingSlider>
       <FooterSection></FooterSection>
     </div>

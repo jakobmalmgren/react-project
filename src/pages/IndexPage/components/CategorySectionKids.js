@@ -5,7 +5,7 @@ function CategorySectionKids() {
     <Link to="/KidsPage">
       <div className={css.categorySectionKids}>
         <h2>KIDS</h2>
-        <p>The spring collection has arrived</p>
+        <p>The summer collection has arrived</p>
         <h2>SHOP NOW!</h2>
       </div>
     </Link>

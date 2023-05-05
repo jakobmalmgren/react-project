@@ -33,24 +33,28 @@
 
 .navIconWrapper {
   display: flex;
-  margin-right: 0px 15px;
+  justify-content: end;
   align-items: center;
   font-size: 20px;
-  flex: end;
-  cursor: pointer;
+  width: 30%;
+  margin-right: 20px;
 }
 
-.navIcon {
+.navIconHeart {
   position: relative;
+}
+.navIconCart {
+  margin: 0px 11px;
+  cursor: pointer;
+}
+.navIconLogin {
+  cursor: pointer;
 }
 .heartWrapper {
   display: flex;
   align-items: center;
 }
-.heartWrapper :nth-child(1) {
-  margin-right: 25px;
-  margin-left: 10px;
-}
+
 .favoriteCounter {
   width: 20px;
   height: 20px;
@@ -73,7 +77,7 @@
   background-color: rgb(0 24 0 / 78%);
   position: absolute;
   top: 7px;
-  right: 44px;
+  right: 37px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,26 +107,15 @@
   height: 20px;
   margin-right: 10px;
 }
-.signInBtn {
-  border: none;
-  width: 70px;
-  cursor: pointer;
-  background-color: #f2f3f3;
-  font-weight: bolder;
-}
+
 .navInfo p {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(0 24 0 / 78%);
-}
-
-.navInfoText {
-  display: flex;
-  justify-content: center;
+  color: white;
+  font-weight: lighter;
   font-size: 12px;
   margin: 5px 15px;
-  font-weight: bolder;
 }
 
 @media only screen and (min-width: 600px) {
@@ -132,6 +125,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
   }
 
   .navlinksBigScreen {
