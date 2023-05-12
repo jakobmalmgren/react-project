@@ -5,10 +5,8 @@ function OutletSection() {
   return (
     <Link to="/OutletPage">
       <div className={css.outletWrapper}>
-        <div>
-          <h1>OUTLET</h1>
-          <p>Deals up to 70% discount</p>
-        </div>
+        <h1>OUTLET</h1>
+        <p>Deals up to 70% discount</p>
       </div>
     </Link>
   );

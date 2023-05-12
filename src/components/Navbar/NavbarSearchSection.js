@@ -1,10 +1,11 @@
 import { IoIosSearch } from "react-icons/io";
 import css from "./NavbarSearchSection.module.css";
+import { Link } from "react-router-dom";
 
 function NavbarSearchSection(props) {
   return (
-    <div className={css.formWrapper}>
-      <form className={css.navbarForm}>
+    <form className={css.navbarForm}>
+      <Link to="/SearchProductsPage">
         <input
           onChange={(e) => {
             props.setSearch(e.target.value);
@@ -15,10 +16,10 @@ function NavbarSearchSection(props) {
           placeholder="Search"
           className={css.searchField}
         />
+      </Link>
 
-        <IoIosSearch className={css.searchIcon}></IoIosSearch>
-      </form>
-    </div>
+      <IoIosSearch className={css.searchIcon}></IoIosSearch>
+    </form>
   );
 }
 

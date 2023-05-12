@@ -1,41 +1,32 @@
 .heroWrapper {
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-top: 10px;
-  height: 80vh;
-}
-.hero {
+  height: 50vh;
   background-image: url(/public/img/herosection.avif);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
 
-  height: 100%;
-}
-.hero h1 {
+.heroWrapper h1 {
   text-align: center;
-
   color: white;
+  font-size: 20px;
 }
-.hero p {
-  font-size: 23px;
+.heroWrapper p {
+  font-size: 10px;
   color: white;
   text-align: center;
 }
-.hero :nth-child(2) {
+.heroWrapper :nth-child(2) {
   margin: 30px 0px;
 }
 
 @media only screen and (min-width: 600px) {
-  .heroWrapper {
-    margin-top: 20px;
+  .heroWrapper h1 {
+    font-size: 40px;
   }
-  .hero p {
-    font-size: 22px;
-  }
-  .hero h1 {
-    font-size: 32px;
+  .heroWrapper p {
+    font-size: 25px;
   }
 }

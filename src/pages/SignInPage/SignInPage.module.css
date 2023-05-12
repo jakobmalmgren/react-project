@@ -20,7 +20,30 @@
   left: 0px;
   transition: 100ms;
 }
+.mail {
+  color: rgb(0 24 0 / 78%);
+  position: relative;
+}
+.password {
+  background-color: rgb(173 187 173);
+  position: relative;
+}
+.formLoginWrapper input::placeholder {
+  position: absolute;
+  left: 50px;
+}
 
+.iconWrapper {
+  background-color: rgb(173 187 173);
+  width: 40px;
+  height: 91%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
 .overlay {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.272);
@@ -28,7 +51,7 @@
 .formLogin {
   width: 550px;
   height: 100vh;
-  background-color: #485248;
+  background-color: white;
 }
 .formHeader {
   background-color: #f2f3f3;
@@ -58,12 +81,17 @@
   width: 100%;
   padding: 10px;
   margin: 10px 0px;
+  padding-left: 45px;
 }
 .rememberDataWrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+}
+.rememberDataWrapper :nth-child(1) {
+  padding: 10px 0px;
+}
+
+.rememberDataWrapper p {
+  font-size: 10px;
 }
 .rememberMeWrapper {
   display: flex;
@@ -73,7 +101,7 @@
   accent-color: black;
 }
 .rememberMeWrapper p {
-  font-size: 15px;
+  font-size: 10px;
   margin-left: 5px;
 }
 
@@ -84,4 +112,21 @@
 
 .rememberDataWrapper :nth-child(1) {
   display: flex;
+}
+.signInPageBtn {
+  background-color: rgb(173 187 173);
+  height: 50px;
+  width: 100%;
+  margin-top: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 400px) {
+  .rememberDataWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

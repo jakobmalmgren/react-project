@@ -3,35 +3,51 @@
   margin: 5px;
   width: 100%;
   max-width: 200px;
-
-  height: 320px;
+  height: 250px;
+}
+.card:hover {
+  transform: scale(1.01);
 }
 .cardImage {
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
   height: 60%;
+  width: 100%;
 }
 
 .cardItem {
   font-weight: bold;
-  font-size: 10px;
+  font-size: 14px;
 }
 
-.cardDescription,
-.cardPrice {
-  font-size: 12px;
+.cardDescription {
+  font-size: 14px;
 }
-.cardIcon {
+
+.cardIconContainer {
   position: absolute;
   top: 5px;
   right: 5px;
   cursor: pointer;
 }
+.cardIcon {
+  border: 1px solid black;
+  display: flex;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIcon:hover {
+  transition: 0.5s;
+  background-color: rgb(173 187 173);
+}
 .discountIcon {
   width: 40px;
   height: 40px;
-  background-color: rgb(0 24 0 / 78%);
-  color: white;
+  background-color: rgb(173 187 173);
+  color: black;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -40,16 +56,20 @@
   top: 5px;
   left: 5px;
   font-size: 12px;
-  font-family: "Dancing Script", cursive;
+  display: flex;
 }
 
-.card p,
-.card h3 {
-  color: rgb(0 24 0 / 78%);
-}
 .card .itemValue {
   text-decoration: line-through;
+  margin-right: 10px;
 }
 .card .cardPriceDiscount {
   color: red;
+}
+
+.cardIconWrapper {
+  display: flex;
+}
+.priceWrapper {
+  display: flex;
 }

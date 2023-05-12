@@ -33,19 +33,30 @@ function KidsPage(props) {
     })
     .map((kid) => {
       return (
-        <Card key={kid.id} {...kid} addItemToCart={props.addItemToCart}></Card>
+        <Card
+          deleteLikedItems={props.deleteLikedItems}
+          renderLikedItems={props.renderLikedItems}
+          key={kid.id}
+          {...kid}
+          addItemToCart={props.addItemToCart}
+        ></Card>
       );
     });
   return (
-    <div>
+    <div className={css.kidsPage}>
       <h1>Kids</h1>
+      <div className={css.toggleBtnWrapper}>
+        <div
+          className={css.toggleBtn}
+          onClick={() => {
+            setToggleFilterItemsKids(!toggleFilterItemsKids);
+          }}
+        >
+          <FilterButton></FilterButton>
+        </div>
 
-      <div
-        onClick={() => {
-          setToggleFilterItemsKids(!toggleFilterItemsKids);
-        }}
-      >
-        <FilterButton></FilterButton>
+        <h3>{filteredKids.length}</h3>
+        <p>products</p>
       </div>
       {toggleFilterItemsKids && (
         <div className={css.filterItems}>

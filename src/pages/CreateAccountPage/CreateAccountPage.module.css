@@ -16,5 +16,7 @@
 }
 .createAccountPageForm button {
   width: 100%;
+  color: white;
   padding: 15px;
+  background-color: rgb(173 187 173);
 }

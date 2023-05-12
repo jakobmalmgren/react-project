@@ -2,7 +2,7 @@
   color: red;
 }
 a {
-  color: rgb(0 24 0 / 78%);
+  color: black;
 }
 
 .navlinksList li {
@@ -16,7 +16,6 @@ a {
 @media only screen and (min-width: 600px) {
   .navlinksList {
     display: flex;
-    width: 100%;
   }
   .navlinksList li {
     margin: 0px 15px;

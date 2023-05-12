@@ -1,10 +1,7 @@
 .categoryWrapper {
-  width: 100%;
-  margin-top: 20px;
-  padding: 0px 8px;
+  height: 100vh;
 }
 .categorySectionOne {
-  height: 400px;
   background-image: url(/public/img/mensection.avif);
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,33 +9,32 @@
   justify-content: center;
   align-items: center;
   color: white;
+  height: 50%;
 }
-.categorySectionOne h2,
-.categorySectionTwo h2 {
-  font-size: 40px;
-}
-.categorySectionOne p,
-.categorySectionTwo p {
-  font-size: 20px;
-}
-
 .categorySectionTwo {
   color: white;
   background-image: url(/public/img/womensecion.jpg);
-  height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8px;
+  height: 50%;
+  margin-top: 10px;
+}
+.categorySectionOne h2,
+.categorySectionTwo h2 {
+  font-size: 20px;
+}
+.categorySectionOne p,
+.categorySectionTwo p {
+  font-size: 10px;
 }
 
 @media only screen and (min-width: 600px) {
   .categoryWrapper {
-    padding: 0px 8px;
-    margin-top: 40px;
     display: flex;
+    height: auto;
   }
   .categorySectionTwo {
     height: 400px;
@@ -49,5 +45,13 @@
     height: 400px;
     margin-right: 10px;
     width: 50%;
+  }
+  .categorySectionOne h2,
+  .categorySectionTwo h2 {
+    font-size: 30px;
+  }
+  .categorySectionOne p,
+  .categorySectionTwo p {
+    font-size: 15px;
   }
 }

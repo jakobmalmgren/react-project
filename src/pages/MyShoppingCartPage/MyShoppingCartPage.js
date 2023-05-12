@@ -1,7 +1,7 @@
 import { CgCloseO } from "react-icons/cg";
 import css from "./MyShoppingCartPage.module.css";
 import MyShoppingCartPageCard from "./components/MyShoppingCartPageCard";
-import Button from "../../components/Buttons/Button";
+
 import { Link } from "react-router-dom";
 
 function MyShoppingCartPage(props) {
@@ -10,10 +10,14 @@ function MyShoppingCartPage(props) {
     myShoppingCartPageCard = props.boughtItems.map((item) => {
       return (
         <MyShoppingCartPageCard
+          addItemToCart={props.addItemToCart}
           {...item}
+          key={item.id}
           deleteItems={props.deleteItems}
           handleDecrement={props.handleDecrement}
           handleIncrement={props.handleIncrement}
+          //
+          handleMyShoppingCartPage={props.handleMyShoppingCartPage}
         ></MyShoppingCartPageCard>
       );
     });
@@ -57,25 +61,27 @@ function MyShoppingCartPage(props) {
             <div>
               <div className={css.totalCountWrapper}>
                 <div>
-                  <h2>Products: ${props.sum.toFixed(2)}</h2>
-                  <h2>Tax: $ {props.taxPrice.toFixed(2)} </h2>
-                  <h2>Shipping fee: $ {props.shippingPrice.toFixed(2)}</h2>
+                  <h2>Products: ${props.sum.toFixed(0)}</h2>
+                  <h2>Tax: $ {props.taxPrice.toFixed(0)} </h2>
+                  <h2>Shipping fee: $ {props.shippingPrice.toFixed(0)}</h2>
                   {props.sum < 100 ? (
-                    <h3>
-                      ($ {props.amountToFreeShippingPrice.toFixed(2)} to free
-                      shippingfee)
-                    </h3>
+                    <h4>
+                      $ {props.amountToFreeShippingPrice.toFixed(0)} to no
+                      shippingfee
+                    </h4>
                   ) : (
                     ""
                   )}
-                  <h2>Total: $ {props.totalPrice.toFixed(2)}</h2>
+                  <h2>Total: $ {props.totalPrice.toFixed(0)}</h2>
                 </div>
               </div>
               <Link to="/checkoutPage">
-                <Button
-                  content="GO TO CHECKOUT"
-                  handleMyShoppingCartPage={props.handleMyShoppingCartPage}
-                ></Button>
+                <button
+                  className={css.goToCheckoutBtn}
+                  onClick={props.handleMyShoppingCartPage}
+                >
+                  GO TO CHECKOUT
+                </button>
               </Link>
             </div>
           )}

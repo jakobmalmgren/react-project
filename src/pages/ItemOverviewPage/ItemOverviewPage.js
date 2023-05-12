@@ -7,7 +7,10 @@ function ItemOverviewPage(props) {
     addedCartItem = props.addToCart.map((item) => {
       return (
         <ItemOverviewPageContent
+          deleteLikedItems={props.deleteLikedItems}
+          renderLikedItems={props.renderLikedItems}
           {...item}
+          key={item.id}
           onAdd={props.onAdd}
         ></ItemOverviewPageContent>
       );

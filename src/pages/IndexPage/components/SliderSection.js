@@ -25,12 +25,11 @@ function SliderSection(props) {
   return (
     <div>
       <h1 className={css.sliderHeader}>{props.header}</h1>
-      <div className={css.carouselWrapper}>
-        <Carousel className={css.carousel} responsive={responsive}>
-          {props.filteredTshirts}
-          {props.filteredShoes}
-        </Carousel>
-      </div>
+
+      <Carousel responsive={responsive}>
+        {props.filteredTshirts}
+        {props.filteredShoes}
+      </Carousel>
     </div>
   );
 }

@@ -20,14 +20,23 @@
   left: 0px;
   transition: 100ms;
 }
+.goToCheckoutBtn {
+  background-color: rgb(173 187 173);
+  height: 50px;
+  width: 100%;
+  margin-top: 50px;
+  color: white;
+  cursor: pointer;
+}
 
 .overlay {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.272);
 }
 .myShoppingCart {
-  width: 550px;
-  background-color: #485248;
+  /* nåt fel här...widh?? */
+  width: 1700px;
+  background-color: white;
   overflow-y: scroll;
 }
 
@@ -65,14 +74,21 @@
   width: 100%;
 }
 .totalCountWrapper h2 {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: lighter;
 }
-.totalCountWrapper h3 {
+.totalCountWrapper h4 {
   font-size: 13px;
-  font-weight: lighter;
+  color: red;
+  font-weight: normal;
 }
 .shippingWrapper {
   display: flex;
   align-items: center;
+}
+
+@media only screen and (min-width: 400px) {
+  .myShoppingCart {
+    max-width: 400px;
+  }
 }

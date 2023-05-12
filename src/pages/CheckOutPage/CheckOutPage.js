@@ -7,10 +7,10 @@ function CheckoutPage(props) {
   const [text, setText] = useState("");
   function updateText() {
     setTimeout(() => {
-      setText("WAITING....");
+      setText("Waiting....");
     });
     setTimeout(() => {
-      setText("YOUR PURCHASE WAS SUCCESFULL!");
+      setText("Your purchase was succesful!");
       props.setBoughtItems([]);
     }, 5000);
   }
@@ -23,60 +23,57 @@ function CheckoutPage(props) {
     const itemValue = (item.price / ((100 - item.discountValue) / 10)) * 10;
     return (
       <div className={css.checkoutPageWrapper}>
-        <div className={css.checkoutPageItems}>
-          <div className={css.checkoutPageImgWrapper}>
-            <img src={`img/${item.image[0]}`} alt="" />
-            {discountIcon && (
-              <h2 className={css.discountIcon}>{discountIcon}%</h2>
-            )}
-          </div>
+        <div className={css.checkoutPageImgWrapper}>
+          <img src={`img/${item.image[0]}`} alt="" />
+          {discountIcon && (
+            <h2 className={css.discountIcon}>{discountIcon}%</h2>
+          )}
+        </div>
 
-          <div className={css.checkoutPageCategories}>
-            <h3>{item.description}</h3>
-            <p>{item.item}</p>
+        <div className={css.checkoutPageItemsWrapper}>
+          <h3>{item.description}</h3>
+          <p>{item.item}</p>
 
+          <div className={css.priceWrapper}>
             {discountIcon && (
-              <p className={css.itemValue}>
-                {/* ${(item.price / ((100 - item.discountValue) / 10)) * 10} */}
-                ${itemValue.toFixed(2)}
-              </p>
+              <p className={css.itemValue}>${itemValue.toFixed(0)}</p>
             )}
             {discountIcon ? (
               <p className={css.cardPriceDiscount}>$ {item.price}</p>
             ) : (
               <p className={css.cardPrice}>$ {item.price}</p>
             )}
-            <p>{item.category}</p>
           </div>
+          <p>{item.category}</p>
 
-          <BsFillTrashFill
-            className={css.deleteIcon}
-            onClick={() => {
-              props.deleteItems(item);
-            }}
-          ></BsFillTrashFill>
-        </div>
-        <div className={css.totalSection}>
-          <button
-            className={css.itemBtn}
-            onClick={() => {
-              props.handleDecrement(item);
-            }}
-          >
-            <BiMinus></BiMinus>
-          </button>
-          <p>{item.qty}</p>
-          <button
-            className={css.itemBtn}
-            onClick={() => {
-              props.handleIncrement(item);
-            }}
-          >
-            <BiPlus></BiPlus>
-          </button>
+          <div className={css.totalSection}>
+            <button
+              className={css.plusMinusBtn}
+              onClick={() => {
+                props.handleDecrement(item);
+              }}
+            >
+              <BiMinus></BiMinus>
+            </button>
+            <p className={css.quantityArea}>{item.qty}</p>
 
+            <button
+              className={css.plusMinusBtn}
+              onClick={() => {
+                props.handleIncrement(item);
+              }}
+            >
+              <BiPlus></BiPlus>
+            </button>
+          </div>
           <h2>$ {item.price * item.qty}</h2>
         </div>
+        <BsFillTrashFill
+          className={css.deleteIcon}
+          onClick={() => {
+            props.deleteItems(item);
+          }}
+        ></BsFillTrashFill>
       </div>
     );
   });
@@ -86,20 +83,18 @@ function CheckoutPage(props) {
       <div className={css.checkOutPageContainer}>
         {checkout}
         {props.boughtItems.length > 0 ? (
-          <div>
-            <h2>Products: $ {props.sum.toFixed(2)} </h2>
-            <h2>Tax: $ {props.taxPrice.toFixed(2)} </h2>
+          <div className={css.checkoutPriceContainer}>
+            <h2>Products: $ {props.sum.toFixed(0)} </h2>
+            <h2>Tax: $ {props.taxPrice.toFixed(0)} </h2>
             <div className={css.shippingWrapper}>
-              <h2>Shipping fee: $ {props.shippingPrice.toFixed(2)} </h2>
+              <h2>Shipping fee: $ {props.shippingPrice.toFixed(0)} </h2>
               {props.sum < 100 ? (
-                <h3>
-                  ($ {props.amountToFreeShippingPrice} to free shippingfee)
-                </h3>
+                <h4>$ {props.amountToFreeShippingPrice} to no shippingfee</h4>
               ) : (
                 ""
               )}
             </div>
-            <h2>Total: $ {props.totalPrice.toFixed(2)}</h2>
+            <h2>Total: $ {props.totalPrice.toFixed(0)}</h2>
 
             <button
               className={css.purchaseBtn}

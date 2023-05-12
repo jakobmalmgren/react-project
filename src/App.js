@@ -14,8 +14,8 @@ import ItemOverviewPage from "./pages/ItemOverviewPage/ItemOverviewPage";
 import CheckOutPage from "./pages/CheckOutPage/CheckOutPage";
 import products from "./data/products";
 import { useEffect } from "react";
-
 import SearchProductsPage from "./pages/SearchProductsPage/SearchProductsPage";
+
 import CreateAccountPage from "./pages/CreateAccountPage/CreateAccountPage";
 
 function App() {
@@ -34,7 +34,11 @@ function App() {
   //----------------------------------------------
 
   //--------------------------lägger till MyfavoritePage
-  //lägga toll localstorage här me...som ja gjrde innan..
+
+  const getMyLikedFromLocalStorage = JSON.parse(
+    localStorage.getItem("myFavoritePage")
+  );
+
   function renderLikedItems(item) {
     const exist = likedItems.find((x) => {
       return item.id === x.id;
@@ -43,15 +47,21 @@ function App() {
       setLikedItems([...item]);
     } else {
       setLikedItems([...likedItems, item]);
-    } //kolla bought items kanske kan göra samma
+    }
   }
-  const [likedItems, setLikedItems] = useState([]);
-  const [heart, setHeart] = useState(false);
 
-  function toggleHeart() {
-    setHeart(!heart);
+  const [likedItems, setLikedItems] = useState(getMyLikedFromLocalStorage);
+
+  useEffect(() => {
+    localStorage.setItem("myFavoritePage", JSON.stringify(likedItems));
+  }, [likedItems]);
+
+  function deleteLikedItems(items) {
+    const deleted = likedItems.filter((fav) => {
+      return fav.id !== items.id;
+    });
+    return setLikedItems(deleted);
   }
-  console.log(heart);
 
   //----------------------------------------------------
 
@@ -116,14 +126,16 @@ function App() {
   }, 0);
 
   const taxPrice = sum * 0.15;
-  const shippingPrice = sum >= 100 ? 0 : 15.9;
+  const shippingPrice = sum >= 100 ? 0 : 15;
   const amountToFreeShippingPrice = 100 - sum;
   const totalPrice = sum + taxPrice + shippingPrice;
 
   //------------------------------------------------------------
 
   //-------------------------------------
-  const [openSignIn, setOpenSignIn] = useState(false); // öppnar stänger signInpage o fixar så modal kmr o ingen scroll
+  const [openSignIn, setOpenSignIn] = useState(false);
+
+  // öppnar stänger signInpage o fixar så modal kmr o ingen scroll
   //i bode signinpage OCH myshoppingcartpage...
   //men vill fixa annnrolunda här under o nå body o ändra classname dynamisk
 
@@ -141,7 +153,7 @@ function App() {
   const [search, setSearch] = useState(""); // fixar sökaproductsida
 
   //----------------------------
-  console.log(search);
+
   return (
     <div>
       <NavbarSection
@@ -156,8 +168,8 @@ function App() {
         setSearch={setSearch}
         //-
         likedItems={likedItems}
-        // products={products}
         handleSignIn={handleSignIn}
+        addItemToCart={addItemToCart}
         openSignIn={openSignIn}
         setOpenSignIn={setOpenSignIn}
         handleIncrement={handleIncrement}
@@ -170,95 +182,62 @@ function App() {
       ></NavbarSection>
 
       <Switch>
-        {search === "" ? (
-          <Route exact path="/">
-            <IndexPage
-              addItemToCart={addItemToCart}
-              products={products}
-            ></IndexPage>
-          </Route>
-        ) : (
-          <SearchProductsPage search={search}></SearchProductsPage>
-        )}
-        {/* <Route exact path="/">
+        <Route exact path="/">
           <IndexPage
+            deleteLikedItems={deleteLikedItems}
             renderLikedItems={renderLikedItems}
             addItemToCart={addItemToCart}
             products={products}
           ></IndexPage>
-        </Route> */}
-        {search === "" ? (
-          <Route path="/womenPage">
-            <WomenPage
-              toggleHeart={toggleHeart}
-              setHeart={setHeart}
-              heart={heart}
-              renderLikedItems={renderLikedItems}
-              addItemToCart={addItemToCart}
-              products={products}
-            ></WomenPage>
-          </Route>
-        ) : (
-          <SearchProductsPage search={search}></SearchProductsPage>
-        )}
-        {/* 
+        </Route>
+
         <Route path="/womenPage">
           <WomenPage
-            search={search}
+            deleteLikedItems={deleteLikedItems}
+            renderLikedItems={renderLikedItems}
             addItemToCart={addItemToCart}
             products={products}
           ></WomenPage>
-        </Route> */}
-        {search === "" ? (
-          <Route path="/menPage">
-            <MenPage
-              addItemToCart={addItemToCart}
-              products={products}
-            ></MenPage>
-          </Route>
-        ) : (
-          <SearchProductsPage search={search}></SearchProductsPage>
-        )}
-        {/* <Route path="/menPage">
-          <MenPage products={products} addItemToCart={addItemToCart}></MenPage>
-        </Route> */}
-        {search === "" ? (
-          <Route path="/kidsPage">
-            <KidsPage
-              addItemToCart={addItemToCart}
-              products={products}
-            ></KidsPage>
-          </Route>
-        ) : (
-          <SearchProductsPage search={search}></SearchProductsPage>
-        )}
-        {/* <Route path="/kidsPage">
+        </Route>
+
+        <Route path="/menPage">
+          <MenPage
+            products={products}
+            deleteLikedItems={deleteLikedItems}
+            renderLikedItems={renderLikedItems}
+            addItemToCart={addItemToCart}
+          ></MenPage>
+        </Route>
+
+        <Route path="/kidsPage">
           <KidsPage
+            deleteLikedItems={deleteLikedItems}
+            renderLikedItems={renderLikedItems}
             products={products}
             addItemToCart={addItemToCart}
           ></KidsPage>
-        </Route> */}
-        {search === "" ? (
-          <Route path="/outletPage">
-            <OutletPage
-              addItemToCart={addItemToCart}
-              products={products}
-            ></OutletPage>
-          </Route>
-        ) : (
-          <SearchProductsPage search={search}></SearchProductsPage>
-        )}
-        {/* <Route path="/outletPage">
+        </Route>
+
+        <Route path="/outletPage">
           <OutletPage
+            deleteLikedItems={deleteLikedItems}
+            renderLikedItems={renderLikedItems}
             products={products}
             addItemToCart={addItemToCart}
           ></OutletPage>
-        </Route> */}
+        </Route>
         <Route path="/MyFavoritesPage">
-          <MyFavoritePage likedItems={likedItems}></MyFavoritePage>
+          <MyFavoritePage
+            addItemToCart={addItemToCart}
+            deleteLikedItems={deleteLikedItems}
+            renderLikedItems={renderLikedItems}
+            likedItems={likedItems}
+          ></MyFavoritePage>
         </Route>
         <Route path="/ItemOverviewPage">
           <ItemOverviewPage
+            deleteLikedItems={deleteLikedItems}
+            renderLikedItems={renderLikedItems}
             onAdd={onAdd}
             addToCart={addToCart}
           ></ItemOverviewPage>
@@ -282,6 +261,15 @@ function App() {
         </Route>
         <Route path="/CreateAccountPage">
           <CreateAccountPage></CreateAccountPage>
+        </Route>
+        <Route path="/SearchProductsPage">
+          <SearchProductsPage
+            deleteLikedItems={deleteLikedItems}
+            renderLikedItems={renderLikedItems}
+            addItemToCart={addItemToCart}
+            setSearch={setSearch}
+            search={search}
+          ></SearchProductsPage>
         </Route>
       </Switch>
       <RatingSlider></RatingSlider>

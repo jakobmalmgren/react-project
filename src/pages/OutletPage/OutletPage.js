@@ -36,6 +36,8 @@ function OutletPage(props) {
     .map((outlet) => {
       return (
         <Card
+          deleteLikedItems={props.deleteLikedItems}
+          renderLikedItems={props.renderLikedItems}
           key={outlet.id}
           {...outlet}
           addItemToCart={props.addItemToCart}
@@ -43,14 +45,19 @@ function OutletPage(props) {
       );
     });
   return (
-    <div>
+    <div className={css.outletPage}>
       <h1>Outlet</h1>
-      <div
-        onClick={() => {
-          setToggleFilterItemsOutlet(!toggleFilterItemsOutlet);
-        }}
-      >
-        <FilterButton></FilterButton>
+      <div className={css.toggleBtnWrapper}>
+        <div
+          className={css.toggleBtn}
+          onClick={() => {
+            setToggleFilterItemsOutlet(!toggleFilterItemsOutlet);
+          }}
+        >
+          <FilterButton></FilterButton>
+        </div>
+        <h3>{filteredOutlet.length}</h3>
+        <p>products</p>
       </div>
       {toggleFilterItemsOutlet && (
         <div className={css.filterItems}>

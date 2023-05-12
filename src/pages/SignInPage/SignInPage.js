@@ -1,7 +1,8 @@
 import { CgCloseO } from "react-icons/cg";
+import { AiOutlineMail } from "react-icons/ai";
+import { RiLockPasswordLine } from "react-icons/ri";
 import css from "./SignInPage.module.css";
 import { Link } from "react-router-dom";
-import Button from "../../components/Buttons/Button";
 
 function SignInPage(props) {
   return (
@@ -16,16 +17,26 @@ function SignInPage(props) {
           ></CgCloseO>
         </div>
         <div className={css.formLoginWrapper}>
-          <input
-            type="text"
-            placeholder="Email"
-            className={css.formLoginInput}
-          />
-          <input
-            type="text"
-            placeholder="Password"
-            className={css.formLoginInput}
-          />
+          <div className={css.mail}>
+            <input
+              type="text"
+              placeholder="Email"
+              className={css.formLoginInput}
+            />
+            <div className={css.iconWrapper}>
+              <AiOutlineMail className={css.icon}></AiOutlineMail>
+            </div>
+          </div>
+          <div className={css.password}>
+            <input
+              type="text"
+              placeholder="Password"
+              className={css.formLoginInput}
+            />
+            <div className={css.iconWrapper}>
+              <RiLockPasswordLine className={css.icon}></RiLockPasswordLine>
+            </div>
+          </div>
 
           <div className={css.rememberDataWrapper}>
             <div className={css.rememberMeWrapper}>
@@ -35,9 +46,23 @@ function SignInPage(props) {
 
             <p>Forgot the password?</p>
           </div>
-          <Button content="SIGN IN"></Button>
+          <button
+            className={css.signInPageBtn}
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+          >
+            SIGN IN
+          </button>
           <Link to="/CreateAccountPage">
-            <Button content="CREATE ACCOUNT"></Button>
+            <button
+              className={css.signInPageBtn}
+              onClick={() => {
+                props.handleSignIn();
+              }}
+            >
+              CREATE ACCOUNT
+            </button>
           </Link>
         </div>
       </form>

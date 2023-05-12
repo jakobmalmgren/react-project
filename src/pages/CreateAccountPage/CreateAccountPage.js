@@ -10,7 +10,7 @@ function CreateAccountPage() {
     password: "",
     confirmPassword: "",
   });
-  console.log(values);
+
   const inputs = [
     {
       id: 1,
@@ -55,8 +55,8 @@ function CreateAccountPage() {
       id: 5,
       name: "confirmPassword",
       type: "password",
-      placeHolder: "confirmPassword",
-      label: "confirmPassword",
+      placeHolder: "confirm Password",
+      label: "confirm Password",
       errormessage: "Password dont match",
       required: true,
       pattern: values.password,
@@ -71,13 +71,13 @@ function CreateAccountPage() {
 
   return (
     <div className={css.createAccountPage}>
-      <h1>Create An Account</h1>
+      <h1>Create Account</h1>
       <div className={css.createAccountPageFormWrapper}>
         <form onSubmit={handleSubmit} className={css.createAccountPageForm}>
           {inputs.map((input) => {
             return (
               <Inputs
-                key={Inputs.id}
+                key={input.id}
                 {...input}
                 values={values[inputs.name]}
                 onChange={onChange}

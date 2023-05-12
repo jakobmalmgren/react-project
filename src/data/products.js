@@ -682,7 +682,7 @@ const products = [
   },
   {
     id: 56,
-    image: ["/pants15pic2.jpg", "/pants15pic2.jpg"],
+    image: ["/pants15.jpg", "/pants15pic2.jpg"],
 
     item: "PANTS",
     description: "Jack & Jones",

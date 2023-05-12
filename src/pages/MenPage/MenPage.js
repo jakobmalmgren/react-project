@@ -33,19 +33,31 @@ function MenPage(props) {
     })
     .map((men) => {
       return (
-        <Card key={men.id} {...men} addItemToCart={props.addItemToCart}></Card>
+        <Card
+          deleteLikedItems={props.deleteLikedItems}
+          renderLikedItems={props.renderLikedItems}
+          key={men.id}
+          {...men}
+          addItemToCart={props.addItemToCart}
+        ></Card>
       );
     });
 
   return (
-    <div>
+    <div className={css.menPage}>
       <h1>Men</h1>
-      <div
-        onClick={() => {
-          setToggleFilterItemsMen(!toggleFilterItemsMen);
-        }}
-      >
-        <FilterButton></FilterButton>
+      <div className={css.toggleBtnWrapper}>
+        <div
+          className={css.toggleBtn}
+          onClick={() => {
+            setToggleFilterItemsMen(!toggleFilterItemsMen);
+          }}
+        >
+          <FilterButton></FilterButton>
+        </div>
+
+        <h3>{filteredMen.length}</h3>
+        <p>products</p>
       </div>
 
       {toggleFilterItemsMen && (

@@ -1,147 +1,134 @@
+.addToCartPage {
+  padding: 10px;
+}
 .discountIcon {
   width: 80px;
   height: 80px;
-  background-color: rgb(0 24 0 / 78%);
-  color: white;
+  background-color: rgb(173 187 173);
+  color: black;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 8px;
+  left: 8px;
   font-size: 20px;
-  font-family: "Dancing Script", cursive;
 }
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+}
+.smallImageWrapper {
+  margin: 0 auto;
+  display: flex;
+  max-width: 610px;
+}
+.smallImageWrapper :nth-child(1),
+.smallImageWrapper :nth-child(2) {
+  padding: 5px;
+}
+
 .bigImageWrapper {
-  position: relative;
-}
-.header {
-  text-align: center;
-  margin: 25px 0px;
-  font-size: 25px;
-  color: rgb(0 24 0 / 78%);
-}
-.addToCartPage {
-  color: rgb(0 24 0 / 78%);
   display: flex;
   justify-content: center;
+}
+.positionDiscount {
+  position: relative;
 }
 
 .smallImage {
-  width: 50%;
-  height: 300px;
-  width: 300px;
-  object-fit: cover;
-  padding: 8px;
+  object-fit: contain;
+  width: 100%;
   cursor: pointer;
+  max-width: 300px;
+  border: 0.5px solid black;
+  border-radius: 10%;
 }
 
 .bigImage {
-  height: 500px;
-  width: 500px;
-  object-fit: cover;
-  padding: 8px;
+  width: 100%;
+  object-fit: contain;
   cursor: pointer;
   position: relative;
+  min-height: 300px;
+  border: 0.5px solid black;
+  border-radius: 10%;
+  max-width: 500px;
 }
-
 .sectionInfo {
-  width: 100%;
+  padding: 10px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.addToCartBtnWrapper {
-  display: flex;
-  justify-content: center;
-}
 .addToCartBtn {
-  width: 60%;
+  width: 100%;
   height: 40px;
-  background-color: rgb(8 57 3 / 30%);
+  background-color: rgb(173 187 173);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 25px 0px;
   font-size: 13px;
   cursor: pointer;
-}
-.addToCartBtn :nth-child(1) {
-  margin-right: 5px;
-}
-.addToFav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(0 24 0 / 78%);
+  color: white;
 }
 
-.heartIcon {
+.heartIconWrapper {
   display: flex;
-}
-.addToFav :nth-child(1) {
-  margin-right: 5px;
-  cursor: pointer;
-}
-.addToFav p {
-  font-size: 13px;
-}
-.addToCartInfo {
-  margin-top: 40px;
-  margin-left: 60px;
-}
-.addToCartInfo h4 {
-  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-.sectionInfo h4 {
-  margin: 15px 0px;
-  font-weight: bold;
-}
-.bigImageWrapper .itemValue {
+.sectionInfo .itemValue {
   text-decoration: line-through;
 }
 .cardPriceDiscount {
   color: red;
+  margin-left: 10px;
+}
+.heartIcon {
+  border: 1px solid black;
+  display: flex;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.heartIcon:hover {
+  transition: 0.5s;
+  background-color: rgb(173 187 173);
+}
+.priceWrapper {
+  display: flex;
+}
+.addToCartInfo p {
+  margin-bottom: 5px;
+}
+.faq {
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 800px) {
-  .imageContainer {
-    display: flex;
-  }
-  .smallImageWrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  .smallImage {
-    height: 300px;
-    width: 300px;
-  }
-  .bigImage {
-    height: 500px;
-    width: 500px;
-  }
-
-  .addToCartBtn {
-    margin: 15px 0px;
-  }
-
-  .addToCartPage h3 {
-    margin: 10px 0px;
-  }
-}
-@media only screen and (min-width: 1050px) {
-  .smallImage {
-    height: 300px;
-    width: 300px;
-  }
-  .bigImage {
-    height: 500px;
-    width: 500px;
-  }
   .addToCartPage {
     display: flex;
   }
   .sectionInfo {
-    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .sectionInfo .header {
+    font-size: 27px;
+  }
+  .priceWrapper .itemValue,
+  .priceWrapper .cardPriceDiscount,
+  .priceWrapper .cardPrice {
+    font-size: 20px;
   }
 }

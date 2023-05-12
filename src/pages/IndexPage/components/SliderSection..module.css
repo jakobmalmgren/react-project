@@ -3,19 +3,3 @@
   font-size: 25px;
   text-align: start;
 }
-
-.carouselWrapper {
-  display: flex;
-  justify-content: center;
-}
-.carousel {
-  width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  .slider-header {
-    font-size: 27px;
-    margin-top: 18px;
-    margin-bottom: 15px;
-  }
-}

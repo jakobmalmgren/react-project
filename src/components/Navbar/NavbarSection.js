@@ -3,11 +3,11 @@ import { BsCart3 } from "react-icons/bs";
 import { VscHeart } from "react-icons/vsc";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
-import Navlinks from "./NavlinksSection";
+import NavlinksSection from "./NavlinksSection";
 import NavbarSearchSection from "./NavbarSearchSection";
 import { GoCheck } from "react-icons/go";
 import SignInPage from "../../pages/SignInPage/SignInPage";
-import MobileNavigation from "./MobileNavigationSection";
+import MobileNavigationSection from "./MobileNavigationSection";
 import MyShoppingCartPage from "../../pages/MyShoppingCartPage/MyShoppingCartPage";
 import css from "./NavbarSection.module.css";
 import { CiLogin } from "react-icons/ci";
@@ -30,17 +30,17 @@ function NavbarSection(props) {
     <div>
       <div className={css.nav}>
         <div className={css.burgerWrapper}>
-          {props.toggleBurger && <MobileNavigation />}
+          {props.toggleBurger && <MobileNavigationSection />}
           {props.toggleBurger ? closer : burger}
         </div>
         <div className={css.navlinksWrapper}>
           <div className={css.navTitle}>
             <Link to="/">
-              <h2>CLOTHES</h2>
+              <h2>FASHION</h2>
             </Link>
           </div>
           <div className={css.navlinksBigScreen}>
-            <Navlinks></Navlinks>
+            <NavlinksSection></NavlinksSection>
           </div>
         </div>
 
@@ -75,6 +75,7 @@ function NavbarSection(props) {
         ></SignInPage>
 
         <MyShoppingCartPage
+          addItemToCart={props.addItemToCart}
           sum={props.sum}
           taxPrice={props.taxPrice}
           shippingPrice={props.shippingPrice}
@@ -112,11 +113,11 @@ function NavbarSection(props) {
           </Link>
         </div>
       </div>
-      <div className={css.signInWrapper}>
+      <div className={css.searchbarWrapper}>
         <NavbarSearchSection setSearch={props.setSearch}></NavbarSearchSection>
         <div className={css.countryInfo}>
           <img src="/img/united-states.png" alt="" className={css.flag} />
-          <small>USA</small>
+          <small>US</small>
         </div>
       </div>
 

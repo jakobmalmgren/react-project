@@ -1,6 +1,6 @@
-.categorySectionKids {
+.categorySectionKidsWrapper {
   background-image: url(/public/img/kidssection.avif);
-  height: 400px;
+  height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -9,9 +9,17 @@
   align-items: center;
   flex-direction: column;
 }
-.categorySectionKids h2 {
-  font-size: 40px;
-}
-.categorySectionKids p {
+.categorySectionKidsWrapper h2 {
   font-size: 20px;
+}
+.categorySectionKidsWrapper p {
+  font-size: 10px;
+}
+@media only screen and (min-width: 600px) {
+  .categorySectionKidsWrapper h2 {
+    font-size: 30px;
+  }
+  .categorySectionKidsWrapper p {
+    font-size: 15px;
+  }
 }

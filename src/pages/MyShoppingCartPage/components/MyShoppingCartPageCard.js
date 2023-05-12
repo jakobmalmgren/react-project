@@ -2,7 +2,7 @@ import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
 import { BsFillTrashFill } from "react-icons/bs";
 import css from "./MyShoppingCartPageCard.module.css";
-
+import { Link } from "react-router-dom";
 function MyShoppingCartPageCard(props) {
   let discountIcon;
   if (props.discount === true) {
@@ -12,11 +12,17 @@ function MyShoppingCartPageCard(props) {
   return (
     <div className={css.myShoppingCartCard}>
       <div className={css.imgWrapper}>
-        <img
-          src={`img/${props.image[0]}`}
-          alt=""
-          className={css.myShoppingCartCardImg}
-        />
+        <Link to="/ItemOverviewPage">
+          <img
+            src={`img/${props.image[0]}`}
+            onClick={() => {
+              props.addItemToCart(props);
+              props.handleMyShoppingCartPage();
+            }}
+            alt=""
+            className={css.myShoppingCartCardImg}
+          />
+        </Link>
         {discountIcon && <h2 className={css.discountIcon}>{discountIcon}%</h2>}
       </div>
 
@@ -25,17 +31,17 @@ function MyShoppingCartPageCard(props) {
           <h3>{props.description}</h3>
           <p>{props.item} </p>
 
-          {discountIcon && (
-            <p className={css.itemValue}>
-              {/* ${(props.price / ((100 - props.discountValue) / 10)) * 10} */}
-              ${itemValue.toFixed(2)}
-            </p>
-          )}
-          {discountIcon ? (
-            <p className={css.cardPriceDiscount}>$ {props.price}</p>
-          ) : (
-            <p className={css.cardPrice}>$ {props.price}</p>
-          )}
+          <div className={css.priceWrapper}>
+            {discountIcon && (
+              <p className={css.itemValue}>${itemValue.toFixed(0)}</p>
+            )}
+            {discountIcon ? (
+              <p className={css.cardPriceDiscount}>$ {props.price}</p>
+            ) : (
+              <p className={css.cardPrice}>$ {props.price}</p>
+            )}
+          </div>
+
           <p>{props.category}</p>
         </div>
 
@@ -48,7 +54,7 @@ function MyShoppingCartPageCard(props) {
           >
             <BiMinus className={css.icon}></BiMinus>
           </button>
-          <p>{props.qty}</p>
+          <p className={css.quantityArea}>{props.qty}</p>
           <button
             className={css.plusMinusBtn}
             onClick={() => {
@@ -57,9 +63,8 @@ function MyShoppingCartPageCard(props) {
           >
             <BiPlus className={css.icon}></BiPlus>
           </button>
-
-          <h2>$ {props.price * props.qty}</h2>
         </div>
+        <h2>$ {props.price * props.qty}</h2>
         <BsFillTrashFill
           onClick={() => {
             props.deleteItems(props);
