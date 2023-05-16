@@ -1,13 +1,13 @@
-import { AiFillStar } from "react-icons/ai";
+import { IoIosStarOutline } from "react-icons/io";
 const ratings = [
   {
     id: 1,
     ratingStars: [
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
     ],
     ratingTitle: "Very good experience!",
     ratingDescription: "Quick and good support service",
@@ -17,10 +17,10 @@ const ratings = [
   {
     id: 2,
     ratingStars: [
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
     ],
     ratingTitle: "Amazing",
     ratingDescription: "So helpful!",
@@ -30,9 +30,9 @@ const ratings = [
   {
     id: 3,
     ratingStars: [
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
     ],
     ratingTitle: "Didnt like this webpage!",
     ratingDescription: "Bad support",
@@ -42,9 +42,9 @@ const ratings = [
   {
     id: 4,
     ratingStars: [
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
     ],
     ratingTitle: "Support top notch!",
     ratingDescription: "Sarah, best support ever!",
@@ -54,9 +54,9 @@ const ratings = [
   {
     id: 5,
     ratingStars: [
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
     ],
     ratingTitle: "Shipment",
     ratingDescription: "The Shipment was very fast!",
@@ -66,10 +66,10 @@ const ratings = [
   {
     id: 6,
     ratingStars: [
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
     ],
     ratingTitle: "Return very fast!",
     ratingDescription: "I got my money back in 2 days",
@@ -78,7 +78,7 @@ const ratings = [
   },
   {
     id: 7,
-    ratingStars: [<AiFillStar></AiFillStar>],
+    ratingStars: [<IoIosStarOutline></IoIosStarOutline>],
     ratingTitle: "Zzzzz",
     ratingDescription: "The support havent reached out to me in 7 hours",
     ratingCustomer: "Casandra Billings",
@@ -86,7 +86,10 @@ const ratings = [
   },
   {
     id: 8,
-    ratingStars: [<AiFillStar></AiFillStar>, <AiFillStar></AiFillStar>],
+    ratingStars: [
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+    ],
     ratingTitle: "Ok clothes!",
     ratingDescription: "Didnt find anything here",
     ratingCustomer: "Ewa Andersson",
@@ -95,11 +98,10 @@ const ratings = [
   {
     id: 9,
     ratingStars: [
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
     ],
     ratingTitle: "Wonderful!",
     ratingDescription: "Loved this website!",
@@ -109,10 +111,10 @@ const ratings = [
   {
     id: 10,
     ratingStars: [
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
-      <AiFillStar></AiFillStar>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
+      <IoIosStarOutline></IoIosStarOutline>,
     ],
     ratingTitle: "So nice!",
     ratingDescription: "Bought my best dress from here",
