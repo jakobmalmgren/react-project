@@ -18,7 +18,7 @@ import SearchProductsPage from "./pages/SearchProductsPage/SearchProductsPage";
 import CreateAccountPage from "./pages/CreateAccountPage/CreateAccountPage";
 
 function App() {
-  // opem/close burger
+  // open/close burger
   const [toggleBurger, setToggleBurger] = useState(false);
   const [openMyShoppingCartPage, setOpenMyShoppingCartPage] = useState(false);
   // open/close myshoppingcartpage
