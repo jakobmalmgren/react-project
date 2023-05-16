@@ -15,25 +15,24 @@ import CheckOutPage from "./pages/CheckOutPage/CheckOutPage";
 import products from "./data/products";
 import { useEffect } from "react";
 import SearchProductsPage from "./pages/SearchProductsPage/SearchProductsPage";
-
 import CreateAccountPage from "./pages/CreateAccountPage/CreateAccountPage";
 
 function App() {
-  const [toggleBurger, setToggleBurger] = useState(false); // öppnar/stännger Burgermenu
-  const [openMyShoppingCartPage, setOpenMyShoppingCartPage] = useState(false); // öppnar/stänger myshoppingcartpage
+  // opem/close burger
+  const [toggleBurger, setToggleBurger] = useState(false);
+  const [openMyShoppingCartPage, setOpenMyShoppingCartPage] = useState(false);
+  // open/close myshoppingcartpage
   function handleMyShoppingCartPage() {
-    setOpenMyShoppingCartPage(!openMyShoppingCartPage); // öppnar/stänger myshoppingcartpage function
+    setOpenMyShoppingCartPage(!openMyShoppingCartPage);
   }
 
-  // -----------------------läggeer till i itemoverviewpage!
+  // add itemoverviewpage!
   const [addToCart, setAddToCart] = useState([]);
   function addItemToCart(products) {
     setAddToCart([products]);
   }
 
-  //----------------------------------------------
-
-  //--------------------------lägger till MyfavoritePage
+  //add/delete MyfavoritePage
 
   const getMyLikedFromLocalStorage = JSON.parse(
     localStorage.getItem("myFavoritePage")
@@ -44,7 +43,7 @@ function App() {
       return item.id === x.id;
     });
     if (exist) {
-      setLikedItems([...item]);
+      setLikedItems([...likedItems]);
     } else {
       setLikedItems([...likedItems, item]);
     }
@@ -63,9 +62,7 @@ function App() {
     return setLikedItems(deleted);
   }
 
-  //----------------------------------------------------
-
-  //------------------lägger till va man valt att köpa i myshoppingcartpage MED state!
+  //add myshoppingcartpage
   const getMyCartFromLocalStorage = JSON.parse(
     localStorage.getItem("myShoppingCart")
   );
@@ -89,7 +86,7 @@ function App() {
     localStorage.setItem("myShoppingCart", JSON.stringify(boughtItems));
   }, [boughtItems]);
 
-  //lägger till o tar bor antalet items----------------------------
+  //increase/decrease items in myshoppingcartpage(card)
   function handleDecrement(product) {
     setBoughtItems(
       boughtItems.map((item) => {
@@ -108,7 +105,6 @@ function App() {
       })
     );
   }
-  //--deletar item--------------------------------------------------------------
 
   function deleteItems(product) {
     setBoughtItems(
@@ -118,9 +114,7 @@ function App() {
     );
   }
 
-  /////----------------- plugga denna..viktigt! varför [] i else o {} i första..
-  // addar sumering cash av allt_------------------
-
+  // add the fee
   const sum = boughtItems.reduce((acc, cu) => {
     return acc + cu.price * cu.qty;
   }, 0);
@@ -130,29 +124,21 @@ function App() {
   const amountToFreeShippingPrice = 100 - sum;
   const totalPrice = sum + taxPrice + shippingPrice;
 
-  //------------------------------------------------------------
-
-  //-------------------------------------
+  //open/close signInpage
   const [openSignIn, setOpenSignIn] = useState(false);
+  function handleSignIn() {
+    setOpenSignIn(!openSignIn);
+  }
 
-  // öppnar stänger signInpage o fixar så modal kmr o ingen scroll
-  //i bode signinpage OCH myshoppingcartpage...
-  //men vill fixa annnrolunda här under o nå body o ändra classname dynamisk
-
-  if (openSignIn || openMyShoppingCartPage) {
-    //prevent from scrolling
+  //prevent from scrolling when open signinpage and shoppingcartpage
+  if (openSignIn || openMyShoppingCartPage || toggleBurger) {
     document.body.classList.add("active");
   } else {
     document.body.classList.remove("active");
   }
 
-  function handleSignIn() {
-    setOpenSignIn(!openSignIn);
-  }
-  //--------------------------------------------------------------------
-  const [search, setSearch] = useState(""); // fixar sökaproductsida
-
-  //----------------------------
+  //searchsection in navbar
+  const [search, setSearch] = useState("");
 
   return (
     <div>
@@ -164,9 +150,7 @@ function App() {
         shippingPrice={shippingPrice}
         totalPrice={totalPrice}
         amountToFreeShippingPrice={amountToFreeShippingPrice}
-        //---------------------------
         setSearch={setSearch}
-        //-
         likedItems={likedItems}
         handleSignIn={handleSignIn}
         addItemToCart={addItemToCart}
@@ -244,13 +228,12 @@ function App() {
         </Route>
         <Route path="/checkoutPage">
           <CheckOutPage
-            //---------------------
+            addItemToCart={addItemToCart}
             sum={sum}
             taxPrice={taxPrice}
             shippingPrice={shippingPrice}
             totalPrice={totalPrice}
             amountToFreeShippingPrice={amountToFreeShippingPrice}
-            //-------------------
             setBoughtItems={setBoughtItems}
             products={products}
             boughtItems={boughtItems}
@@ -272,6 +255,18 @@ function App() {
           ></SearchProductsPage>
         </Route>
       </Switch>
+      {openSignIn || openMyShoppingCartPage ? (
+        <div
+          className="layover"
+          onClick={() => {
+            setOpenSignIn(false);
+            setOpenMyShoppingCartPage(false);
+          }}
+        ></div>
+      ) : (
+        ""
+      )}
+
       <RatingSlider></RatingSlider>
       <FooterSection></FooterSection>
     </div>

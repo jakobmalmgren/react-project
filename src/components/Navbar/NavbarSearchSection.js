@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function NavbarSearchSection(props) {
   return (
-    <form className={css.navbarForm}>
+    <div className={css.navbarForm}>
       <Link to="/SearchProductsPage">
         <input
           onChange={(e) => {
@@ -19,7 +19,7 @@ function NavbarSearchSection(props) {
       </Link>
 
       <IoIosSearch className={css.searchIcon}></IoIosSearch>
-    </form>
+    </div>
   );
 }
 

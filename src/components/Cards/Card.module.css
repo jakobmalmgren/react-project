@@ -1,10 +1,10 @@
 .card {
   position: relative;
-  margin: 5px;
   width: 100%;
   max-width: 200px;
   height: 250px;
 }
+
 .card:hover {
   transform: scale(1.01);
 }
@@ -38,11 +38,22 @@
   align-items: center;
   justify-content: center;
 }
-
 .cardIcon:hover {
   transition: 0.5s;
-  background-color: rgb(173 187 173);
+  color: rgb(173 187 173);
+  background-color: black;
 }
+.cardIconActive {
+  border: 1px solid black;
+  display: flex;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 0, 0, 0.484);
+}
+
 .discountIcon {
   width: 40px;
   height: 40px;
@@ -69,6 +80,9 @@
 
 .cardIconWrapper {
   display: flex;
+}
+.cardIconWrapper :nth-child(2) {
+  margin-left: 2px;
 }
 .priceWrapper {
   display: flex;

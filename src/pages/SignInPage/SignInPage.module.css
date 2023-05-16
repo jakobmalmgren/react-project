@@ -1,25 +1,23 @@
 .containerWrapper {
-  display: flex;
-  width: 100%;
+  width: 400px;
+  background-color: white;
   height: 100vh;
   z-index: 1001;
   position: fixed;
-  justify-content: end;
-  position: absolute;
-  left: -1500px;
-  transition: 100ms;
+  right: -500px;
+  transition: 0.5s;
 }
 .active {
-  display: flex;
-  width: 100%;
+  width: 350px;
+  max-width: 83%;
+  background-color: white;
   height: 100vh;
   z-index: 1001;
   position: fixed;
-  justify-content: end;
-  position: absolute;
-  left: 0px;
-  transition: 100ms;
+  right: 0px;
+  transition: 0.5s;
 }
+
 .mail {
   color: rgb(0 24 0 / 78%);
   position: relative;
@@ -44,15 +42,7 @@
   left: 2px;
   top: 2px;
 }
-.overlay {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.272);
-}
-.formLogin {
-  width: 550px;
-  height: 100vh;
-  background-color: white;
-}
+
 .formHeader {
   background-color: #f2f3f3;
   height: 60px;
@@ -129,4 +119,5 @@
     justify-content: space-between;
     align-items: center;
   }
+  
 }

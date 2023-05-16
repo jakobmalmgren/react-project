@@ -3,7 +3,7 @@ import { BsCart3 } from "react-icons/bs";
 import { VscHeart } from "react-icons/vsc";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgClose } from "react-icons/cg";
-import NavlinksSection from "./NavlinksSection";
+import BigScreenNavigationSection from "./BigScreenNavigationSection";
 import NavbarSearchSection from "./NavbarSearchSection";
 import { GoCheck } from "react-icons/go";
 import SignInPage from "../../pages/SignInPage/SignInPage";
@@ -30,7 +30,11 @@ function NavbarSection(props) {
     <div>
       <div className={css.nav}>
         <div className={css.burgerWrapper}>
-          {props.toggleBurger && <MobileNavigationSection />}
+          {props.toggleBurger && (
+            <MobileNavigationSection
+              setToggleBurger={props.setToggleBurger}
+            ></MobileNavigationSection>
+          )}
           {props.toggleBurger ? closer : burger}
         </div>
         <div className={css.navlinksWrapper}>
@@ -40,34 +44,9 @@ function NavbarSection(props) {
             </Link>
           </div>
           <div className={css.navlinksBigScreen}>
-            <NavlinksSection></NavlinksSection>
+            <BigScreenNavigationSection></BigScreenNavigationSection>
           </div>
         </div>
-
-        {/* {props.openSignIn && (
-          <SignInPage
-            handleSignIn={props.handleSignIn}
-            openSignIn={props.openSignIn}
-          ></SignInPage>
-        )} */}
-
-        {/* {props.openMyShoppingCartPage && (
-          <MyShoppingCartPage
-            //------------
-            sum={props.sum}
-            taxPrice={props.taxPrice}
-            shippingPrice={props.shippingPrice}
-            totalPrice={props.totalPrice}
-            amountToFreeShippingPrice={props.amountToFreeShippingPrice}
-            //-----------------
-            openMyShoppingCartPage={props.openMyShoppingCartPage}
-            handleMyShoppingCartPage={props.handleMyShoppingCartPage}
-            deleteItems={props.deleteItems}
-            handleDecrement={props.handleDecrement}
-            handleIncrement={props.handleIncrement}
-            boughtItems={props.boughtItems}
-          ></MyShoppingCartPage>
-        )} */}
 
         <SignInPage
           handleSignIn={props.handleSignIn}
@@ -81,7 +60,6 @@ function NavbarSection(props) {
           shippingPrice={props.shippingPrice}
           totalPrice={props.totalPrice}
           amountToFreeShippingPrice={props.amountToFreeShippingPrice}
-          //-----------------
           openMyShoppingCartPage={props.openMyShoppingCartPage}
           handleMyShoppingCartPage={props.handleMyShoppingCartPage}
           deleteItems={props.deleteItems}

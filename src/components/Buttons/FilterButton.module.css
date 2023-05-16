@@ -1,6 +1,5 @@
 .filterBtn {
   width: 90px;
-  margin-right: 10px;
   height: 33px;
   font-size: 14px;
   background-color: white;
@@ -9,5 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-left: 90px;
+  margin: 20px 0px;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+.filterBtn:hover {
+  transition: 0.5s;
+  color: rgb(173 187 173);
+  background-color: black;
 }

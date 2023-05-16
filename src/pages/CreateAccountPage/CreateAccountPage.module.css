@@ -1,7 +1,6 @@
 .createAccountPage h1 {
   text-align: center;
-
-  margin-bottom: 20px;
+  margin: 30px 0px;
 }
 .createAccountPageFormWrapper {
   display: flex;
@@ -10,7 +9,7 @@
 
 .createAccountPageForm {
   width: 400px;
-  padding: 20px;
+  padding: 17px;
   border: 1px solid black;
   margin-bottom: 20px;
 }
@@ -19,4 +18,5 @@
   color: white;
   padding: 15px;
   background-color: rgb(173 187 173);
+  cursor: pointer;
 }

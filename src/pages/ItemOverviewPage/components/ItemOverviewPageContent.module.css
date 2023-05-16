@@ -44,6 +44,7 @@
   max-width: 300px;
   border: 0.5px solid black;
   border-radius: 10%;
+  max-height: 300px;
 }
 
 .bigImage {
@@ -54,10 +55,11 @@
   min-height: 300px;
   border: 0.5px solid black;
   border-radius: 10%;
-  max-width: 500px;
+  max-width: 475px;
+  max-height: 475px;
 }
 .sectionInfo {
-  padding: 10px;
+  padding: 25px;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -102,7 +104,8 @@
 
 .heartIcon:hover {
   transition: 0.5s;
-  background-color: rgb(173 187 173);
+  color: rgb(173 187 173);
+  background-color: black;
 }
 .priceWrapper {
   display: flex;
@@ -114,15 +117,11 @@
   cursor: pointer;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 750px) {
   .addToCartPage {
     display: flex;
   }
-  .sectionInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+
   .sectionInfo .header {
     font-size: 27px;
   }
@@ -130,5 +129,8 @@
   .priceWrapper .cardPriceDiscount,
   .priceWrapper .cardPrice {
     font-size: 20px;
+  }
+  .smallImage {
+    min-width: 250px;
   }
 }

@@ -1,13 +1,14 @@
 .ratingCard {
   margin: 5px;
-  background-color: rgba(128, 128, 128, 0.137);
+  background-color: rgb(173 187 173);
   height: 200px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: rgb(0 24 0 / 78%);
+  color: black;
+  border: 1px solid black;
 }
 
 .ratingTitle {

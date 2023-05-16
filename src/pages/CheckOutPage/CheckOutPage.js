@@ -3,6 +3,7 @@ import { BsFillTrashFill } from "react-icons/bs";
 import { BiPlus } from "react-icons/bi";
 import { BiMinus } from "react-icons/bi";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 function CheckoutPage(props) {
   const [text, setText] = useState("");
   function updateText() {
@@ -24,7 +25,15 @@ function CheckoutPage(props) {
     return (
       <div className={css.checkoutPageWrapper}>
         <div className={css.checkoutPageImgWrapper}>
-          <img src={`img/${item.image[0]}`} alt="" />
+          <Link to="/ItemOverviewPage">
+            <img
+              src={`img/${item.image[0]}`}
+              alt=""
+              onClick={() => {
+                props.addItemToCart(item);
+              }}
+            />
+          </Link>
           {discountIcon && (
             <h2 className={css.discountIcon}>{discountIcon}%</h2>
           )}
@@ -89,7 +98,7 @@ function CheckoutPage(props) {
             <div className={css.shippingWrapper}>
               <h2>Shipping fee: $ {props.shippingPrice.toFixed(0)} </h2>
               {props.sum < 100 ? (
-                <h4>$ {props.amountToFreeShippingPrice} to no shippingfee</h4>
+                <h4>$ {props.amountToFreeShippingPrice} to no shipping fee</h4>
               ) : (
                 ""
               )}

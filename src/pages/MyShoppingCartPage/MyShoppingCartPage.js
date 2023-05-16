@@ -16,7 +16,6 @@ function MyShoppingCartPage(props) {
           deleteItems={props.deleteItems}
           handleDecrement={props.handleDecrement}
           handleIncrement={props.handleIncrement}
-          //
           handleMyShoppingCartPage={props.handleMyShoppingCartPage}
         ></MyShoppingCartPageCard>
       );
@@ -29,11 +28,6 @@ function MyShoppingCartPage(props) {
         props.openMyShoppingCartPage ? css.active : css.containerWrapper
       }
     >
-      <div
-        className={css.overlay}
-        onClick={props.handleMyShoppingCartPage}
-      ></div>
-
       <div className={css.myShoppingCart}>
         <div className={css.myShoppingCartHeader}>
           <h2>
@@ -67,7 +61,7 @@ function MyShoppingCartPage(props) {
                   {props.sum < 100 ? (
                     <h4>
                       $ {props.amountToFreeShippingPrice.toFixed(0)} to no
-                      shippingfee
+                      shipping fee
                     </h4>
                   ) : (
                     ""

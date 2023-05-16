@@ -1,5 +1,4 @@
 import FilterButton from "../../components/Buttons/FilterButton";
-
 import Card from "../../components/Cards/Card";
 import css from "./KidsPage.module.css";
 import { useState } from "react";

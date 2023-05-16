@@ -6,13 +6,13 @@
 }
 
 .searchField {
-  outline: none;
   padding: 10px;
-  background-color: #f2f3f3;
-  border: 1px solid black;
+  background-color: black;
   height: 40px;
+  color: rgb(173 187 173);
 }
 .searchIcon {
   position: absolute;
   right: 10px;
+  color: rgb(173 187 173);
 }

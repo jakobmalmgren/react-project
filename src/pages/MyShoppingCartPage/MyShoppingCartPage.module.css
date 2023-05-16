@@ -1,24 +1,23 @@
 .containerWrapper {
-  display: flex;
-  width: 100%;
+  width: 400px;
+  background-color: white;
   height: 100vh;
   z-index: 1001;
   position: fixed;
-  justify-content: end;
-  position: absolute;
-  left: -1500px;
-  transition: 100ms;
+  right: -500px;
+  transition: 0.5s;
+  overflow-y: scroll;
 }
 .active {
-  display: flex;
-  width: 100%;
+  width: 350px;
+  max-width: 83%;
+  background-color: white;
   height: 100vh;
   z-index: 1001;
   position: fixed;
-  justify-content: end;
-  position: absolute;
-  left: 0px;
-  transition: 100ms;
+  right: 0px;
+  transition: 0.5s;
+  overflow-y: scroll;
 }
 .goToCheckoutBtn {
   background-color: rgb(173 187 173);
@@ -27,17 +26,6 @@
   margin-top: 50px;
   color: white;
   cursor: pointer;
-}
-
-.overlay {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.272);
-}
-.myShoppingCart {
-  /* nåt fel här...widh?? */
-  width: 1700px;
-  background-color: white;
-  overflow-y: scroll;
 }
 
 .myShoppingCartHeader {
@@ -85,10 +73,4 @@
 .shippingWrapper {
   display: flex;
   align-items: center;
-}
-
-@media only screen and (min-width: 400px) {
-  .myShoppingCart {
-    max-width: 400px;
-  }
 }

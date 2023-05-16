@@ -1,9 +1,10 @@
 import HeroSection from "./components/HeroSection";
-import SliderSection from "./components/SliderSection";
+import SliderSection from "../../components/Slider/SliderSection";
 import CategorySectionMenWomen from "./components/CategorySectionMenWomen";
 import OutletSection from "./components/OutletSection";
 import CategorySectionKids from "./components/CategorySectionKids";
 import Card from "../../components/Cards/Card";
+import css from "./IndexPage.module.css";
 
 function IndexPage(props) {
   const filteredTshirts = props.products
@@ -36,8 +37,9 @@ function IndexPage(props) {
         ></Card>
       );
     });
+
   return (
-    <div>
+    <div className={css.indexWrapper}>
       <HeroSection></HeroSection>
       <SliderSection
         filteredTshirts={filteredTshirts}
@@ -48,7 +50,6 @@ function IndexPage(props) {
         categoryMale="MEN"
         categoryFemale="WOMEN"
       ></CategorySectionMenWomen>
-
       <SliderSection
         header="Shoes - News"
         filteredShoes={filteredShoes}

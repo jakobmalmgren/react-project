@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import css from "./NavlinksSection.module.css";
-
-function NavlinksSection() {
+import css from "./BigScreenNavigationSection.module.css";
+function BigScreenNavigationSection(props) {
   return (
     <ul className={css.navlinksList}>
       <Link to="/womenPage">
@@ -20,4 +19,4 @@ function NavlinksSection() {
   );
 }
 
-export default NavlinksSection;
+export default BigScreenNavigationSection;

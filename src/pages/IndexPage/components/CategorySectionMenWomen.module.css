@@ -10,6 +10,8 @@
   align-items: center;
   color: white;
   height: 50%;
+  background-position: 50%;
+  padding: 10px;
 }
 .categorySectionTwo {
   color: white;
@@ -21,17 +23,20 @@
   align-items: center;
   height: 50%;
   margin-top: 10px;
+  background-position: 50%;
+  padding: 10px;
 }
 .categorySectionOne h2,
 .categorySectionTwo h2 {
-  font-size: 20px;
+  font-size: 35px;
+  font-weight: lighter;
 }
 .categorySectionOne p,
 .categorySectionTwo p {
-  font-size: 10px;
+  font-size: 15px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
   .categoryWrapper {
     display: flex;
     height: auto;
@@ -48,10 +53,10 @@
   }
   .categorySectionOne h2,
   .categorySectionTwo h2 {
-    font-size: 30px;
+    font-size: 38px;
   }
   .categorySectionOne p,
   .categorySectionTwo p {
-    font-size: 15px;
+    font-size: 20px;
   }
 }

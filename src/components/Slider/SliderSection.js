@@ -10,25 +10,26 @@ function SliderSection(props) {
     },
     desktop: {
       breakpoint: { max: 1000, min: 650 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 650, min: 464 },
-      items: 2,
+      items: 3,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 1,
+      items: 2,
     },
   };
 
   return (
-    <div>
+    <div className={css.slider}>
       <h1 className={css.sliderHeader}>{props.header}</h1>
 
       <Carousel responsive={responsive}>
         {props.filteredTshirts}
         {props.filteredShoes}
+        {props.ratingData}
       </Carousel>
     </div>
   );
