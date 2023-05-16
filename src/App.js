@@ -143,6 +143,7 @@ function App() {
   return (
     <div>
       <NavbarSection
+        setSearch={setSearch}
         handleMyShoppingCartPage={handleMyShoppingCartPage}
         openMyShoppingCartPage={openMyShoppingCartPage}
         sum={sum}
@@ -150,7 +151,6 @@ function App() {
         shippingPrice={shippingPrice}
         totalPrice={totalPrice}
         amountToFreeShippingPrice={amountToFreeShippingPrice}
-        setSearch={setSearch}
         likedItems={likedItems}
         handleSignIn={handleSignIn}
         addItemToCart={addItemToCart}
