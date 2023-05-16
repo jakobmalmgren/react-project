@@ -100,6 +100,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .heartIcon:hover {

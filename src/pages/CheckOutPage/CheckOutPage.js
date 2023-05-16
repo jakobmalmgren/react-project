@@ -115,7 +115,7 @@ function CheckoutPage(props) {
             </button>
           </div>
         ) : (
-          <h1>YOU HAVE NO ITEMS</h1>
+          <h1 className={css.noItemsText}>YOU HAVE NO ITEMS</h1>
         )}
       </div>
 

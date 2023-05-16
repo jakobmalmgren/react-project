@@ -11,6 +11,7 @@
   margin: 20px 0px;
   margin-left: 40px;
   margin-right: 10px;
+  transition: 0.5s;
 }
 .filterBtn:hover {
   transition: 0.5s;

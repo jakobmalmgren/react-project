@@ -37,6 +37,7 @@
   width: 30px;
   align-items: center;
   justify-content: center;
+  transition: 0.5s;
 }
 .cardIcon:hover {
   transition: 0.5s;

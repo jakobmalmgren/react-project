@@ -38,8 +38,10 @@
   align-items: center;
   background-color: rgb(173 187 173);
   border: 1px solid black;
+  transition: 0.5s;
 }
-.plusMinusBtn:hover {
+.totalSection .plusMinusBtn:hover {
+  transition: 0.5s;
   background-color: rgba(173, 187, 173, 0.55);
 }
 .quantityArea {
@@ -98,7 +100,7 @@
 }
 .purchasedText {
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 50px;
   padding: 20px;
 }
@@ -118,8 +120,18 @@
 .priceWrapper {
   display: flex;
 }
+.noItemsText {
+  font-size: 20px;
+  margin-top: 15px;
+}
 @media only screen and (min-width: 700px) {
   .checkoutPageWrapper {
     max-width: 700px;
+  }
+  .noItemsText {
+    font-size: 25px;
+  }
+  .purchasedText {
+    font-size: 25px;
   }
 }
