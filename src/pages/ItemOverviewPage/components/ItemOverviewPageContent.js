@@ -83,7 +83,7 @@ function ItemOverviewPageContent(props) {
               props.onAdd(props);
             }}
           >
-            <BsCart3></BsCart3>ADD TO CART
+            <BsCart3 className={css.cartIcon}></BsCart3>ADD TO CART
           </button>
 
           <div className={css.addToCartInfo}>

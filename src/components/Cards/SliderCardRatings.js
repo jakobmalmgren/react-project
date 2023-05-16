@@ -1,19 +1,26 @@
 import css from "./SliderCardRatings.module.css";
 function SliderCardRatings(props) {
+  const {
+    ratingStars,
+    ratingTitle,
+    ratingDescription,
+    ratingCustomer,
+    ratingTime,
+  } = props;
   return (
     <div className={css.ratingCard}>
-      <div>{props.ratingStars}</div>
+      <div>{ratingStars}</div>
       <div className={css.ratingTitle}>
-        <h3>{props.ratingTitle}</h3>
+        <h3>{ratingTitle}</h3>
       </div>
       <div className={css.ratingDescription}>
-        <p>{props.ratingDescription}</p>
+        <p>{ratingDescription}</p>
       </div>
       <div className={css.ratingCustomer}>
-        <p>{props.ratingCustomer}</p>
+        <p>{ratingCustomer}</p>
       </div>
       <div className={css.ratingTime}>
-        <p>{props.ratingTime}</p>
+        <p>{ratingTime}</p>
       </div>
     </div>
   );

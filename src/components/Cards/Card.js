@@ -4,21 +4,34 @@ import { MdHeartBroken } from "react-icons/md";
 import { VscHeart } from "react-icons/vsc";
 
 function Card(props) {
+  const {
+    discount,
+    discountValue,
+    price,
+    image,
+    item,
+    description,
+    category,
+    renderLikedItems,
+    deleteLikedItems,
+    addItemToCart,
+  } = props;
+  
   let discountIcon;
-  if (props.discount === true) {
-    discountIcon = props.discountValue;
+  if (discount === true) {
+    discountIcon = discountValue;
   }
 
-  const itemValue = (props.price / ((100 - props.discountValue) / 10)) * 10;
+  const itemValue = (price / ((100 - discountValue) / 10)) * 10;
   return (
     <div className={css.card}>
       <Link to="/ItemOverviewPage">
         <img
-          src={`img/${props.image[0]}`}
+          src={`img/${image[0]}`}
           alt=""
           className={css.cardImage}
           onClick={() => {
-            props.addItemToCart(props);
+            addItemToCart(props);
           }}
         />
       </Link>
@@ -28,23 +41,23 @@ function Card(props) {
           <p className={css.itemValue}>${itemValue.toFixed(0)}</p>
         )}
         {discountIcon ? (
-          <p className={css.cardPriceDiscount}>$ {props.price}</p>
+          <p className={css.cardPriceDiscount}>$ {price}</p>
         ) : (
-          <p className={css.cardPrice}>$ {props.price}</p>
+          <p className={css.cardPrice}>$ {price}</p>
         )}
       </div>
 
-      <h3 className={css.cardItem}>{props.item}</h3>
+      <h3 className={css.cardItem}>{item}</h3>
 
-      <p className={css.cardDescription}>{props.description}</p>
-      <p>{props.category}</p>
+      <p className={css.cardDescription}>{description}</p>
+      <p>{category}</p>
 
       <div className={css.cardIconContainer}>
         <div className={css.cardIconWrapper}>
           <div
             className={css.cardIcon}
             onClick={() => {
-              props.renderLikedItems(props);
+              renderLikedItems(props);
             }}
           >
             <VscHeart></VscHeart>
@@ -52,7 +65,7 @@ function Card(props) {
           <div
             className={css.cardIcon}
             onClick={() => {
-              props.deleteLikedItems(props);
+              deleteLikedItems(props);
             }}
           >
             <MdHeartBroken></MdHeartBroken>

@@ -76,6 +76,9 @@
   cursor: pointer;
   color: white;
 }
+.addToCartBtn .cartIcon {
+  margin-right: 5px;
+}
 
 .heartIconWrapper {
   display: flex;
