@@ -16,7 +16,7 @@ function Card(props) {
     deleteLikedItems,
     addItemToCart,
   } = props;
-  
+
   let discountIcon;
   if (discount === true) {
     discountIcon = discountValue;
@@ -35,22 +35,22 @@ function Card(props) {
           }}
         />
       </Link>
-      {discountIcon && <h2 className={css.discountIcon}>{discountIcon}%</h2>}
-      <div className={css.priceWrapper}>
-        {discountIcon && (
-          <p className={css.itemValue}>${itemValue.toFixed(0)}</p>
-        )}
-        {discountIcon ? (
-          <p className={css.cardPriceDiscount}>$ {price}</p>
-        ) : (
-          <p className={css.cardPrice}>$ {price}</p>
-        )}
+      <div>
+        <p className={css.cardDescription}>{description}</p>
+        {discountIcon && <h2 className={css.discountIcon}>{discountIcon}%</h2>}
+        <div className={css.priceWrapper}>
+          {discountIcon && (
+            <p className={css.itemValue}>${itemValue.toFixed(0)}</p>
+          )}
+          {discountIcon ? (
+            <p className={css.cardPriceDiscount}>$ {price}</p>
+          ) : (
+            <p className={css.cardPrice}>$ {price}</p>
+          )}
+        </div>
+        <h3 className={css.cardItem}>{item}</h3>
+        <p>{category}</p>
       </div>
-
-      <h3 className={css.cardItem}>{item}</h3>
-
-      <p className={css.cardDescription}>{description}</p>
-      <p>{category}</p>
 
       <div className={css.cardIconContainer}>
         <div className={css.cardIconWrapper}>

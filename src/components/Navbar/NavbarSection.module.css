@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Playfair+Display+SC&display=swap");
 .nav {
   background-color: #f2f3f3;
   height: 60px;
@@ -21,11 +22,23 @@
   width: 100%;
 }
 .navTitle {
-  margin-left: 15px;
+  margin-left: 10px;
   display: flex;
-  width: 33%;
   align-items: center;
+  position: relative;
+}
+.navTitle h2 {
+  font-size: 20px;
   color: black;
+  width: 132px;
+}
+.spanNr {
+  position: absolute;
+  font-family: "Courgette", cursive;
+  color: rgb(173 187 173);
+  font-size: 46px;
+  top: 0px;
+  left: 72px;
 }
 .navlinksBigScreen {
   display: none;
@@ -87,26 +100,20 @@
 }
 
 .searchbarWrapper {
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: rgb(173 187 173);
-  padding: 0px 10px;
 }
 
-.countryInfo {
+.adress {
+  padding-right: 15px;
+  font-size: 10px;
+  padding-bottom: 5px;
   display: flex;
-  align-items: center;
+  justify-content: end;
 }
-.countryInfo small {
-  color: black;
+.pin {
+  margin-right: 5px;
 }
-.flag {
-  width: 17px;
-  height: 17px;
-  margin-right: 10px;
-}
+
 .navInfo {
   background-color: black;
   padding: 7px;
@@ -123,11 +130,23 @@
   font-size: 9px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 450px) {
+  .searchbarWrapper {
+    display: flex;
+  }
+  .adress {
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
   .navlinksBigScreen {
     display: block;
     display: flex;
     align-items: center;
+    margin-left: 100px;
   }
 
   .burgerWrapper {

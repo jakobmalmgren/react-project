@@ -40,8 +40,7 @@ function CheckoutPage(props) {
         </div>
 
         <div className={css.checkoutPageItemsWrapper}>
-          <h3>{item.description}</h3>
-          <p>{item.item}</p>
+          <p className={css.cardDescription}>{item.description}</p>
 
           <div className={css.priceWrapper}>
             {discountIcon && (
@@ -53,6 +52,7 @@ function CheckoutPage(props) {
               <p className={css.cardPrice}>$ {item.price}</p>
             )}
           </div>
+          <h3 className={css.cardItem}>{item.item}</h3>
           <p>{item.category}</p>
 
           <div className={css.totalSection}>

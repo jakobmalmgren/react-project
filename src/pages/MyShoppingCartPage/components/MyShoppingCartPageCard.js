@@ -28,9 +28,7 @@ function MyShoppingCartPageCard(props) {
 
       <div className={css.myShoppingCartCardInfo}>
         <div>
-          <h3>{props.description}</h3>
-          <p>{props.item} </p>
-
+          <p className={css.cardDesciption}>{props.description}</p>
           <div className={css.priceWrapper}>
             {discountIcon && (
               <p className={css.itemValue}>${itemValue.toFixed(0)}</p>
@@ -41,7 +39,7 @@ function MyShoppingCartPageCard(props) {
               <p className={css.cardPrice}>$ {props.price}</p>
             )}
           </div>
-
+          <h3 className={css.cardItem}>{props.item} </h3>
           <p>{props.category}</p>
         </div>
 

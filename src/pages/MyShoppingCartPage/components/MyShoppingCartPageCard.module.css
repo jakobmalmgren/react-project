@@ -39,13 +39,9 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
-.myShoppingCartCardInfo p {
-  font-size: 15px;
-  position: relative;
-  display: flex;
-}
-.myShoppingCartCardInfo h3 {
+.cardDesciption,
+.priceWrapper p,
+.cardItem {
   font-size: 15px;
 }
 

@@ -11,6 +11,7 @@ import MobileNavigationSection from "./MobileNavigationSection";
 import MyShoppingCartPage from "../../pages/MyShoppingCartPage/MyShoppingCartPage";
 import css from "./NavbarSection.module.css";
 import { CiLogin } from "react-icons/ci";
+import { SiPinboard } from "react-icons/si";
 
 function NavbarSection(props) {
   const burger = (
@@ -40,7 +41,8 @@ function NavbarSection(props) {
         <div className={css.navlinksWrapper}>
           <div className={css.navTitle}>
             <Link to="/">
-              <h2>FASHION</h2>
+              <h2>FASHION YOU</h2>
+              <h1 className={css.spanNr}>4</h1>
             </Link>
           </div>
           <div className={css.navlinksBigScreen}>
@@ -93,9 +95,9 @@ function NavbarSection(props) {
       </div>
       <div className={css.searchbarWrapper}>
         <NavbarSearchSection setSearch={props.setSearch}></NavbarSearchSection>
-        <div className={css.countryInfo}>
-          <img src="/img/united-states.png" alt="" className={css.flag} />
-          <small>US</small>
+        <div className={css.adress}>
+          <SiPinboard className={css.pin}></SiPinboard>
+          <p> 152 Beach Avenue Brooklyn, NY 11206</p>
         </div>
       </div>
 

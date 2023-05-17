@@ -22,7 +22,9 @@ function FooterSection() {
             <SiRevolut></SiRevolut>
           </div>
 
-          <p>Swaggish Copyright © 2023 | 152 Beach Avenue Brooklyn, NY 11206</p>
+          <p>
+            Fashion4You Copyright © 2023 | 152 Beach Avenue Brooklyn, NY 11206
+          </p>
         </div>
         <div className={css.footerSocialIcons}>
           <SiFacebook></SiFacebook>

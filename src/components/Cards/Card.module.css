@@ -16,11 +16,12 @@
 
 .cardItem {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
 }
 
-.cardDescription {
-  font-size: 14px;
+.cardDescription,
+.priceWrapper p {
+  font-size: 15px;
 }
 
 .cardIconContainer {

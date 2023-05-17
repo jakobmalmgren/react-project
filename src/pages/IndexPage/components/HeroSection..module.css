@@ -1,13 +1,18 @@
 .heroWrapper {
   height: 50vh;
-  background-image: url(/public/img/herosection.avif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 63%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
+}
+.hero {
+  width: 88%;
+  background-color: rgb(173 187 173);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .heroWrapper h1 {
