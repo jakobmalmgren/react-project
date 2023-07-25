@@ -1,3 +1,53 @@
+# Title
+
+Fashion 4 you
+An E - comerce where you can buy clothes(practice webpage)
+
+# Introduction
+
+Why did I create this project?
+-I created this project only for practise purpose, to increase my toolbox.
+
+What particular technology did I want to learn?
+-This project i focused on:
+React
+React-router-dom
+Hooks
+Different type of functions such as arrowfunctions etc
+Variations of methods
+Props
+Destructuring props
+Function components
+Folder structure
+Arrays
+Objects
+Conditional rendering
+Template literals
+
+Is it for a non-profit organization?
+-Yes it is, its only for me.
+
+What was the inspiration behind creating the project?
+-I wanted to increase my toolbox and therefore the E-comerce.
+
+# Technologies applied
+
+-React
+-React-icons
+-React-multi-carousel
+-React-router-dom
+-Hooks
+-Different type of functions such as arrowfunctions etc
+-Variations of methods
+-Props
+-Destructuring props
+-Function components
+-Folder structure
+-Arrays
+-Objects
+-Conditional rendering
+-Template literals
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
