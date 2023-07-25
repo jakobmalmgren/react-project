@@ -9,20 +9,33 @@ Why did I create this project?
 -I created this project only for practise purpose, to increase my toolbox.
 
 What particular technology did I want to learn?
--This project i focused on:
-React
-React-router-dom
-Hooks
-Different type of functions such as arrowfunctions etc
-Variations of methods
-Props
-Destructuring props
-Function components
-Folder structure
-Arrays
-Objects
-Conditional rendering
-Template literals
+This project i focused on:
+
+-React
+
+-React-router-dom
+
+-Hooks
+
+-Different type of functions such as arrowfunctions etc
+
+-Variations of methods
+
+-Props
+
+-Destructuring props
+
+-Function components
+
+-Folder structure
+
+-Arrays
+
+-Objects
+
+-Conditional rendering
+
+-Template literals
 
 Is it for a non-profit organization?
 -Yes it is, its only for me.
@@ -33,19 +46,34 @@ What was the inspiration behind creating the project?
 # Technologies applied
 
 -React
+
 -React-icons
+
 -React-multi-carousel
+
 -React-router-dom
+
 -Hooks
--Different type of functions such as arrowfunctions etc
+
+-Different type of functions such as
+arrowfunctions etc
+
 -Variations of methods
+
 -Props
+
 -Destructuring props
+
 -Function components
+
 -Folder structure
+
 -Arrays
+
 -Objects
+
 -Conditional rendering
+
 -Template literals
 
 # Getting Started with Create React App
