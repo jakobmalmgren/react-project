@@ -1,5 +1,6 @@
 {
   "name": "react-project",
+  "homepage": "https://react-project-tau-topaz.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
