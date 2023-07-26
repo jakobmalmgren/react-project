@@ -1,12 +1,14 @@
 import css from "./SliderCardRatings.module.css";
 function SliderCardRatings(props) {
   const {
+    // id,
     ratingStars,
     ratingTitle,
     ratingDescription,
     ratingCustomer,
     ratingTime,
   } = props;
+
   return (
     <div className={css.ratingCard}>
       <div>{ratingStars}</div>
