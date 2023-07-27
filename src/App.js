@@ -2,7 +2,7 @@ import "./App.css";
 import NavbarSection from "./components/Navbar/NavbarSection";
 // import RatingSlider from "./components/Footer/RatingSlider";
 import IndexPage from "./pages/IndexPage/IndexPage";
-import { Switch, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import FooterSection from "./components/Footer/FooterSection";
 import WomenPage from "./pages/WomenPage/WomenPage";
 import MenPage from "./pages/MenPage/MenPage";
@@ -165,96 +165,126 @@ function App() {
         onAdd={onAdd}
       ></NavbarSection>
 
-      <Switch>
-        <Route exact path="/">
-          <IndexPage
-            deleteLikedItems={deleteLikedItems}
-            renderLikedItems={renderLikedItems}
-            addItemToCart={addItemToCart}
-            products={products}
-          ></IndexPage>
-        </Route>
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <IndexPage
+              deleteLikedItems={deleteLikedItems}
+              renderLikedItems={renderLikedItems}
+              addItemToCart={addItemToCart}
+              products={products}
+            ></IndexPage>
+          }
+        />
+        <Route
+          path="/womenPage"
+          element={
+            <WomenPage
+              deleteLikedItems={deleteLikedItems}
+              renderLikedItems={renderLikedItems}
+              addItemToCart={addItemToCart}
+              products={products}
+            ></WomenPage>
+          }
+        />
+        <Route
+          path="/menPage"
+          element={
+            <MenPage
+              products={products}
+              deleteLikedItems={deleteLikedItems}
+              renderLikedItems={renderLikedItems}
+              addItemToCart={addItemToCart}
+            ></MenPage>
+          }
+        />
+        <Route
+          path="/kidsPage"
+          element={
+            <KidsPage
+              deleteLikedItems={deleteLikedItems}
+              renderLikedItems={renderLikedItems}
+              products={products}
+              addItemToCart={addItemToCart}
+            ></KidsPage>
+          }
+        />
+        <Route
+          path="/outletPage"
+          element={
+            <OutletPage
+              deleteLikedItems={deleteLikedItems}
+              renderLikedItems={renderLikedItems}
+              products={products}
+              addItemToCart={addItemToCart}
+            ></OutletPage>
+          }
+        />
 
-        <Route path="/womenPage">
-          <WomenPage
-            deleteLikedItems={deleteLikedItems}
-            renderLikedItems={renderLikedItems}
-            addItemToCart={addItemToCart}
-            products={products}
-          ></WomenPage>
-        </Route>
+        <Route
+          path="/MyFavoritesPage"
+          element={
+            <MyFavoritePage
+              addItemToCart={addItemToCart}
+              deleteLikedItems={deleteLikedItems}
+              renderLikedItems={renderLikedItems}
+              likedItems={likedItems}
+            ></MyFavoritePage>
+          }
+        />
 
-        <Route path="/menPage">
-          <MenPage
-            products={products}
-            deleteLikedItems={deleteLikedItems}
-            renderLikedItems={renderLikedItems}
-            addItemToCart={addItemToCart}
-          ></MenPage>
-        </Route>
+        <Route
+          path="/ItemOverviewPage"
+          element={
+            <ItemOverviewPage
+              deleteLikedItems={deleteLikedItems}
+              renderLikedItems={renderLikedItems}
+              onAdd={onAdd}
+              addToCart={addToCart}
+            ></ItemOverviewPage>
+          }
+        />
 
-        <Route path="/kidsPage">
-          <KidsPage
-            deleteLikedItems={deleteLikedItems}
-            renderLikedItems={renderLikedItems}
-            products={products}
-            addItemToCart={addItemToCart}
-          ></KidsPage>
-        </Route>
+        <Route
+          path="/checkoutPage"
+          element={
+            <CheckOutPage
+              addItemToCart={addItemToCart}
+              sum={sum}
+              taxPrice={taxPrice}
+              shippingPrice={shippingPrice}
+              totalPrice={totalPrice}
+              amountToFreeShippingPrice={amountToFreeShippingPrice}
+              setBoughtItems={setBoughtItems}
+              products={products}
+              boughtItems={boughtItems}
+              deleteItems={deleteItems}
+              handleIncrement={handleIncrement}
+              handleDecrement={handleDecrement}
+            ></CheckOutPage>
+          }
+        />
 
-        <Route path="/outletPage">
-          <OutletPage
-            deleteLikedItems={deleteLikedItems}
-            renderLikedItems={renderLikedItems}
-            products={products}
-            addItemToCart={addItemToCart}
-          ></OutletPage>
-        </Route>
-        <Route path="/MyFavoritesPage">
-          <MyFavoritePage
-            addItemToCart={addItemToCart}
-            deleteLikedItems={deleteLikedItems}
-            renderLikedItems={renderLikedItems}
-            likedItems={likedItems}
-          ></MyFavoritePage>
-        </Route>
-        <Route path="/ItemOverviewPage">
-          <ItemOverviewPage
-            deleteLikedItems={deleteLikedItems}
-            renderLikedItems={renderLikedItems}
-            onAdd={onAdd}
-            addToCart={addToCart}
-          ></ItemOverviewPage>
-        </Route>
-        <Route path="/checkoutPage">
-          <CheckOutPage
-            addItemToCart={addItemToCart}
-            sum={sum}
-            taxPrice={taxPrice}
-            shippingPrice={shippingPrice}
-            totalPrice={totalPrice}
-            amountToFreeShippingPrice={amountToFreeShippingPrice}
-            setBoughtItems={setBoughtItems}
-            products={products}
-            boughtItems={boughtItems}
-            deleteItems={deleteItems}
-            handleIncrement={handleIncrement}
-            handleDecrement={handleDecrement}
-          ></CheckOutPage>
-        </Route>
-        <Route path="/CreateAccountPage">
-          <CreateAccountPage></CreateAccountPage>
-        </Route>
-        <Route path="/SearchProductsPage">
-          <SearchProductsPage
-            deleteLikedItems={deleteLikedItems}
-            renderLikedItems={renderLikedItems}
-            addItemToCart={addItemToCart}
-            setSearch={setSearch}
-            search={search}
-          ></SearchProductsPage>
-        </Route>
-      </Switch>
+        <Route
+          path="/CreateAccountPage"
+          element={<CreateAccountPage></CreateAccountPage>}
+        />
+
+        <Route
+          path="/SearchProductsPage"
+          element={
+            <SearchProductsPage
+              deleteLikedItems={deleteLikedItems}
+              renderLikedItems={renderLikedItems}
+              addItemToCart={addItemToCart}
+              setSearch={setSearch}
+              search={search}
+            ></SearchProductsPage>
+          }
+        />
+      </Routes>
       {openSignIn || openMyShoppingCartPage ? (
         <div
           className="layover"
