@@ -1,6 +1,5 @@
 {
   "name": "react-project",
-  "homepage": "https://e-comerceapp.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
