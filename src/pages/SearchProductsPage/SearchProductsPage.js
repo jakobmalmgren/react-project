@@ -13,9 +13,10 @@ function SearchProductsPage(props) {
         return item;
       }
     })
-    .map((item) => {
+    .map((item, i) => {
       return (
         <Card
+          key={i}
           {...item}
           deleteLikedItems={props.deleteLikedItems}
           renderLikedItems={props.renderLikedItems}

@@ -1,7 +1,6 @@
 import css from "./SliderCardRatings.module.css";
 function SliderCardRatings(props) {
   const {
-    // id,
     ratingStars,
     ratingTitle,
     ratingDescription,

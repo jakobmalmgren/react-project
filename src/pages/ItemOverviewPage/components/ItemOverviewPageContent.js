@@ -18,7 +18,7 @@ function ItemOverviewPageContent(props) {
 
   const smallImages = props.image.map((item, index) => {
     return (
-      <div>
+      <div key={index}>
         <img
           className={css.smallImage}
           src={`img/${item}`}

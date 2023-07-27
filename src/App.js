@@ -1,6 +1,6 @@
 import "./App.css";
 import NavbarSection from "./components/Navbar/NavbarSection";
-import RatingSlider from "./components/Footer/RatingSliderSection";
+import RatingSlider from "./components/Footer/RatingSlider";
 import IndexPage from "./pages/IndexPage/IndexPage";
 import { Switch, Route } from "react-router-dom";
 import FooterSection from "./components/Footer/FooterSection";
@@ -267,7 +267,7 @@ function App() {
         ""
       )}
 
-      <RatingSlider></RatingSlider>
+      {/* <RatingSlider></RatingSlider> */}
       <FooterSection></FooterSection>
     </div>
   );
