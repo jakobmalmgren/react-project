@@ -18,9 +18,16 @@ function MyFavoritePage(props) {
   }
 
   return (
+    // <div className={css.myFavoritePage}>
+    //   <h1>My Favorites</h1>
+    //   {props.likedItems.length === 0 && (
+    //     <h4 className={css.noFavorite}>YOU HAVE NO FAVORITE ITEMS SAVED</h4>
+    //   )}
+    //   <div className={css.cardWrapper}> {cardItem}</div>
+    // </div>
     <div className={css.myFavoritePage}>
       <h1>My Favorites</h1>
-      {props.likedItems.length === 0 && (
+      {props.likedItems.length && props.likedItems.length === 0 && (
         <h4 className={css.noFavorite}>YOU HAVE NO FAVORITE ITEMS SAVED</h4>
       )}
       <div className={css.cardWrapper}> {cardItem}</div>

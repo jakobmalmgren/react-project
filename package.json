@@ -1,7 +1,7 @@
 {
   "name": "react-project",
+  "homepage": "https://react-project-gules.vercel.app/",
   "version": "0.1.0",
-  "homepage": "https://react-project-9r4ssalrt-jakobmalmgren.vercel.app/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

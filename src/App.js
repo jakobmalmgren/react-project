@@ -1,6 +1,6 @@
 import "./App.css";
 import NavbarSection from "./components/Navbar/NavbarSection";
-// import RatingSlider from "./components/Footer/RatingSlider";
+import RatingSlider from "./components/Footer/RatingSlider";
 import IndexPage from "./pages/IndexPage/IndexPage";
 import { Route, Routes } from "react-router-dom";
 import FooterSection from "./components/Footer/FooterSection";
@@ -68,18 +68,34 @@ function App() {
   );
   const [boughtItems, setBoughtItems] = useState(getMyCartFromLocalStorage);
 
+  // function onAdd(item) {
+  //   const exist = boughtItems.find((x) => {
+  //     return x.id === item.id;
+  //   });
+  //   if (exist) {
+  //     setBoughtItems(
+  //       boughtItems.map((x) => {
+  //         return [...x];
+  //       })
+  //     );
+  //   } else {
+  //     setBoughtItems([...boughtItems, { ...item, qty: 1 }]);
+  //   }
+  // }
   function onAdd(item) {
-    const exist = boughtItems.find((x) => {
-      return x.id === item.id;
-    });
-    if (exist) {
-      setBoughtItems(
-        boughtItems.map((x) => {
-          return [...x];
-        })
-      );
-    } else {
-      setBoughtItems([...boughtItems, { ...item, qty: 1 }]);
+    if (boughtItems !== null) {
+      const exist = boughtItems.find((x) => {
+        return x.id === item.id;
+      });
+      if (exist) {
+        setBoughtItems(
+          boughtItems.map((x) => {
+            return [...x];
+          })
+        );
+      } else {
+        setBoughtItems([...boughtItems, { ...item, qty: 1 }]);
+      }
     }
   }
   useEffect(() => {
@@ -115,9 +131,22 @@ function App() {
   }
 
   // add the fee
-  const sum = boughtItems.reduce((acc, cu) => {
-    return acc + cu.price * cu.qty;
-  }, 0);
+
+  // const sum = boughtItems.reduce((acc, cu) => {
+  //   return acc + cu.price * cu.qty;
+  // }, 0);
+
+  // const taxPrice = sum * 0.15;
+  // const shippingPrice = sum >= 100 ? 0 : 15;
+  // const amountToFreeShippingPrice = 100 - sum;
+  // const totalPrice = sum + taxPrice + shippingPrice;
+
+  let sum;
+  if (boughtItems && boughtItems.length > 0) {
+    sum = boughtItems.reduce((acc, cu) => {
+      return acc + cu.price * cu.qty;
+    }, 0);
+  }
 
   const taxPrice = sum * 0.15;
   const shippingPrice = sum >= 100 ? 0 : 15;
@@ -164,7 +193,6 @@ function App() {
         setToggleBurger={setToggleBurger}
         onAdd={onAdd}
       ></NavbarSection>
-
       <Routes>
         <Route
           exact
@@ -296,8 +324,7 @@ function App() {
       ) : (
         ""
       )}
-
-      {/* <RatingSlider></RatingSlider> */}
+      <RatingSlider></RatingSlider>
       <FooterSection></FooterSection>
     </div>
   );

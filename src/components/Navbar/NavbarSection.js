@@ -80,7 +80,11 @@ function NavbarSection(props) {
             onClick={props.handleMyShoppingCartPage}
           ></BsCart3>
           <div className={props.boughtItems.length > 0 ? css.cartCounter : ""}>
-            {props.boughtItems.length <= 0 ? "" : props.boughtItems.length}
+            {/* <div className={props.boughtItems === null ? "" : css.cartCounter}> */}
+            {props.boughtItems && props.boughtItems.length <= 0
+              ? ""
+              : props.boughtItems.length}
+            {/* {props.boughtItems === null ? "" : props.boughtItems.length} */}
           </div>
 
           <Link to="/MyFavoritesPage" className={css.heartWrapper}>
@@ -88,7 +92,11 @@ function NavbarSection(props) {
             <div
               className={props.likedItems.length > 0 ? css.favoriteCounter : ""}
             >
+              {/* <div
+              className={props.likedItems === null ? "" : css.favoriteCounter}
+            > */}
               {props.likedItems.length <= 0 ? "" : props.likedItems.length}
+              {/* {props.likedItems === null ? "" : props.likedItems.length} */}
             </div>
           </Link>
         </div>

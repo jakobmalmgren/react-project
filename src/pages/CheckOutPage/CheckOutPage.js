@@ -89,9 +89,38 @@ function CheckoutPage(props) {
 
   return (
     <div>
-      <div className={css.checkOutPageContainer}>
+      {/* <div className={css.checkOutPageContainer}>
         {checkout}
         {props.boughtItems.length > 0 ? (
+          <div className={css.checkoutPriceContainer}>
+            <h2>Products: $ {props.sum.toFixed(0)} </h2>
+            <h2>Tax: $ {props.taxPrice.toFixed(0)} </h2>
+            <div className={css.shippingWrapper}>
+              <h2>Shipping fee: $ {props.shippingPrice.toFixed(0)} </h2>
+              {props.sum < 100 ? (
+                <h4>$ {props.amountToFreeShippingPrice} to no shipping fee</h4>
+              ) : (
+                ""
+              )}
+            </div>
+            <h2>Total: $ {props.totalPrice.toFixed(0)}</h2>
+
+            <button
+              className={css.purchaseBtn}
+              onClick={() => {
+                updateText();
+              }}
+            >
+              PURCHASE
+            </button>
+          </div>
+        ) : (
+          <h1 className={css.noItemsText}>YOU HAVE NO ITEMS</h1>
+        )}
+      </div> */}
+      <div className={css.checkOutPageContainer}>
+        {checkout}
+        {props.boughtItems && props.boughtItems.length > 0 ? (
           <div className={css.checkoutPriceContainer}>
             <h2>Products: $ {props.sum.toFixed(0)} </h2>
             <h2>Tax: $ {props.taxPrice.toFixed(0)} </h2>
