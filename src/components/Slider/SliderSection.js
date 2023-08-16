@@ -26,7 +26,7 @@ function SliderSection(props) {
     <div className={css.slider}>
       <h1 className={css.sliderHeader}>{props.header}</h1>
 
-      <Carousel responsive={responsive}>
+      <Carousel responsive={responsive} infinite={true}>
         {props.filteredTshirts}
         {props.filteredShoes}
         {props.ratingData}

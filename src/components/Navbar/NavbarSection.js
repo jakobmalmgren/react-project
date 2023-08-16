@@ -17,13 +17,13 @@ function NavbarSection(props) {
   const burger = (
     <RxHamburgerMenu
       onClick={() => props.setToggleBurger(!props.toggleBurger)}
-      className={css.openCloseIcon}
+      className={css.openIcon}
     />
   );
   const closer = (
     <CgClose
       onClick={() => props.setToggleBurger(!props.toggleBurger)}
-      className={css.openCloseIcon}
+      className={css.closeIcon}
     />
   );
 
@@ -80,11 +80,9 @@ function NavbarSection(props) {
             onClick={props.handleMyShoppingCartPage}
           ></BsCart3>
           <div className={props.boughtItems.length > 0 ? css.cartCounter : ""}>
-            {/* <div className={props.boughtItems === null ? "" : css.cartCounter}> */}
             {props.boughtItems && props.boughtItems.length <= 0
               ? ""
               : props.boughtItems.length}
-            {/* {props.boughtItems === null ? "" : props.boughtItems.length} */}
           </div>
 
           <Link to="/MyFavoritesPage" className={css.heartWrapper}>
@@ -93,10 +91,16 @@ function NavbarSection(props) {
               className={props.likedItems.length > 0 ? css.favoriteCounter : ""}
             >
               {/* <div
-              className={props.likedItems === null ? "" : css.favoriteCounter}
+              className={
+                props.likedItems && props.likedItems.length > 0
+                  ? css.favoriteCounter
+                  : ""
+              }
             > */}
               {props.likedItems.length <= 0 ? "" : props.likedItems.length}
-              {/* {props.likedItems === null ? "" : props.likedItems.length} */}
+              {/* {props.likedItems && props.likedItems.length >= 0
+                ? props.likedItems.length
+                : ""} */}
             </div>
           </Link>
         </div>
@@ -112,6 +116,7 @@ function NavbarSection(props) {
       <div className={css.navInfo}>
         <p className={css.navInfoText}>
           <GoCheck className={css.navIcon}></GoCheck> Free shipments over $100
+          purchased
         </p>
         <p className={css.navInfoText}>
           <GoCheck className={css.navIcon}></GoCheck>Fast shipments

@@ -23,4 +23,13 @@
 
 .filterItems {
   margin-left: 40px;
+  color: black;
+  outline: none;
+}
+
+select {
+  color: black;
+  outline: none;
+  background-color: white;
+  border: 1px solid black;
 }

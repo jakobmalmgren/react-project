@@ -12,6 +12,7 @@
   background-color: black;
   height: 40px;
   color: rgb(173 187 173);
+  outline: none;
 }
 .searchIcon {
   position: absolute;

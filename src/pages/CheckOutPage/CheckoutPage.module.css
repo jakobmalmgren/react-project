@@ -47,6 +47,9 @@
   transition: 0.5s;
   background-color: rgba(173, 187, 173, 0.55);
 }
+.plusMinusBtn {
+  color: black;
+}
 .quantityArea {
   width: 28px;
   height: 28px;

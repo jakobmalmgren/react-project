@@ -76,6 +76,7 @@
 }
 .icon {
   cursor: pointer;
+  color: black;
 }
 .priceWrapper {
   display: flex;

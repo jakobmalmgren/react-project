@@ -5,8 +5,8 @@ import MyShoppingCartPageCard from "./components/MyShoppingCartPageCard";
 import { Link } from "react-router-dom";
 
 function MyShoppingCartPage(props) {
-  console.log(props.boughtItems, "boughtitems", typeof props.boughtItems);
-  console.log(props.sum, "sum", typeof props.sum);
+  // console.log(props.boughtItems, "boughtitems", typeof props.boughtItems);
+  // console.log(props.sum, "sum", typeof props.sum);
 
   let myShoppingCartPageCard;
   if (props.boughtItems) {
@@ -95,7 +95,7 @@ function MyShoppingCartPage(props) {
           {myShoppingCartPageCard}
 
           {props.boughtItems && props.boughtItems.length <= 0 ? (
-            console.log("finns INTE ")
+            ""
           ) : (
             <div>
               <div className={css.totalCountWrapper}>

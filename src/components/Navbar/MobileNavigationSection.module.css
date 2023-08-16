@@ -1,17 +1,19 @@
 .navlinksMobile {
-  position: absolute;
+  /* position: absolute; */
   top: 0px;
   left: 0px;
+  position: fixed;
   background-color: rgb(173 187 173);
   width: 100%;
   height: 100vh;
   text-align: center;
-  z-index: 1;
+  z-index: 1200;
 }
 .navlinksMobile li {
   padding: 15px;
   margin-top: 40px;
   font-size: 20px;
+  list-style: none;
 }
 
 .outletRedColor {

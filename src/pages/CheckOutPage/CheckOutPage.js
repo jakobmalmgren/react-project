@@ -11,7 +11,7 @@ function CheckoutPage(props) {
       setText("Waiting....");
     });
     setTimeout(() => {
-      setText("Your purchase was succesful!");
+      setText("Your purchase was successful!");
       props.setBoughtItems([]);
     }, 5000);
   }

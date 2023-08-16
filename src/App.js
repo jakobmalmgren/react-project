@@ -26,6 +26,9 @@ function App() {
     setOpenMyShoppingCartPage(!openMyShoppingCartPage);
   }
 
+  if (toggleBurger) {
+  }
+
   // add itemoverviewpage!
   const [addToCart, setAddToCart] = useState([]);
   function addItemToCart(products) {
@@ -34,39 +37,69 @@ function App() {
 
   //add/delete MyfavoritePage
 
-  const getMyLikedFromLocalStorage = JSON.parse(
-    localStorage.getItem("myFavoritePage")
-  );
+  //-------------------------------------------------------------------------
 
+  //de är localstorage som e kruxet..men om ja vill ändra tilbaka e bara o uncommment
+  // alla me localstorage i..samma i bouthitems...
+
+  //----------------------------------------------------------------------
+
+  // const getMyLikedFromLocalStorage = JSON.parse(
+  //   localStorage.getItem("myFavoritePage")
+  // );
+
+  // function renderLikedItems(item) {
+  //   const exist = likedItems.find((x) => {
+  //     return item.id === x.id;
+  //   });
+  //   if (exist) {
+  //     setLikedItems([...likedItems]);
+  //   } else {
+  //     setLikedItems([...likedItems, item]);
+  //   }
+  // }
+
+  // fix kod så de inte blir fel me likeditems om den e null
   function renderLikedItems(item) {
-    const exist = likedItems.find((x) => {
-      return item.id === x.id;
-    });
-    if (exist) {
-      setLikedItems([...likedItems]);
-    } else {
-      setLikedItems([...likedItems, item]);
+    if (likedItems !== null && likedItems.length >= 0) {
+      const exist = likedItems.find((x) => {
+        return item.id === x.id;
+      });
+      if (exist) {
+        setLikedItems([...likedItems]);
+      } else {
+        setLikedItems([...likedItems, item]);
+      }
+    }
+  }
+  const [likedItems, setLikedItems] = useState([]);
+  // const [likedItems, setLikedItems] = useState(getMyLikedFromLocalStorage);
+
+  // useEffect(() => {
+  //   localStorage.setItem("myFavoritePage", JSON.stringify(likedItems));
+  // }, [likedItems]);
+
+  // function deleteLikedItems(items) {
+  //   const deleted = likedItems.filter((fav) => {
+  //     return fav.id !== items.id;
+  //   });
+  //   return setLikedItems(deleted);
+  // }
+  function deleteLikedItems(items) {
+    if (likedItems !== null && likedItems.length >= 0) {
+      const deleted = likedItems.filter((fav) => {
+        return fav.id !== items.id;
+      });
+      return setLikedItems(deleted);
     }
   }
 
-  const [likedItems, setLikedItems] = useState(getMyLikedFromLocalStorage);
-
-  useEffect(() => {
-    localStorage.setItem("myFavoritePage", JSON.stringify(likedItems));
-  }, [likedItems]);
-
-  function deleteLikedItems(items) {
-    const deleted = likedItems.filter((fav) => {
-      return fav.id !== items.id;
-    });
-    return setLikedItems(deleted);
-  }
-
   //add myshoppingcartpage
-  const getMyCartFromLocalStorage = JSON.parse(
-    localStorage.getItem("myShoppingCart")
-  );
-  const [boughtItems, setBoughtItems] = useState(getMyCartFromLocalStorage);
+  // const getMyCartFromLocalStorage = JSON.parse(
+  //   localStorage.getItem("myShoppingCart")
+  // );
+  // const [boughtItems, setBoughtItems] = useState(getMyCartFromLocalStorage);
+  const [boughtItems, setBoughtItems] = useState([]);
 
   // function onAdd(item) {
   //   const exist = boughtItems.find((x) => {

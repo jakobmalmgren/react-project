@@ -6,9 +6,15 @@
   position: relative;
   justify-content: space-between;
 }
-.openCloseIcon {
+.openIcon {
   cursor: pointer;
-  z-index: 1;
+  z-index: 1201;
+  /* position: fixed; */
+}
+.closeIcon {
+  cursor: pointer;
+  z-index: 1201;
+  position: fixed;
 }
 .burgerWrapper {
   display: flex;
@@ -28,7 +34,7 @@
   position: relative;
 }
 .navTitle h2 {
-  font-size: 20px;
+  font-size: 17px;
   color: black;
   width: 132px;
 }
@@ -38,7 +44,7 @@
   color: rgb(173 187 173);
   font-size: 46px;
   top: 0px;
-  left: 72px;
+  left: 60px;
 }
 .navlinksBigScreen {
   display: none;
@@ -83,6 +89,7 @@
   align-items: center;
   border: 1px solid black;
 }
+
 .cartCounter {
   width: 20px;
   height: 20px;
